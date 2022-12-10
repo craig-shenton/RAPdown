@@ -11,7 +11,7 @@ website:
   description: "RAP Markdown"
   # date: now
   # favicon: _assets/favicon/favicon.ico
-  repo-url: https://github.com/craig-shenton/qdown
+  repo-url: https://github.com/craig-shenton/RAPdown
   repo-actions: [edit, issue]
 
   twitter-card:
@@ -23,9 +23,9 @@ website:
     # background: "#005eb8"
     right:
     - text: "License"
-      href: https://github.com/craig-shenton/qdown/blob/main/LICENSE
+      href: https://github.com/craig-shenton/RAPdown/blob/main/LICENSE
     - text: "Code of Conduct"
-      href: https://github.com/craig-shenton/qdown/blob/main/CODE_OF_CONDUCT.md
+      href: https://github.com/craig-shenton/RAPdown/blob/main/CODE_OF_CONDUCT.md
 
   navbar:
     background: light
@@ -42,10 +42,10 @@ website:
         menu:
           - text: "Report a Bug"
             icon: "bug"
-            href: "https://github.com/craig-shenton/qdown/issues"
+            href: "https://github.com/craig-shenton/RAPdown/issues"
           - text: "Ask a Question"
             icon: "chat-right-text"
-            href: "https://github.com/craig-shenton/qdown/discussions"
+            href: "https://github.com/craig-shenton/RAPdown/discussions"
           - text: "FAQ"
             icon: "question-circle"
             href: faq/index.qmd
@@ -54,7 +54,7 @@ website:
         href: https://twitter.com/craigrshenton
         aria-label: Twitter
       - icon: github
-        href: https://github.com/craig-shenton/qdown
+        href: https://github.com/craig-shenton/RAPdown
         aria-label: GitHub
 
   sidebar:
@@ -72,7 +72,7 @@ website:
               file: rap-maturity-framework.qmd
       right:
         - icon: github
-          href: https://github.com/craig-shenton/qdown
+          href: https://github.com/craig-shenton/RAPdown
           aria-label: GitHub
 format:
   html:

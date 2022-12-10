@@ -1,59 +1,33 @@
-# qdown
+# RAPdown
 
 <!-- PROJECT LOGO -->
-<br />
+<!-- <br />
 <p align="center">
-  <a href="https://github.com/craig-shenton/qdown/">
+  <a href="https://github.com/craig-shenton/RAPdown/">
     <img src="_assets/img/quarto.png" alt="Logo" height="50">
   </a>
+</p> -->
 
-  <h3 align="center">Q Markdown</h3>
-
+  <h1 align="center">RAPdown</h1>
+  <h3 align="center">A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications</h3>
   <p align="center">
     <br />
-    <a href="/"><strong>Explore the docs »</strong></a>
+    <a href="https://craig-shenton.github.io/RAPdown/"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/craig-shenton/qdown/issues">Report Bug</a>
+    <a href="https://github.com/craig-shenton/RAPdown/issues">Report Bug</a>
     ·
-    <a href="https://github.com/craig-shenton/qdown/issues">Request Feature</a>
+    <a href="https://github.com/craig-shenton/RAPdown/issues">Request Feature</a>
   </p>
 </p>
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#package-stucture">Package Structure</a></li>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
-
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
-
-Quarto Markdown project
-
 _**Note:** No private data are stored in this repository._
 
-### Package Structure
+### Project Structure
 
 <!-- NHSD template -->
 
 ```
-qdown
+RAPdown
 │   README.md
 │
 ├───my_project
@@ -71,13 +45,18 @@ qdown
 │   └───output_profile
 │
 └───tests
-    ├───unittests
-    │       │   test_data_connections.py
-    │       │   test_field_definitions.py
-    │       │   test_processing_steps.py
-    │
-    └───backtests
-            test_compare_outputs.py
+|   ├───unittests
+|   │       │   test_data_connections.py
+|   │       │   test_field_definitions.py
+|   │       │   test_processing_steps.py
+|   │
+|   └───backtests
+|           │   test_compare_outputs.py
+|
+├───reports
+│   │
+│   ├───input_profile
+│   └───output_profile
 ```
 
 ### Built With
@@ -86,17 +65,9 @@ qdown
 - [R](https://www.r-project.org/)
 - [GitHub Actions](https://github.com/features/actions)
 
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-Please refer to the [Quarto Tutorial](https://openscapes.github.io/quarto-website-tutorial/) site
-
-<!-- ROADMAP -->
-
 ## Roadmap
 
-See the [open issues](https://github.com/craig-shenton/qdown/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/craig-shenton/RAPdown/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING-->
 
@@ -110,22 +81,16 @@ Contributions are what make the open source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-_See [CONTRIBUTING.md](https://github.com/craig-shenton/qdown/blob/main/CONTRIBUTING.md) for detailed guidance._
+_See [CONTRIBUTING.md](https://github.com/craig-shenton/RAPdown/blob/main/CONTRIBUTING.md) for detailed guidance._
 
 <!-- LICENSE -->
 
 ## License
 
-Distributed under the MIT License. _See [LICENSE.md](https://github.com/craig-shenton/qdown/blob/main/LICENSE) for more information._
+Distributed under the MIT License. _See [LICENSE.md](https://github.com/craig-shenton/RAPdown/blob/main/LICENSE) for more information._
 
 <!-- CONTACT -->
 
-## About
+## Contact
 
 Project contact email: [craig.shenton@nhs.net](mailto:craig.shenton@nhs.net)
-
-## Acknowledgements
-
-* []()
-* []()
-* []()
