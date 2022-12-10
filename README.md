@@ -4,13 +4,12 @@
 <br />
 <p align="center">
   <a href="https://github.com/craig-shenton/qdown/">
-    <img src="_assets/img/quarto.png" alt="Logo" height="120">
+    <img src="_assets/img/quarto.png" alt="Logo" height="50">
   </a>
 
-  <h3 align="center">R Reporting</h3>
+  <h3 align="center">Q Markdown</h3>
 
   <p align="center">
-    NHS England R Community
     <br />
     <a href="/"><strong>Explore the docs »</strong></a>
     <br />
@@ -50,6 +49,9 @@ Quarto Markdown project
 _**Note:** No private data are stored in this repository._
 
 ### Package Structure
+
+<!-- NHSD template -->
+
 ```
 qdown
 │   README.md
@@ -77,19 +79,6 @@ qdown
     └───backtests
             test_compare_outputs.py
 ```
-Some things to notice about this structure:
-
-* In the repository there are two files: `create_publication.py` and `params.py`. These top level files are the highest level of abstraction and should be the main place where users interact with the code. 
-
-    * The `params.py` file contains all of the parameters that we expect to change frequently, e.g. input data. 
-    * The `create_publication.py` file organises the steps in a simple, easy-to-understand manner that should be readable by anyone, even if they don't know python. In this way, we aim to reduce risk by make the code accessible to new staff. 
-
-* The next level down contains the meaty parts of the code. By organising the code into logical sections, we make it easier to understand but also to maintain and test. Moreover, tucking the complex code out of the way means that users don't need to understand everything about the code all at once. 
-    * The `data_connections.py` file handles reading data in and writing data back out. 
-    * The `field_definitions.py` file contains the definitions for each of the fields (columns) derived in the process. By abstracting these definitions out of the code and making them reuseable, we achieve some great benefits. First, it becomes much easier to maintain. When the specifications change next year, we only need to make the change in one location. Next, it becomes much easier to test. We write unit tests for each of these definitions and can then reuse these definitions in many places without increasing risk. 
-    * The `processing_steps.py` file contains the core business logic. 
-
-Note that we never store passwords or any sensitive credentials in the repo to prevent the situation where it can mistakenly committed into the git. There are several ways to deal with the secret, keys and passwords such as using Git Hooks or final cleansing process before publishing. 
 
 ### Built With
 
