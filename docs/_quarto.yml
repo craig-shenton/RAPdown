@@ -83,12 +83,12 @@ format:
       sidebar-width: 250px
       body-width: 900px
       margin-width: 300px
-    # Code options
-    code-tools:
-      source: false
-      toggle: false
-      caption: none
-    code-fold: true
-    code-summary: "Show code"
-    code-copy: true
-    code-overflow: wrap
+    # # Code options
+    # code-tools:
+    #   source: false
+    #   toggle: false
+    #   caption: none
+    # code-fold: true
+    # code-summary: "Show code"
+    # code-copy: true
+    # code-overflow: wrap
