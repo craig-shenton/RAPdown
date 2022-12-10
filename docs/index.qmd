@@ -13,7 +13,6 @@ image: _assets/img/hero_right.png
 ::: {.hero-banner}
 
 ::: {.hero-image .hero-image-left}
-![](_assets/img/hero_left.png){fig-alt="Stack of three printed articles with text, code, and graphics."}
 :::
 
 ::: {.content-block}
@@ -35,7 +34,6 @@ image: _assets/img/hero_right.png
 :::
 
 ::: {.hero-image .hero-image-right}
-![](/_assets/img/hero_right.png){fig-alt="Stack of three printed articles with text, code, and graphics."}
 :::
 
 :::
