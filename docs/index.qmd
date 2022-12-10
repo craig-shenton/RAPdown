@@ -7,13 +7,13 @@ css: index.css
 editor: source
 description: | 
   Quarto is an open-source scientific and technical publishing system built on Pandoc.
-image: _assests/img/hero_right.png
+image: _assets/img/hero_right.png
 ---
 
 ::: {.hero-banner}
 
 ::: {.hero-image .hero-image-left}
-![](_assests/img/hero_left.png){fig-alt="Stack of three printed articles with text, code, and graphics."}
+![](_assets/img/hero_left.png){fig-alt="Stack of three printed articles with text, code, and graphics."}
 :::
 
 ::: {.content-block}
@@ -35,7 +35,7 @@ image: _assests/img/hero_right.png
 :::
 
 ::: {.hero-image .hero-image-right}
-![](images/hero_right.png){fig-alt="Stack of three printed articles with text, code, and graphics."}
+![](/_assets/img/hero_right.png){fig-alt="Stack of three printed articles with text, code, and graphics."}
 :::
 
 :::
