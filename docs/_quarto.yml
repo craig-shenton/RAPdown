@@ -12,7 +12,7 @@ website:
   # date: now
   # favicon: _assets/favicon/favicon.ico
   repo-url: https://github.com/craig-shenton/qdown
-  repo-actions: [issue]
+  repo-actions: [edit, issue]
 
   twitter-card:
     creator: "@craigrshenton"
@@ -57,15 +57,17 @@ website:
 
   sidebar:
     - id: nav
-      style: "docked"
+      style: "floating"
       search: true
-      # collapse-level: 3
-      #align: left
+      collapse-level: 2
+      align: left
       contents:
-        - section: "Introduction"
+        - section: "Content"
           contents:
-            - text: "RAP Checklist" 
+            - text: "Introduction" 
               file: index.qmd
+            - text: "RAP Checklist" 
+              file: rap-maturity-framework.qmd
       right:
         - icon: github
           href: https://github.com/craig-shenton/qdown
