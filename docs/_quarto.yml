@@ -27,24 +27,24 @@ website:
     - text: "Code of Conduct"
       href: https://github.com/craig-shenton/qdown/blob/main/CODE_OF_CONDUCT.md
 
-  navbar:
-    background: "#005eb8"
-    # logo: assets/logos/logo-nhs-300.png
-    # align: center
-    title: "Content"
-    collapse-below: lg
+  # navbar:
+  #   background: "#005eb8"
+  #   # logo: assets/logos/logo-nhs-300.png
+  #   # align: center
+  #   title: "Content"
+  #   collapse-below: lg
  
-    right:
-      - icon: github
-        href: https://github.com/craig-shenton/qdown
-        aria-label: GitHub
+  #   right:
+  #     - icon: github
+  #       href: https://github.com/craig-shenton/qdown
+  #       aria-label: GitHub
 
   sidebar:
     - id: nav
-      style: "docked"
+      #style: "docked"
       search: true
       collapse-level: 3
-      align: left
+      #align: left
       contents:
         - section: "Introduction"
           contents:
@@ -57,7 +57,7 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
-    mainfont: "Atkinson Hyperlegible"
+    mainfont: "Arial"
     # Code options
     code-tools:
       source: false
