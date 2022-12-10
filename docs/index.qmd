@@ -3,7 +3,7 @@ pagetitle: "Quarto"
 page-layout: custom
 section-divs: false
 toc: false
-css: _assets/style/index.css
+css: index.css
 editor: source
 description: | 
   Quarto is an open-source scientific and technical publishing system built on Pandoc.
