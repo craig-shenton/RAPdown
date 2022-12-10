@@ -36,6 +36,8 @@ website:
     left:
       - text: "Introduction"
         href: index.qmd
+      - text: "RAP Checklist" 
+        file: rap-maturity-framework.qmd
       - text: "Help"
         menu:
           - text: "Report a Bug"
