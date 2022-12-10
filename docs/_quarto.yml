@@ -5,6 +5,7 @@ project:
   #   - "course-materials/_slides/"
     
 website:
+  open-graph: true
   page-navigation: true
   title: "RAP Markdown"
   description: "RAP Markdown"
@@ -13,14 +14,17 @@ website:
   repo-url: https://github.com/craig-shenton/qdown
   repo-actions: [issue]
 
-  # opengraph: true
-  # twitter-card:
-  #   creator: "@minebocek"
-  #   image: "/images/twitter-card.png"
+  twitter-card:
+    creator: "@craigrshenton"
+    image: "https://pbs.twimg.com/profile_images/800388889114451968/Ta6tqm7s_400x400.jpg"
+
+  body-header: "This page brought to you by <https://example.com>"
+
+  margin-header: _assets/img/quarto.png
 
   page-footer:
     left: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    background: "#005eb8"
+    # background: "#005eb8"
     right:
     - text: "License"
       href: https://github.com/craig-shenton/qdown/blob/main/LICENSE
@@ -41,23 +45,26 @@ website:
 
   sidebar:
     - id: nav
-      #style: "docked"
+      style: "docked"
       search: true
-      collapse-level: 3
+      # collapse-level: 3
       #align: left
       contents:
         - section: "Introduction"
           contents:
             - text: "RAP Checklist" 
               file: index.qmd
+      right:
+        - icon: github
+          href: https://github.com/craig-shenton/qdown
+          aria-label: GitHub
 format:
   html:
-    theme:
-      light: [cosmo]
+    theme: cosmo
     toc: true
     code-copy: true
     code-overflow: wrap
-    mainfont: "Arial"
+    # mainfont: "Arial"
     # Code options
     code-tools:
       source: false
