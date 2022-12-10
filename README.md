@@ -8,17 +8,9 @@
   </a>
 </p> -->
 
-  <h1 align="center">RAPdown</h1>
-  <h3 align="center">A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications</h3>
-  <p align="center">
-    <br />
-    <a href="https://craig-shenton.github.io/RAPdown/"><strong>Explore the docs »</strong></a>
-    <br />
-    <a href="https://github.com/craig-shenton/RAPdown/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/craig-shenton/RAPdown/issues">Request Feature</a>
-  </p>
-</p>
+A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
+
+[Explore Documentation](https://craig-shenton.github.io/RAPdown/) - [Report Bug](https://github.com/craig-shenton/RAPdown/issues) - [Request Feature](https://github.com/craig-shenton/RAPdown/issues)
 
 _**Note:** No private data are stored in this repository._
 
