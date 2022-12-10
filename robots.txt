@@ -1,1 +1,1 @@
-Sitemap: https://craig-shenton.github.io/qdown/sitemap.xml
+Sitemap: https://github.com/craig-shenton/qdown/sitemap.xml
