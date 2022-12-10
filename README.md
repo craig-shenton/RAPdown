@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/craig-shenton/qdown/">
-    <img src="assets/logos/quarto.png" alt="Logo" height="120">
+    <img src="_assets/img/quarto.png" alt="Logo" height="120">
   </a>
 
   <h3 align="center">R Reporting</h3>
