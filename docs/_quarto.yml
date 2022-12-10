@@ -18,10 +18,6 @@ website:
     creator: "@craigrshenton"
     image: "https://pbs.twimg.com/profile_images/800388889114451968/Ta6tqm7s_400x400.jpg"
 
-  body-header: "This page brought to you by <https://example.com>"
-
-  margin-header: _assets/img/quarto.png
-
   page-footer:
     left: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
     # background: "#005eb8"
@@ -31,17 +27,33 @@ website:
     - text: "Code of Conduct"
       href: https://github.com/craig-shenton/qdown/blob/main/CODE_OF_CONDUCT.md
 
-  # navbar:
-  #   background: "#005eb8"
-  #   # logo: assets/logos/logo-nhs-300.png
-  #   # align: center
-  #   title: "Content"
-  #   collapse-below: lg
- 
-  #   right:
-  #     - icon: github
-  #       href: https://github.com/craig-shenton/qdown
-  #       aria-label: GitHub
+  navbar:
+    background: light
+    logo: _assets/img/quarto.png
+    logo-alt: "Quarto logo."
+    title: false
+    collapse-below: lg
+    left:
+      - text: "Introduction"
+        href: index.qmd
+      - text: "Help"
+        menu:
+          - text: "Report a Bug"
+            icon: "bug"
+            href: "https://github.com/craig-shenton/qdown/issues"
+          - text: "Ask a Question"
+            icon: "chat-right-text"
+            href: "https://github.com/craig-shenton/qdown/discussions"
+          - text: "FAQ"
+            icon: "question-circle"
+            href: docs/faq/index.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/craigrshenton
+        aria-label: Twitter
+      - icon: github
+        href: https://github.com/craig-shenton/qdown
+        aria-label: GitHub
 
   sidebar:
     - id: nav
@@ -60,11 +72,17 @@ website:
           aria-label: GitHub
 format:
   html:
-    theme: cosmo
     toc: true
+    theme:
+      light: [cosmo, _assets/style/theme.scss]
     code-copy: true
     code-overflow: wrap
-    # mainfont: "Arial"
+    css: _assets/style/styles.css
+    include-after-body: _assets/style/js.html
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
     # Code options
     code-tools:
       source: false
@@ -72,3 +90,5 @@ format:
       caption: none
     code-fold: true
     code-summary: "Show code"
+    code-copy: true
+    code-overflow: wrap
