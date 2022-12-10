@@ -1,3 +1,6 @@
+---
+title: "Quarto Markdown Publishing & RAP Maturity"
+---
 ## The 'Levels of RAP' Maturity Framework
 
 Developed by [NHS Digital RAP community](https://nhsdigital.github.io/rap-community-of-practice/introduction_to_RAP/levels_of_RAP/).
@@ -40,3 +43,4 @@ _Meeting all of the above requirements, plus:_
 - [ ] Repository automatically runs tests etc. via [CI](https://github.com/skills/continuous-integration)/CD or a different integration/deployment tool e.g. [GitHub Actions](https://docs.github.com/en/actions).
 - [ ] Process runs based on event-based triggers (e.g., new data in database) or on a schedule.
 - [ ] Changes to the RAP are clearly signposted. E.g. a changelog in the package, releases etc. (See gov.uk info on [Semantic Versioning](https://github.com/alphagov/govuk-frontend/blob/main/docs/contributing/versioning.md))
+

@@ -1,0 +1,67 @@
+project:
+  type: website
+  # resources:
+  #   - "images/twitter-card.png"
+  #   - "course-materials/_slides/"
+    
+website:
+  page-navigation: true
+  title: "RAP Markdown"
+  description: "RAP Markdown"
+  # date: now
+  # favicon: _assets/favicon/favicon.ico
+  repo-url: https://github.com/craig-shenton/qdown
+  repo-actions: [issue]
+
+  # opengraph: true
+  # twitter-card:
+  #   creator: "@minebocek"
+  #   image: "/images/twitter-card.png"
+
+  page-footer:
+    left: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    background: "#005eb8"
+    right:
+    - text: "License"
+      href: https://github.com/craig-shenton/qdown/blob/main/LICENSE
+    - text: "Code of Conduct"
+      href: https://github.com/craig-shenton/qdown/blob/main/CODE_OF_CONDUCT.md
+
+  navbar:
+    background: "#005eb8"
+    # logo: assets/logos/logo-nhs-300.png
+    # align: center
+    title: "Content"
+    collapse-below: lg
+ 
+    right:
+      - icon: github
+        href: https://github.com/craig-shenton/qdown
+        aria-label: GitHub
+
+  sidebar:
+    - id: nav
+      style: "docked"
+      search: true
+      collapse-level: 3
+      align: left
+      contents:
+        - section: "Introduction"
+          contents:
+            - text: "RAP Checklist" 
+              file: index.qmd
+format:
+  html:
+    theme:
+      light: [cosmo]
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+    # Code options
+    code-tools:
+      source: false
+      toggle: false
+      caption: none
+    code-fold: true
+    code-summary: "Show code"
