@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://craig-shenton.github.io/RAPdown/tutorials/copy.html</loc>
+    <lastmod>2022-12-11T22:15:57.345Z</lastmod>
+  </url>
+  <url>
     <loc>https://craig-shenton.github.io/RAPdown/updates.html</loc>
-    <lastmod>2022-12-11T18:57:23.859Z</lastmod>
+    <lastmod>2022-12-11T22:15:58.753Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/posts/rap-maturity/index.html</loc>
-    <lastmod>2022-12-11T18:57:24.751Z</lastmod>
+    <lastmod>2022-12-11T22:15:59.605Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/posts/welcome/index.html</loc>
-    <lastmod>2022-12-11T18:57:25.539Z</lastmod>
+    <lastmod>2022-12-11T22:16:00.493Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/index.html</loc>
-    <lastmod>2022-12-11T18:57:25.927Z</lastmod>
+    <lastmod>2022-12-11T22:16:00.913Z</lastmod>
   </url>
 </urlset>
