@@ -67,6 +67,34 @@
     "href": "updates.html",
     "title": "RAP Markdown",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n  \n\n\n\n\n\n\n\n\nMy First Post\n\n\n\n\n\n\n2022-12-11\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n  \n\n\n\n\n\n\n\n\nMy First Post\n\n\n\n\n\n\n2022-12-11\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\nQuarto Markdown Publishing & RAP Maturity\n\n\n\n\n\n\n2022-12-11\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/rap-maturity/index.html",
+    "href": "posts/rap-maturity/index.html",
+    "title": "RAP Maturity Framework",
+    "section": "",
+    "text": "Developed by NHS Digital RAP community.\nThere are three levels:\n\nBaseline - RAP fundamentals offering resilience against future change.\nSilver - Implementing best practice by following good analytical and software engineering standards.\nGold - Analysis as a product to further elevate your analytical work and enhance its reusability to the public."
+  },
+  {
+    "objectID": "posts/rap-maturity/index.html#baseline-rap---getting-the-fundamentals-right",
+    "href": "posts/rap-maturity/index.html#baseline-rap---getting-the-fundamentals-right",
+    "title": "RAP Maturity Framework",
+    "section": "Baseline RAP - getting the fundamentals right",
+    "text": "Baseline RAP - getting the fundamentals right\nIn order for a publication to be considered a reproducible analytical pipeline, it must at least meet all of the requirements of Baseline RAP:\n\nData produced by code in an open-source language (e.g., Python, R, SQL).\nCode is version controlled (i.e., Git & GitHub).\nRepository includes a README.md file (or equivalent) that clearly details steps a user must follow to reproduce the code.\nCode has been peer reviewed (i.e., use PRs and code reviews)\nCode is published in the open and linked to & from accompanying publication (if relevant)."
+  },
+  {
+    "objectID": "posts/rap-maturity/index.html#silver-rap---implementing-best-practice",
+    "href": "posts/rap-maturity/index.html#silver-rap---implementing-best-practice",
+    "title": "RAP Maturity Framework",
+    "section": "Silver RAP - implementing best practice",
+    "text": "Silver RAP - implementing best practice\nMeeting all of the above requirements, plus:\n\nOutputs are produced by code with minimal manual intervention.\nCode is well-documented including user guidance, explanation of code structure & methodology and docstrings for functions.\nCode is well-organised following standard directory format.\nReusable functions and/or classes are used where appropriate.\nCode adheres to agreed coding standards (e.g., PEP8).\nPipeline includes a testing framework (unit tests, back tests).\nRepository includes package dependency information.\nLogs are automatically recorded by the pipeline to ensure outputs are as expected.\nData is handled and output in a Tidy data format."
+  },
+  {
+    "objectID": "posts/rap-maturity/index.html#gold-rap---analysis-as-a-product",
+    "href": "posts/rap-maturity/index.html#gold-rap---analysis-as-a-product",
+    "title": "RAP Maturity Framework",
+    "section": "Gold RAP - analysis as a product",
+    "text": "Gold RAP - analysis as a product\nMeeting all of the above requirements, plus:\n\nCode is fully packaged.\nRepository automatically runs tests etc. via CI/CD or a different integration/deployment tool e.g. GitHub Actions.\nProcess runs based on event-based triggers (e.g., new data in database) or on a schedule.\nChanges to the RAP are clearly signposted. E.g. a changelog in the package, releases etc. (See gov.uk info on Semantic Versioning)"
   }
 ]

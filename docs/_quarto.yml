@@ -34,8 +34,6 @@ website:
     left:
       - text: "{RAP}down"
         href: index.qmd
-      - text: "RAP Checklist" 
-        file: rap-maturity-framework.qmd
       - text: "Updates" 
         file: updates.qmd
       - text: "Help"
@@ -64,12 +62,10 @@ website:
       collapse-level: 2
       align: left
       contents:
-        - section: "Content"
+        - section: "Documentation"
           contents:
             - text: "{RAP}down" 
               file: index.qmd
-            - text: "RAP Checklist" 
-              file: rap-maturity-framework.qmd
       right:
         - icon: github
           href: https://github.com/craig-shenton/RAPdown
@@ -86,10 +82,10 @@ format:
     code-overflow: wrap
     css: _assets/style/styles.css
     include-after-body: _assets/style/js.html
-    grid:
-      sidebar-width: 250px
-      body-width: 900px
-      margin-width: 300px
+    # grid:
+    #   sidebar-width: 250px
+    #   body-width: 900px
+    #   margin-width: 300px
     # # Code options
     # code-tools:
     #   source: false
