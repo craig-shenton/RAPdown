@@ -4,7 +4,6 @@ author: "Craig R Shenton"
 date: "2022-12-11"
 categories: [news]
 sidebar: false
-page-layout: article
 image: "thumbnail.jpg"
 description: "My First Post"
 page-layout: full
