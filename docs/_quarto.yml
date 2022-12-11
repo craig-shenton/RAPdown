@@ -29,12 +29,10 @@ website:
 
   navbar:
     background: light
-    logo: _assets/img/RAPdown.svg
-    logo-alt: "RAPdown logo."
     title: false
     collapse-below: lg
     left:
-      - text: "Introduction"
+      - text: "{RAP}down"
         href: index.qmd
       - text: "RAP Checklist" 
         file: rap-maturity-framework.qmd
@@ -68,7 +66,7 @@ website:
       contents:
         - section: "Content"
           contents:
-            - text: "Introduction" 
+            - text: "{RAP}down" 
               file: index.qmd
             - text: "RAP Checklist" 
               file: rap-maturity-framework.qmd
