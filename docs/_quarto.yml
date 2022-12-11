@@ -37,6 +37,10 @@ website:
         href: index.qmd
       - text: "Updates" 
         file: updates.qmd
+      - text: "Tutorials" 
+        file: tutorials/index.qmd
+      - text: "Documentation" 
+        file: documentation/index.qmd
       - text: "Help"
         menu:
           - text: "Report a Bug"
@@ -57,26 +61,36 @@ website:
         aria-label: GitHub
 
   sidebar:
-    - id: nav
-      style: "floating"
-      search: true
-      collapse-level: 2
-      align: left
-      contents:
-        - section: "Documentation"
-          contents:
-            - text: "{RAP}down" 
-              file: index.qmd
-      right:
-        - icon: github
-          href: https://github.com/craig-shenton/RAPdown
-          aria-label: GitHub
+    style: "floating"
+    pinned: true
+    contents:
+      - text: "Homepage" 
+        file: index.qmd
+      - text: "Updates" 
+        file: updates.qmd
+      - section: Tutorials
+        file: tutorials/index.qmd
+        contents: 
+          - auto: tutorials/*.qmd
+      - section: Documentation
+        file: documentation/index.qmd
+        contents: 
+          - auto: documentation/*.qmd
+      - section: FAQ
+        file: faq/index.qmd
+        contents: 
+          - auto: faq/*.qmd
+      # right:
+      #   - icon: github
+      #     href: https://github.com/craig-shenton/RAPdown
+      #     aria-label: GitHub
   comments:
     giscus:
       repo: craig-shenton/RAPdown
 format:
   html:
     toc: true
+    toc-depth: 4
     theme:
       light: [cosmo, _assets/style/theme.scss]
     code-copy: true

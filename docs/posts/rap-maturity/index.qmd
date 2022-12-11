@@ -2,11 +2,9 @@
 title: "RAP Maturity Framework"
 author: "Craig R Shenton"
 date: "2022-12-11"
-categories: [news]
-sidebar: false
+categories: [NHS, RAP]
 image: "nhsd-rap.png"
 description: "Quarto Markdown Publishing & RAP Maturity"
-page-layout: article
 title-block-banner: false
 ---
 

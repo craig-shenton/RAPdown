@@ -1,22 +1,13 @@
 ---
+title: "Updates"
+subtitle: "News, tips, and commentary about all things {RAP}down"
 listing:
-  contents: posts
-  feed: true
-  sort-ui: true
-  sort: 
-    - "date desc"
-    - "title desc"
-  type: default
-  image-height: 150px
-  image-placeholder: "_assets/img/quarto.png"
-  fields: [image, title, description, date, reading-time]
+  sort: "date desc"
+  contents: "posts"
+  sort-ui: false
+  filter-ui: false
   categories: true
-  date-format: "YYYY-MM-DD"
-  page-size: 9
-toc: false
-toc-location: body
-page-layout: article
-title-block-banner: false
+  feed: true
+page-layout: full
 comments: false
-sidebar: false
 ---

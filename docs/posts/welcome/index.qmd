@@ -3,10 +3,8 @@ title: "Welcome To My Blog"
 author: "Craig R Shenton"
 date: "2022-12-11"
 categories: [news]
-sidebar: false
 image: "thumbnail.jpg"
 description: "My First Post"
-page-layout: article
 title-block-banner: false
 ---
 
