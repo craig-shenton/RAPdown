@@ -33,5 +33,68 @@
   <pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate>
   <media:content url="https://github.com/craig-shenton/RAPdown/posts/welcome/thumbnail.jpg" medium="image" type="image/jpeg"/>
 </item>
+<item>
+  <title>RAP Maturity Framework</title>
+  <dc:creator>Craig R Shenton</dc:creator>
+  <link>https://github.com/craig-shenton/RAPdown/posts/rap-maturity/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="the-levels-of-rap-maturity-framework" class="level2">
+<h2 class="anchored" data-anchor-id="the-levels-of-rap-maturity-framework">The ‘Levels of RAP’ Maturity Framework</h2>
+<p>Developed by <a href="https://nhsdigital.github.io/rap-community-of-practice/introduction_to_RAP/levels_of_RAP/">NHS Digital RAP community</a>.</p>
+<p>There are three levels:</p>
+<ol type="1">
+<li>Baseline - <strong>RAP fundamentals</strong> offering resilience against future change.</li>
+<li>Silver - <strong>Implementing best practice</strong> by following good analytical and software engineering standards.</li>
+<li>Gold - <strong>Analysis as a product</strong> to further elevate your analytical work and enhance its reusability to the public.</li>
+</ol>
+</section>
+<section id="baseline-rap---getting-the-fundamentals-right" class="level2">
+<h2 class="anchored" data-anchor-id="baseline-rap---getting-the-fundamentals-right">Baseline RAP - getting the fundamentals right</h2>
+<p>In order for a publication to be considered a reproducible analytical pipeline, it must at least meet all of the requirements of Baseline RAP:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="">Data produced by code in an open-source language (e.g., Python, R, SQL).</li>
+<li><input type="checkbox" disabled="" checked="">Code is version controlled (i.e., Git &amp; GitHub).</li>
+<li><input type="checkbox" disabled="">Repository includes a README.md file (or equivalent) that clearly details steps a user must follow to reproduce the code.</li>
+<li><input type="checkbox" disabled="">Code has been peer reviewed (i.e., use PRs and code reviews)</li>
+<li><input type="checkbox" disabled="" checked="">Code is published in the open and linked to &amp; from accompanying publication (if relevant).</li>
+</ul>
+</section>
+<section id="silver-rap---implementing-best-practice" class="level2">
+<h2 class="anchored" data-anchor-id="silver-rap---implementing-best-practice">Silver RAP - implementing best practice</h2>
+<p><em>Meeting all of the above requirements, plus:</em></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="">Outputs are produced by code with minimal manual intervention.</li>
+<li><input type="checkbox" disabled="">Code is well-documented including user guidance, explanation of code structure &amp; methodology and docstrings for functions.</li>
+<li><input type="checkbox" disabled="">Code is well-organised following standard directory format.</li>
+<li><input type="checkbox" disabled="">Reusable functions and/or classes are used where appropriate.</li>
+<li><input type="checkbox" disabled="">Code adheres to agreed coding standards (e.g., PEP8).</li>
+<li><input type="checkbox" disabled="">Pipeline includes a testing framework (unit tests, back tests).</li>
+<li><input type="checkbox" disabled="">Repository includes package dependency information.</li>
+<li><input type="checkbox" disabled="">Logs are automatically recorded by the pipeline to ensure outputs are as expected.</li>
+<li><input type="checkbox" disabled="">Data is handled and output in a <a href="https://medium.com/@kimrodrikwa/untidy-data-a90b6e3ebe4c">Tidy data format</a>.</li>
+</ul>
+</section>
+<section id="gold-rap---analysis-as-a-product" class="level2">
+<h2 class="anchored" data-anchor-id="gold-rap---analysis-as-a-product">Gold RAP - analysis as a product</h2>
+<p><em>Meeting all of the above requirements, plus:</em></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="">Code is fully packaged.</li>
+<li><input type="checkbox" disabled="">Repository automatically runs tests etc. via <a href="https://github.com/skills/continuous-integration">CI</a>/CD or a different integration/deployment tool e.g.&nbsp;<a href="https://docs.github.com/en/actions">GitHub Actions</a>.</li>
+<li><input type="checkbox" disabled="">Process runs based on event-based triggers (e.g., new data in database) or on a schedule.</li>
+<li><input type="checkbox" disabled="">Changes to the RAP are clearly signposted. E.g. a changelog in the package, releases etc. (See gov.uk info on <a href="https://github.com/alphagov/govuk-frontend/blob/main/docs/contributing/versioning.md">Semantic Versioning</a>)</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://github.com/craig-shenton/RAPdown/posts/rap-maturity/index.html</guid>
+  <pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate>
+  <media:content url="https://github.com/craig-shenton/RAPdown/posts/rap-maturity/nhsd-rap.png" medium="image" type="image/png" height="92" width="144"/>
+</item>
 </channel>
 </rss>
