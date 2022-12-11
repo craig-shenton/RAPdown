@@ -1,5 +1,11 @@
 
-.navbar-brand-container {
+  .navbar-logo {
+  max-height: 40px;
+  width: 90px;
+  padding-right: 0px;
+  }
+  
+  .navbar-brand-container {
     margin-right: 0;
   }
   
