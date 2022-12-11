@@ -21,12 +21,12 @@ comments: false
 
 ### A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
-- The standard for creating analytical outputs in government
-- Improve reliability, transparency, and reproducibility
+- RAP is the gold standard for creating analytical outputs in government
+- RAP publications improve reliability, transparency, and reproducibility
 
 ::: {.hero-buttons}
-[Get Started](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
-[Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+[Get {RAP}down](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+[Read the docs](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 ::: 
 
 :::
