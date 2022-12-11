@@ -1,5 +1,5 @@
 ---
-pagetitle: "RAPdown"
+pagetitle: "{RAP}down"
 page-layout: custom
 section-divs: false
 toc: false
@@ -17,7 +17,7 @@ comments: false
 
 ::: {.content-block}
 
-# ![](_assets/img/RAPdown_hex.svg) RAPdown
+# ![](_assets/img/RAPdown_hex.svg) {RAP}down
 
 ### A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
@@ -68,19 +68,19 @@ Plotly is a popular data visualisation library with a wide range of interactive 
 
 ::: {.feature}
 ### Approved Statitical Functions
-`Coming soon`.
+`Coming soon`
 
 :::
 
 ::: {.feature}
 ### CI/CD GitHub Actions
-`Coming soon`.
+`Coming soon`
 
 :::
 
 ::: {.feature}
 ### Containerised Deployment
-`Coming soon`.
+`Coming soon`
 
 :::
 
