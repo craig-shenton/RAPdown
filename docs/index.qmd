@@ -87,11 +87,10 @@ Plotly is a popular data visualisation library with a wide range of interactive 
 :::
 :::
 
-
 ::: {.get-started .alt-background}
 ::: {.content-block}
 
-### Read more about Reproducible Analytical Pipelines at NHS Digital's Community of Practice
+### Read more about Reproducible Analytical Pipelines (RAP) at NHS Digital's Community of Practice
 
 [Why RAP?](https://nhsdigital.github.io/rap-community-of-practice/introduction_to_RAP/why_RAP_is_important/){.btn-action-primary  .btn-action .btn .btn-success .btn-lg role="button"}
 

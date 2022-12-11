@@ -13,6 +13,7 @@ website:
   # favicon: _assets/favicon/favicon.ico
   repo-url: https://github.com/craig-shenton/RAPdown
   repo-actions: [edit, issue]
+  site-url: https://craig-shenton.github.io/RAPdown/
 
   twitter-card:
     creator: "@craigrshenton"
