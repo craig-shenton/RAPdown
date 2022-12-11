@@ -3,6 +3,7 @@ title: "Welcome To My Blog"
 author: "Craig R Shenton"
 date: "2022-12-11"
 categories: [news]
+toc: false
 ---
 
 This is the first post in a Quarto blog. Welcome!
