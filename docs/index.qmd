@@ -41,7 +41,7 @@ image: _assets/img/hero_right.png
 
 ::: {.feature}
 ### Interactive Markdown Reports
-Templates for interactive `.html` reports
+Templates for interactive `.html` reports in Markdown; a lightweight markup language that is easy to read and write. Reports can be parameterised to create custom versions for many different geographies or topics.
 
 ::: {.learn-more}
 [Learn more »](docs/computations/python.qmd)
@@ -49,8 +49,8 @@ Templates for interactive `.html` reports
 :::
 
 ::: {.feature}
-### Make-like Data Pipelines in R
-test
+### `Make`-like Data Pipelines
+Workflow management to define dependencies in data processing pipelines. Specify the order in which tasks should be executed, and automatically rebuild parts of the pipeline if the input data or any of the intermediate results change.
 
 ::: {.learn-more}
 [Learn more »](docs/output-formats/all-formats.qmd)
@@ -59,7 +59,7 @@ test
 
 ::: {.feature}
 ### Pre-configured Plotly Charts
-test
+Plotly is a popular data visualisation library with a wide range of interactive charts and graphs. RAPdown charts have been pre-configured, adjusting the colors, fonts, annotations, and labels to match a in-house style.
 
 ::: {.learn-more}
 [Learn more »](docs/authoring/markdown-basics.qmd)
@@ -68,29 +68,20 @@ test
 
 ::: {.feature}
 ### Approved Statitical Functions
+`Coming soon`.
 
-
-::: {.learn-more}
-[Learn more »](docs/tools/jupyter-lab.qmd)
-:::
 :::
 
 ::: {.feature}
 ### CI/CD GitHub Actions
-test
+`Coming soon`.
 
-::: {.learn-more}
-[Learn more »](docs/interactive/)
-:::
 :::
 
 ::: {.feature}
 ### Containerised Deployment
-test
+`Coming soon`.
 
-::: {.learn-more}
-[Learn more »](docs/websites/)
-:::
 :::
 
 :::
@@ -100,7 +91,7 @@ test
 ::: {.get-started .alt-background}
 ::: {.content-block}
 
-### Read more at NHS Digital's RAP Community of Practice
+### Read more about Reproducible Analytical Pipelines at NHS Digital's Community of Practice
 
 [Why RAP?](https://nhsdigital.github.io/rap-community-of-practice/introduction_to_RAP/why_RAP_is_important/){.btn-action-primary  .btn-action .btn .btn-success .btn-lg role="button"}
 
