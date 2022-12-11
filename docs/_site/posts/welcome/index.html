@@ -63,10 +63,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="_assets/style/styles.css">
+<link rel="stylesheet" href="../../_assets/style/styles.css">
 <meta property="og:title" content="RAP Markdown - Welcome To My Blog">
 <meta property="og:description" content="My First Post">
-<meta property="og:image" content="thumbnail.jpg">
+<meta property="og:image" content="https://craig-shenton.github.io/RAPdown/posts/welcome/thumbnail.jpg">
 <meta property="og:site-name" content="RAP Markdown">
 <meta name="twitter:title" content="RAP Markdown - Welcome To My Blog">
 <meta name="twitter:description" content="My First Post">
@@ -185,6 +185,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<script type="text/javascript">
+
+    // replace cmd keyboard shortcut w/ control on non-Mac platforms
+    const kPlatformMac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
+    if (!kPlatformMac) {
+       var kbds = document.querySelectorAll("kbd")
+       kbds.forEach(function(kbd) {
+          kbd.innerHTML = kbd.innerHTML.replace(/⌘/g, '⌃');
+       });
+    }
+    
+    </script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
