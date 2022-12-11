@@ -6,7 +6,7 @@ categories: [news]
 sidebar: false
 image: "thumbnail.jpg"
 description: "My First Post"
-page-layout: full
+page-layout: article
 title-block-banner: false
 ---
 

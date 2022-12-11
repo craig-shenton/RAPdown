@@ -15,7 +15,7 @@ listing:
   page-size: 9
 toc: false
 toc-location: body
-page-layout: full
+page-layout: article
 title-block-banner: false
 comments: false
 sidebar: false
