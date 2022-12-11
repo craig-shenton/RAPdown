@@ -6,6 +6,9 @@ categories: [news]
 sidebar: false
 page-layout: article
 image: "thumbnail.jpg"
+description: "My First Post"
+page-layout: full
+title-block-banner: false
 ---
 
 Welcome to my new blog! I'm excited to share my thoughts, ideas, and experiences with you on this platform. This blog will be a place where I can share my passions and interests, as well as provide helpful information and insights on topics that I'm knowledgeable about.
