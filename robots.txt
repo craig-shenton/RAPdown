@@ -1,1 +1,1 @@
-Sitemap: https://github.com/craig-shenton/RAPdown/sitemap.xml
+Sitemap: https://craig-shenton.github.io/RAPdown/sitemap.xml

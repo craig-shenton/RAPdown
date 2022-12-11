@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>RAP Markdown</title>
-<link>https://github.com/craig-shenton/RAPdown/updates.html</link>
-<atom:link href="https://github.com/craig-shenton/RAPdown/updates.xml" rel="self" type="application/rss+xml"/>
+<link>https://craig-shenton.github.io/RAPdown/updates.html</link>
+<atom:link href="https://craig-shenton.github.io/RAPdown/updates.xml" rel="self" type="application/rss+xml"/>
 <description>RAP Markdown</description>
 <generator>quarto-1.2.269</generator>
 <lastBuildDate>Sun, 11 Dec 2022 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Welcome To My Blog</title>
   <dc:creator>Craig R Shenton</dc:creator>
-  <link>https://github.com/craig-shenton/RAPdown/posts/welcome/index.html</link>
+  <link>https://craig-shenton.github.io/RAPdown/posts/welcome/index.html</link>
   <description><![CDATA[ 
 
 
@@ -29,14 +29,14 @@
 
  ]]></description>
   <category>news</category>
-  <guid>https://github.com/craig-shenton/RAPdown/posts/welcome/index.html</guid>
+  <guid>https://craig-shenton.github.io/RAPdown/posts/welcome/index.html</guid>
   <pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://github.com/craig-shenton/RAPdown/posts/welcome/thumbnail.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://craig-shenton.github.io/RAPdown/posts/welcome/thumbnail.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>RAP Maturity Framework</title>
   <dc:creator>Craig R Shenton</dc:creator>
-  <link>https://github.com/craig-shenton/RAPdown/posts/rap-maturity/index.html</link>
+  <link>https://craig-shenton.github.io/RAPdown/posts/rap-maturity/index.html</link>
   <description><![CDATA[ 
 
 
@@ -92,9 +92,9 @@
 
  ]]></description>
   <category>news</category>
-  <guid>https://github.com/craig-shenton/RAPdown/posts/rap-maturity/index.html</guid>
+  <guid>https://craig-shenton.github.io/RAPdown/posts/rap-maturity/index.html</guid>
   <pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://github.com/craig-shenton/RAPdown/posts/rap-maturity/nhsd-rap.png" medium="image" type="image/png" height="92" width="144"/>
+  <media:content url="https://craig-shenton.github.io/RAPdown/posts/rap-maturity/nhsd-rap.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 </channel>
 </rss>
