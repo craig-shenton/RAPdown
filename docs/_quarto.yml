@@ -29,8 +29,8 @@ website:
 
   navbar:
     background: light
-    logo: _assets/img/quarto.png
-    logo-alt: "Quarto logo."
+    logo: _assets/img/RAPdown.svg
+    logo-alt: "RAPdown logo."
     title: false
     collapse-below: lg
     left:

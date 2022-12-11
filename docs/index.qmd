@@ -17,7 +17,7 @@ comments: false
 
 ::: {.content-block}
 
-# RAPdown
+# ![](_assets/img/RAPdown_hex.svg) RAPdown
 
 ### A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
