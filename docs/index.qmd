@@ -7,7 +7,7 @@ css: index.css
 editor: source
 description: | 
   Reproducible Analytical Pipeline (RAP) compliant Quarto publications
-image: _assets/img/hero_right.png
+comments: false
 ---
 
 :::: {.hero-banner}
@@ -41,7 +41,7 @@ image: _assets/img/hero_right.png
 
 ::: {.feature}
 ### Interactive Markdown Reports
-Templates for interactive `.html` reports in Markdown; a lightweight markup language that is easy to read and write. Reports can be parameterised to create custom versions for many different geographies or topics.
+Templates for interactive `.html` reports in Markdown; a lightweight markup language that is easy to read and write. Templates can be parameterised to create multiple versions of the same report, charts, and analyses for many different geographical hierarchies.
 
 ::: {.learn-more}
 [Learn more »](docs/computations/python.qmd)
@@ -50,7 +50,7 @@ Templates for interactive `.html` reports in Markdown; a lightweight markup lang
 
 ::: {.feature}
 ### `Make`-like Data Pipelines
-Workflow management to define dependencies in data processing pipelines. Specify the order in which tasks should be executed, and automatically rebuild parts of the pipeline if the input data or any of the intermediate results change.
+Use `{targets}` to define dependencies in data processing pipelines. Specify the order in which tasks should be executed, and automatically rebuild parts of the pipeline if the input data or any of the intermediate results change.
 
 ::: {.learn-more}
 [Learn more »](docs/output-formats/all-formats.qmd)
@@ -59,7 +59,7 @@ Workflow management to define dependencies in data processing pipelines. Specify
 
 ::: {.feature}
 ### Pre-configured Plotly Charts
-Plotly is a popular data visualisation library with a wide range of interactive charts and graphs. RAPdown charts have been pre-configured, adjusting the colors, fonts, annotations, and labels to match a in-house style.
+Plotly is a popular data visualisation library with a wide range of interactive charts and graphs. RAPdown charts have been pre-configured, adjusting the colors, fonts, annotations, and labels to match the in-house style.
 
 ::: {.learn-more}
 [Learn more »](docs/authoring/markdown-basics.qmd)

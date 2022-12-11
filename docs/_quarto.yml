@@ -38,6 +38,8 @@ website:
         href: index.qmd
       - text: "RAP Checklist" 
         file: rap-maturity-framework.qmd
+      - text: "Updates" 
+        file: updates.qmd
       - text: "Help"
         menu:
           - text: "Report a Bug"
@@ -74,6 +76,9 @@ website:
         - icon: github
           href: https://github.com/craig-shenton/RAPdown
           aria-label: GitHub
+  comments:
+    giscus:
+      repo: craig-shenton/RAPdown
 format:
   html:
     toc: true
