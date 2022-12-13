@@ -33,7 +33,7 @@ website:
     title: false
     collapse-below: lg
     left:
-      - text: "{RAP}down"
+      - text: "{RAPdown}"
         href: index.qmd
       - text: "Updates" 
         file: updates.qmd
