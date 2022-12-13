@@ -10,7 +10,7 @@ website:
   title: "RAP Markdown"
   description: "RAP Markdown"
   # date: now
-  # favicon: _assets/favicon/favicon.ico
+  favicon: _assets/img/rapdown_colour.ico
   repo-url: https://github.com/craig-shenton/RAPdown
   repo-actions: [edit, issue]
   site-url: https://craig-shenton.github.io/RAPdown/
@@ -80,10 +80,10 @@ website:
         file: documentation/index.qmd
         contents: 
           - auto: documentation/*.qmd
-      - section: FAQ
-        file: faq/index.qmd
-        contents: 
-          - auto: faq/*.qmd
+      - text: "FAQ"
+        file: faq.qmd
+      - text: "About"
+        file: about.qmd
       # right:
       #   - icon: github
       #     href: https://github.com/craig-shenton/RAPdown

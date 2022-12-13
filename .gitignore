@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # Mac Files
 .DS_Store
+
+# local build files
+/docs/_site/
