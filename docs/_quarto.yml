@@ -53,7 +53,7 @@ website:
             href: "https://github.com/craig-shenton/RAPdown/discussions"
           - text: "FAQ"
             icon: "question-circle"
-            href: faq/index.qmd
+            href: faq.qmd
     right:
       - text: "About"
         href: about.qmd

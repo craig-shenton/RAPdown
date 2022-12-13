@@ -29,8 +29,9 @@ Reproducible Analytical Pipelines are the gold standard for creating analytical 
 - Leaves you time to focus on more advanced analytics
 
 ::: {.hero-buttons}
-[Get {RAP}down](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
-[Read the docs](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
+[Get started](tutorials/index.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+<!-- [Read the docs](documentation/index.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+[Latest](updates.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"} -->
 ::: 
 
 :::
@@ -48,7 +49,7 @@ Reproducible Analytical Pipelines are the gold standard for creating analytical 
 Templates for interactive `.html` reports in Markdown; a lightweight markup language that is easy to read and write. Templates can be parameterised to create multiple versions of the same report, charts, and analyses for many different geographical hierarchies.
 
 ::: {.learn-more}
-[Learn more »](docs/computations/python.qmd)
+[Learn more »](tutorials/markdown-reports.qmd)
 :::
 :::
 
@@ -57,7 +58,7 @@ Templates for interactive `.html` reports in Markdown; a lightweight markup lang
 Use `{targets}` to define dependencies in data processing pipelines. Specify the order in which tasks should be executed, and automatically rebuild parts of the pipeline if the input data or any of the intermediate results change.
 
 ::: {.learn-more}
-[Learn more »](docs/output-formats/all-formats.qmd)
+[Learn more »](tutorials/data-pipelines.qmd)
 :::
 :::
 
@@ -66,7 +67,7 @@ Use `{targets}` to define dependencies in data processing pipelines. Specify the
 Plotly is a popular data visualisation library with a wide range of interactive charts and graphs. RAPdown charts have been pre-configured, adjusting the colors, fonts, annotations, and labels to match the in-house style.
 
 ::: {.learn-more}
-[Learn more »](docs/authoring/markdown-basics.qmd)
+[Learn more »](tutorials/plotly-charts.qmd)
 :::
 :::
 
