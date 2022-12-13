@@ -1,4 +1,4 @@
-# RAPdown
+# {RAPdown} Framework
 
 <!-- PROJECT LOGO -->
 <!-- <br />
@@ -10,7 +10,9 @@
 
 A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
-[Explore Documentation](https://craig-shenton.github.io/RAPdown/) - [Report Bug](https://github.com/craig-shenton/RAPdown/issues) - [Request Feature](https://github.com/craig-shenton/RAPdown/issues)
+- [Explore Documentation](https://craig-shenton.github.io/RAPdown/)
+- [Report Bug](https://github.com/craig-shenton/RAPdown/issues)
+- [Request Feature](https://github.com/craig-shenton/RAPdown/issues)
 
 _**Note:** No private data are stored in this repository._
 
