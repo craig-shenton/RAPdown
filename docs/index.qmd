@@ -24,9 +24,9 @@ comments: false
 Reproducible Analytical Pipelines are the gold standard for creating analytical outputs in government[^goldacre]:
 
 - Transparancy increases trust and confidence in your results
-- They allow others to easily verify and replicate your analyses
-- Reduce the risk of human error and inconsistencies in your work
-- Leaves your analysts time to focus on more complex analysis
+- Allow others to easily verify and replicate your analyses
+- Reduce the risk of human error and inconsistencies
+- Leaves you time to focus on more advanced analytics
 
 ::: {.hero-buttons}
 [Get {RAP}down](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
@@ -101,4 +101,4 @@ Plotly is a popular data visualisation library with a wide range of interactive 
 :::
 :::
 
-[^goldacre] See Professor Ben Goldacre’s [Better, Broader, Safer](https://www.gov.uk/government/publications/better-broader-safer-using-health-data-for-research-and-analysis) review into how the efficient and safe use of health data for research and analysis can benefit patients and the healthcare sector.
+[^goldacre]: See Professor Ben Goldacre’s [Better, Broader, Safer](https://www.gov.uk/government/publications/better-broader-safer-using-health-data-for-research-and-analysis) review into how the efficient and safe use of health data for research and analysis can benefit patients and the healthcare sector.
