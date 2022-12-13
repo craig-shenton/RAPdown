@@ -16,18 +16,18 @@
   
   @media (min-width: 1400px) {
   .content-block {
-    max-width: 1237px;
+    max-width: 1350px;
     margin-left: auto;
     margin-right: auto;
   }
   .navbar {
-    max-width: 1237px;
+    max-width: 1350px;
     left: 50%;
     transform: translateX(-50%);
   }
   .nav-footer {
     position: relative;
-    max-width: 1237px;
+    max-width: 1350px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -572,4 +572,6 @@ iframe.reveal-demo {
   font-weight: 500;  
 }
 
-  
+.footnotes-end-of-document {
+  display: none;
+}
