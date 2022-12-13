@@ -53,6 +53,8 @@ website:
             icon: "question-circle"
             href: faq/index.qmd
     right:
+      - text: "About"
+        href: about.qmd
       - icon: twitter
         href: https://twitter.com/craigrshenton
         aria-label: Twitter
