@@ -41,6 +41,8 @@ website:
         file: tutorials/index.qmd
       - text: "Documentation" 
         file: documentation/index.qmd
+      - text: "Example Report"
+        file: ae_attendance.html
       - text: "Help"
         menu:
           - text: "Report a Bug"

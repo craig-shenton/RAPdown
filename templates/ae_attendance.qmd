@@ -1,0 +1,498 @@
+---
+title: "A&E Attendances Dataset"
+date: "`r Sys.Date()`"
+date-format: "D MMMM YYYY"
+format:
+  html:
+    # Table of Contents options
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    toc-title: Contents
+    number-sections: false
+    number-depth: 3
+    # Render options
+    theme: cosmo
+    anchor-sections: false
+    html-math-method: katex
+    # Code options
+    code-tools:
+      source: false
+      toggle: false
+      caption: none
+    code-fold: true
+    code-summary: "Show code"
+    embed-resources: true
+    standalone: true
+    # URL options
+    link-external-icon: true
+    link-external-newwindow: true
+    # References
+    citations-hover: true
+    footnotes-hover: true
+    callout-appearance: simple
+    callout-collapse: true
+    cap-location: bottom
+    title-block-banner: '#005EB8'
+    backgroundcolor: '#f0f4f5'
+    mainfont: 'Open Sans'
+crossref:
+  fig-title: '**Figure**'
+  fig-labels: arabic
+#execute: 
+#  echo: false
+---
+
+```{r load library}
+#| include: False
+
+# Load libs and global vars
+# -------------------------------------------------------------------------
+library(here)
+#library(ggrepel)
+#library(tidyverse)
+#options(tidyverse.quiet = TRUE)
+#library(dplyr)
+#library(lemon)
+#library(sf)
+##library(scales)
+#library(zoo)
+#library(lubridate, warn.conflicts = FALSE)
+#library(plyr, include.only = c("rbind.fill"))
+library(plotly)
+library(DT)
+
+# Needed
+library(scales)
+library(ggrepel)
+library(lubridate)
+library(dplyr)
+library(forcats)
+library(tidyr)
+```
+
+```{css, echo=FALSE}
+.panel-tabset .nav-item {
+  font-size: 16px;
+}
+
+.dt-buttons {
+    /* margin-bottom: -7px; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-bottom: 0.3em;
+}
+
+.figure-caption {
+  color: #373a3c;
+  font-size: 16px;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: #495057;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.tab-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #fff;
+}
+
+.quarto-title-banner {
+  padding-top: 30px;
+  padding-right: 0px;
+  padding-bottom: 40px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.quarto-title-meta  {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  background-color: #fff;
+}
+
+#title-block-header.quarto-title-block {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  background-color: #fff;
+}
+
+.quarto-title {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 16'%3E%3Cpath fill='%23fff' d='M0 0h40v16H0z'%3E%3C/path%3E%3Cpath fill='%23005eb8' d='M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6'%3E%3C/path%3E%3C/svg%3E");
+      display: block;
+      background-color: #005EB8;
+      background-repeat: no-repeat;
+      background-size: 90px;
+      background-position: 0px 0px;
+}
+
+.quarto-title p.subtitle {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: 300;
+}
+
+.quarto-title h1.title {
+      text-indent: 3.7em;
+      font-size: 30px;
+}
+
+.callout-caption-container {
+  color: #005EB8;
+}
+
+.callout {
+  background-color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: .25rem;
+}
+
+.callout-note.callout {
+  border-left-color: #005EB8;
+  background-color: white;
+}
+
+.callout.callout-style-simple {
+  padding: .01em .7em;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: lighter;
+}
+
+h1, .h1 {
+  font-size:30px;
+  font-weight:600;
+}
+
+h2, .h2 {
+ font-size:20px;
+ font-weight:600;
+}
+
+h3, .h3 {
+ font-size:18px;
+ font-weight:600;
+}
+
+.header-section-number {
+  color: #373a3c;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.opensans {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+ -moz-osx-font-smoothing:grayscale;
+ -webkit-font-smoothing:antialiased;
+}
+```
+
+# The A&E Attendances Dataset
+
+This report explains how to use the `ae_attendances` dataset from the [{NHSRdatasets}](https://nhs-r-community.github.io/NHSRdatasets/) package. The dataset contains all reported A&E attendances for the period April 2016 through March 2019.
+
+First let's open and explore the dataset to show the first 10 rows of data.
+
+:::: panel-tabset
+
+## A&E Attendances
+
+```{r data table}
+library(NHSRdatasets)
+data("ae_attendances")
+
+ae_attendances %>%
+  # set the period column to show in Month-Year format
+  mutate_at(vars(period), format, "%b-%y") %>% 
+  # set the numeric columns to have a comma at the 1000's place
+  mutate_at(vars(attendances, breaches, admissions), comma) %>%
+  # show the first 10 rows
+  head(10) %>%
+  # format as a table
+  knitr::kable()
+```
+
+## Reference
+
+::: {.callout-note collapse="false"}
+## Data source
+
+- [NHS England Statistical Work Areas][nhs_swa]
+- available under the [Open Government Licence v3.0][ogl_v3]
+:::
+
+The dataset contains:
+
+- `period`: the month that this activity relates to, stored as a date (1st of each month)
+- `org_code`: the [ODS][ods]
+code for the organisation that this activity relates to
+- `type`: the [Department Type][ae_types]
+for this activity, either 1, 2, or other
+- `attendances`: the number of attendances for this department type at this organisation
+for this month
+- `breaches`: the number of attendances that breached the 4 hour target
+- `admissions`: the number of attendances that resulted in an admission to the
+hospital
+
+:::: 
+
+## England A&E 4 hours Performance
+
+We can calculate the 4 hours performance for England as a whole like so:
+
+:::: panel-tabset
+
+## England 4 Hours Performance
+
+```{r england performance}
+england_performance <- ae_attendances %>%
+  group_by(period) %>%
+  summarise_at(vars(attendances, breaches), sum) %>%
+  mutate(performance = 1 - breaches / attendances)
+
+# format for display
+england_performance %>% 
+  # same format options as above
+  mutate_at(vars(period), format, "%b-%y") %>% 
+  mutate_at(vars(attendances, breaches), comma) %>%
+  # this time show the performance column as a percentage
+  mutate_at(vars(performance), percent) %>%
+  # show the first 10 rows and format as a table
+  head(10) %>%
+  knitr::kable()
+```
+
+:::: 
+
+We can now plot the monthly performance
+
+:::: panel-tabset
+
+## England A&E Performance
+
+```{r england performance plot}
+ggplot(england_performance, aes(period, performance)) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(labels = percent) +
+  labs(x = "Month of attendance",
+       y = "% of attendances that met the 4 hour standard",
+       title = "NHS England A&E 4 Hour Performance",
+       caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+```
+
+::::
+
+We can clearly see the "Winter Pressures" where performance drops.
+
+## Performance by Trust Type
+
+We can also inspect performance for the [different types of department][ae_types]:
+
+:::: panel-tabset
+
+## England Performance by Type
+
+```{r england performance by type}
+ae_attendances %>%
+  group_by(period, type) %>%
+  summarise_if(is.numeric, sum) %>%
+  mutate(performance = 1 - breaches / attendances) %>%
+  ggplot(aes(period, performance, colour = type)) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(labels = percent) +
+  #facet_wrap(vars(type), nrow = 1) +
+  theme(legend.position = "bottom") +
+  labs(x = "Month of attendance",
+       y = "% of attendances that met the 4 hour standard",
+       title = "NHS England A&E 4 Hour Performance",
+       subtitle = "By Department Type",
+       caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+```
+
+## Reference
+
+According to the [NHS Data Dictonary][ae_types] the type of Accident and Emergency Department is determined according to the activity performed as follows:
+
+### National Codes:
+- `01`:	Emergency departments are a Consulatant led 24 hour service with full resuscitation facilities and designated accommodation for the reception of accident and emergency Patients
+- `02`:	Consultant led mono specialty accident and emergency service (e.g. ophthalmology, dental) with designated accommodation for the reception of Patients 
+- `03`:	Other type of A&E/minor injury activity with designated accommodation for the reception of accident and emergency Patients. The department may be doctor led or NURSE led and treats at least minor injuries and illnesses and can be routinely accessed without appointment. A service mainly or entirely appointment based (for example a GP Practice or Out-Patient Clinic) is excluded even though it may treat a number of Patients with minor illness or injury. Excludes NHS walk-in centres
+- `04`:	NHS walk in centres
+
+::::
+
+From this it appears as if only the type 1 departments have the seasonal
+drops, type 2 and "other" departments remain pretty consistent.
+
+## Best and worst for performance?
+
+We could create a similar table of data for performance by each individual trust,
+but it would be useful to only look at trusts that have a type 1 department as
+it appears from the chart above that these departments have the largest
+variation.
+
+:::: panel-tabset
+
+## Performance by Trust
+
+```{r performance_by_trust}
+performance_by_trust <- ae_attendances %>%
+  group_by(org_code, period) %>%
+  # make sure that this trust has a type 1 department
+  filter(any(type == 1)) %>%
+  summarise_at(vars(attendances, breaches), sum) %>%
+  mutate(performance = 1 - breaches / attendances)
+
+# format for display
+performance_by_trust %>%
+  mutate_at(vars(period), format, "%b-%y") %>% 
+  mutate_at(vars(attendances, breaches), comma) %>%
+  mutate_at(vars(performance), percent) %>%
+  head(10) %>%
+  knitr::kable()
+```
+
+:::
+
+From this table we can calculate the overall performance by each trust and then
+organise the trusts by their overall performance.
+
+```{r performance_by_trust_ranking}
+performance_by_trust_ranking <- performance_by_trust %>%
+  summarise(performance = 1 - sum(breaches) / sum(attendances)) %>%
+  arrange(performance) %>%
+  pull(org_code) %>%
+  as.character()
+
+### Top Performing Trusts
+tail(performance_by_trust_ranking, 5)
+
+### Bottom Performing Trusts
+head(performance_by_trust_ranking, 5)
+```
+
+:::: panel-tabset
+
+## Top Performing
+
+```{r performance_by_trust top-5-plot}
+performance_by_trust %>%
+  ungroup() %>%
+  mutate_at(vars(org_code), fct_relevel, performance_by_trust_ranking) %>%
+  filter(org_code %in% c(head(performance_by_trust_ranking, 5))) %>%
+  ggplot(aes(period, performance)) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(labels = percent) +
+  facet_wrap(vars(org_code), nrow = 2) +
+  theme(legend.position = "bottom") +
+  labs(x = "Month of attendance",
+       y = "% of attendances that met the 4 hour standard",
+       title = "NHS England A&E 4 Hour Performance",
+       subtitle = "Top 5 over the whole 3 years",
+       caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+```
+
+## Bottom Performing
+
+```{r performance_by_trust bottom-5-plot}
+performance_by_trust %>%
+  ungroup() %>%
+  mutate_at(vars(org_code), fct_relevel, performance_by_trust_ranking) %>%
+  filter(org_code %in% c(tail(performance_by_trust_ranking, 5))) %>%
+  ggplot(aes(period, performance)) +
+  geom_line() +
+  geom_point() +
+  scale_y_continuous(labels = percent) +
+  facet_wrap(vars(org_code), nrow = 2) +
+  theme(legend.position = "bottom") +
+  labs(x = "Month of attendance",
+       y = "% of attendances that met the 4 hour standard",
+       title = "NHS England A&E 4 Hour Performance",
+       subtitle = "Bottom 5 over the whole 3 years",
+       caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+```
+
+::::
+
+## Benchmarking
+
+It is sometimes useful to see how an organisation stacks up against all of the
+other organisations. Below we create a chart where each organisation is shown as
+a point, ordered by performance from left (highest performance) to right (lowest)
+performance.
+
+It's useful to indicate certain organisations on the chart, below I am showing
+the 3 organisations that are at the lower quartile, median and upper quartile,
+however you could change this to instead pick out specific organisations (using
+a reference table and `left_join` or hard coding with `case_when`).
+
+:::: panel-tabset
+
+## Performance Spine Chart
+
+```{r bencmarking plot}
+ae_attendances %>%
+  filter(period == last(period)) %>%
+  group_by(org_code) %>%
+  filter(any(type == 1)) %>%
+  summarise_at(vars(attendances, breaches), sum) %>%
+  mutate(performance = 1 - breaches/attendances,
+         overall_performance = 1 - sum(breaches)/sum(attendances),
+         org_code = fct_reorder(org_code, -performance)) %>%
+  #
+  arrange(performance) %>%
+  # lets highlight the organsiations that are at the lower and upper quartile
+  # and at the median. First "tile" the data into 4 groups, then we use the
+  # lag function to check to see if the value changes between rows. We will get
+  # NA for the first row, so replace this with FALSE
+  mutate(highlight = ntile(n = 4),
+         highlight = replace_na(highlight != lag(highlight), FALSE)) %>%
+
+  ggplot(aes(org_code, performance)) +
+  geom_hline(aes(yintercept = overall_performance)) +
+  geom_point(aes(fill = highlight), show.legend = FALSE, pch = 21) +
+  geom_text_repel(aes(label = ifelse(highlight, as.character(org_code), NA)),
+                  na.rm = TRUE) +
+  scale_fill_manual(values = c("TRUE" = "black",
+                               "FALSE" = NA)) +
+  scale_y_continuous(labels = percent) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_blank(),
+        axis.line = element_line(),
+        axis.ticks.y = element_line())
+```
+
+::::
+
+# Footnotes
+
+Adapted from the vignette in the [{NHSRdatasets}](https://nhs-r-community.github.io/NHSRdatasets/) package, writen by [Thomas Jemmett][tj_email] and developed by the [NHS-R Community](https://nhsrcommunity.com/).
+
+[tj_email]: mailto:thomas.jemmett@nhs.net
+[su_web]:   https://www.strategyunitwm.nhs.uk/ 
+[nhs_swa]:  https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/
+[ogl_v3]:   https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+[ods]:      https://digital.nhs.uk/services/organisation-data-service
+[ae_types]: https://web.archive.org/web/20200128111444/https://www.datadictionary.nhs.uk/data_dictionary/attributes/a/acc/accident_and_emergency_department_type_de.asp
