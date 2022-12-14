@@ -1,0 +1,11 @@
+---
+title: "0.0.1"
+author: "Craig R Shenton"
+date: "2022-12-14"
+categories: [Updates]
+description: " rapdown 0.0.1 (Alpha)"
+title-block-banner: false
+---
+
+* Documentation site published
+* Example report based on `ae_attendances` dataset from the `{NHSRdatasets}` package published

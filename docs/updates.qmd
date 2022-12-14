@@ -1,6 +1,6 @@
 ---
 title: "Updates"
-subtitle: "News, tips, and commentary about all things {RAPdown}"
+subtitle: "News, tips, and commentary about all things RAP"
 listing:
   sort: "date desc"
   contents: "posts"

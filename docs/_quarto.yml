@@ -36,15 +36,24 @@ website:
       - text: "Homepage"
         icon: "house-door"
         href: index.qmd
-      - text: "Updates"
-        icon: "code-square"
-        href: updates.qmd
       - text: "Tutorials"
         icon: "bookmark-check"
         href: tutorials/index.qmd
       - text: "Documentation"
         icon: "file-earmark-text"
         href: documentation/index.qmd
+      - text: "Updates"
+        icon: "code-square"
+        menu:
+          - text: "Blog"
+            icon: "code-square"
+            href: updates.qmd
+          - text: "0.0.1"
+            icon: "code-square"
+            href: "https://github.com/craig-shenton/RAPdown/discussions"
+          - text: "Changelog"
+            icon: "code-square"
+            href: updates/changelog.qmd
       - text: "Help"
         icon: "info-square"
         menu:
@@ -74,10 +83,6 @@ website:
     contents:
       - text: "Homepage" 
         file: index.qmd
-      - section: Updates
-        file: updates/index.qmd
-        contents: 
-          - auto: updates/*.qmd
       - section: Tutorials
         file: tutorials/index.qmd
         contents: 
@@ -88,6 +93,10 @@ website:
           - auto: documentation/*.qmd
       - text: "Example Report"
         href: ae_attendance.html
+      - section: Updates
+        file: updates.qmd
+        contents: 
+          - auto: updates/*.qmd
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
