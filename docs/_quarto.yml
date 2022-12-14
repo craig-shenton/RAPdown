@@ -74,8 +74,10 @@ website:
     contents:
       - text: "Homepage" 
         file: index.qmd
-      - text: "Updates"
-        file: updates.qmd
+      - section: Updates
+        file: updates/index.qmd
+        contents: 
+          - auto: updates/*.qmd
       - section: Tutorials
         file: tutorials/index.qmd
         contents: 
