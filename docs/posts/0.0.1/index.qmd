@@ -1,8 +1,9 @@
 ---
-title: "Rapdown 0.0.1 (Alpha)"
+title: "{Rapdown} 0.0.1 (Alpha)"
 author: "Craig R Shenton"
 date: "2022-12-14"
 categories: [Updates]
+description: "Changelog"
 title-block-banner: false
 ---
 

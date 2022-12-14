@@ -66,8 +66,8 @@ website:
     right:
       - text: "About"
         href: about.qmd
-      - icon: box-seam
-        href: https://cloud.r-project.org/web/packages/
+#      - icon: box-seam
+#        href: https://cloud.r-project.org/web/packages/
       - icon: twitter
         href: https://twitter.com/craigrshenton
         aria-label: Twitter
