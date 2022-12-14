@@ -46,7 +46,7 @@ website:
         icon: "file-earmark-text"
         href: documentation/index.qmd
       - text: "Help"
-        icon: "info-circle"
+        icon: "info-square"
         menu:
           - text: "Report a Bug"
             icon: "bug"
