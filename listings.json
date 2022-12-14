@@ -1,9 +1,6 @@
 [
   {
-    "listing": "/updates.html",
-    "items": [
-      "/posts/rap-maturity/index.html",
-      "/posts/welcome/index.html"
-    ]
+    "listing": "/updates/index.html",
+    "items": []
   }
 ]

@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "updates/changelog.html",
+    "href": "updates/changelog.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "Source: NEWS.md"
+  },
+  {
+    "objectID": "updates/changelog.html#rapdown-0.0.1-alpha",
+    "href": "updates/changelog.html#rapdown-0.0.1-alpha",
+    "title": "Changelog",
+    "section": "rapdown 0.0.1 (Alpha)",
+    "text": "rapdown 0.0.1 (Alpha)\n\nDocumentation site published\nExample report based on ae_attendances dataset from the {NHSRdatasets} package published"
+  },
+  {
+    "objectID": "updates/index.html",
+    "href": "updates/index.html",
+    "title": "Updates",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About {Rapdown}",
@@ -19,13 +40,6 @@
     "title": "About {Rapdown}",
     "section": "Citation",
     "text": "Citation\nShenton, CR (2022). Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications. https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown.\n@Manual{,\n  title = {\"Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications.\"},\n  author = {Craig R Shenton},\n  year = {2022},\n  note = {https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown},\n}"
-  },
-  {
-    "objectID": "updates.html",
-    "href": "updates.html",
-    "title": "Updates",
-    "section": "",
-    "text": "RAP Maturity Framework\n\n\n\n\n\n\n\nNHS\n\n\nRAP\n\n\n\n\nQuarto Markdown Publishing & RAP Maturity\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\nMy First Post\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/rap-maturity/index.html",
