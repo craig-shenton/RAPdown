@@ -17,7 +17,7 @@ comments: false
 
 ::: {.content-block}
 
-<h1><img src="_assets/img/rapdown_blue.svg" width="100" height="100" /> {RAPdown} <small>v0.1</small></h1>
+<h1><img src="_assets/img/rapdown_blue.svg" width="100" height="100" /> {RAPdown} v0.1</h1>
 
 ### A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
