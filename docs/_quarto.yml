@@ -74,8 +74,7 @@ website:
     contents:
       - text: "Homepage" 
         file: index.qmd
-      - text: "Updates" 
-        icon: "code-square"
+      - text: "Updates"
         file: updates.qmd
       - section: Tutorials
         file: tutorials/index.qmd
