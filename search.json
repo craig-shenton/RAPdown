@@ -14,13 +14,6 @@
     "text": "rapdown 0.0.1 (Alpha)\n\nDocumentation site published\nExample report based on ae_attendances dataset from the {NHSRdatasets} package published"
   },
   {
-    "objectID": "updates/index.html",
-    "href": "updates/index.html",
-    "title": "Updates",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About {Rapdown}",
@@ -40,6 +33,20 @@
     "title": "About {Rapdown}",
     "section": "Citation",
     "text": "Citation\nShenton, CR (2022). Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications. https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown.\n@Manual{,\n  title = {\"Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications.\"},\n  author = {Craig R Shenton},\n  year = {2022},\n  note = {https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown},\n}"
+  },
+  {
+    "objectID": "updates.html",
+    "href": "updates.html",
+    "title": "Updates",
+    "section": "",
+    "text": "0.0.1\n\n\n\n\n\n\n\nUpdates\n\n\n\n\nrapdown 0.0.1 (Alpha)\n\n\n\n\n\n\nDec 14, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nRAP Maturity Framework\n\n\n\n\n\n\n\nNHS\n\n\nRAP\n\n\n\n\nQuarto Markdown Publishing & RAP Maturity\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\nMy First Post\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/0.0.1/index.html",
+    "href": "posts/0.0.1/index.html",
+    "title": "0.0.1",
+    "section": "",
+    "text": "Documentation site published\nExample report based on ae_attendances dataset from the {NHSRdatasets} package published"
   },
   {
     "objectID": "posts/rap-maturity/index.html",

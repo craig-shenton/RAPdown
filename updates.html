@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.280">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./tutorials/index.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./updates/changelog.html" rel="next">
+<link href="./ae_attendance.html" rel="prev">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -95,11 +95,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="_assets/style/styles.css">
 <link rel="alternate" type="application/rss+xml" title="RAP Markdown" href="updates.xml"><meta property="og:title" content="RAP Markdown - Updates">
-<meta property="og:description" content="News, tips, and commentary about all things {RAPdown}">
+<meta property="og:description" content="News, tips, and commentary about all things RAP">
 <meta property="og:image" content="https://craig-shenton.github.io/RAPdown/posts/welcome/thumbnail.jpg">
 <meta property="og:site-name" content="RAP Markdown">
 <meta name="twitter:title" content="RAP Markdown - Updates">
-<meta name="twitter:description" content="News, tips, and commentary about all things {RAPdown}">
+<meta name="twitter:description" content="News, tips, and commentary about all things RAP">
 <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/800388889114451968/Ta6tqm7s_400x400.jpg">
 <meta name="twitter:creator" content="@craigrshenton">
 <meta name="twitter:card" content="summary_large_image">
@@ -122,11 +122,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Homepage</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./updates.html"><i class="bi bi-code-square" role="img">
-</i> 
- <span class="menu-text">Updates</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./tutorials/index.html"><i class="bi bi-bookmark-check" role="img">
 </i> 
  <span class="menu-text">Tutorials</span></a>
@@ -136,6 +131,30 @@ ul.task-list li input[type="checkbox"] {
 </i> 
  <span class="menu-text">Documentation</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-updates" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-code-square" role="img">
+</i> 
+ <span class="menu-text">Updates</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-updates">    
+        <li>
+    <a class="dropdown-item" href="./updates.html"><i class="bi bi-code-square" role="img">
+</i> 
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/craig-shenton/RAPdown/discussions"><i class="bi bi-code-square" role="img">
+</i> 
+ <span class="dropdown-text">0.0.1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./updates/changelog.html"><i class="bi bi-code-square" role="img">
+</i> 
+ <span class="dropdown-text">Changelog</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-info-square" role="img">
@@ -201,11 +220,6 @@ ul.task-list li input[type="checkbox"] {
   <a href="./index.html" class="sidebar-item-text sidebar-link">Homepage</a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./updates.html" class="sidebar-item-text sidebar-link active">Updates</a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./tutorials/index.html" class="sidebar-item-text sidebar-link">Tutorials</a>
@@ -251,6 +265,21 @@ ul.task-list li input[type="checkbox"] {
   <a href="./ae_attendance.html" class="sidebar-item-text sidebar-link">Example Report</a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./updates.html" class="sidebar-item-text sidebar-link active">Updates</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./updates/changelog.html" class="sidebar-item-text sidebar-link">Changelog</a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./faq.html" class="sidebar-item-text sidebar-link">FAQ</a>
@@ -267,14 +296,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="NHS">NHS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RAP">RAP <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="NHS">NHS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RAP">RAP <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Updates">Updates <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">Updates</h1>
-<p class="subtitle lead">News, tips, and commentary about all things {RAPdown}</p>
+<p class="subtitle lead">News, tips, and commentary about all things RAP</p>
 </div>
 
 
@@ -295,7 +324,46 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="NHS,RAP" data-listing-date-sort="1670716800000" data-listing-file-modified-sort="1671036123809" data-listing-reading-time-sort="1.715">
+<div class="quarto-post image-right" data-index="0" data-categories="Updates" data-listing-date-sort="1670976000000" data-listing-file-modified-sort="1671060092193" data-listing-reading-time-sort="0.075">
+<div class="thumbnail">
+<a href="./posts/0.0.1/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/0.0.1/index.html"></a></p>
+</div>
+<div class="body">
+<a href="./posts/0.0.1/index.html">
+<h3 class="no-anchor listing-title">
+0.0.1
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Updates'); return false;">
+Updates
+</div>
+</div>
+<a href="./posts/0.0.1/index.html">
+<div class="listing-description">
+<p>rapdown 0.0.1 (Alpha)</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/0.0.1/index.html">
+<div class="listing-date">
+Dec 14, 2022
+</div>
+<div class="listing-author">
+Craig R Shenton
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="NHS,RAP" data-listing-date-sort="1670716800000" data-listing-file-modified-sort="1671060092193" data-listing-reading-time-sort="1.715">
 <div class="thumbnail">
 <p><a href="./posts/rap-maturity/index.html"> <img src="./posts/rap-maturity/nhsd-rap.png" class="thumnail-image"> </a></p>
 </div>
@@ -333,7 +401,7 @@ Craig R Shenton
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1670716800000" data-listing-file-modified-sort="1671036123809" data-listing-reading-time-sort="0.835">
+<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1670716800000" data-listing-file-modified-sort="1671060092193" data-listing-reading-time-sort="0.835">
 <div class="thumbnail">
 <p><a href="./posts/welcome/index.html"> <img src="./posts/welcome/thumbnail.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -520,13 +588,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Homepage</span>
+      <a href="./ae_attendance.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Example Report</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./tutorials/index.html" class="pagination-link">
-        <span class="nav-page-text">Tutorials</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./updates/changelog.html" class="pagination-link">
+        <span class="nav-page-text">Changelog</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -89,11 +89,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Homepage</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../updates.qmd"><i class="bi bi-code-square" role="img">
-</i> 
- <span class="menu-text">Updates</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../tutorials/index.html"><i class="bi bi-bookmark-check" role="img">
 </i> 
  <span class="menu-text">Tutorials</span></a>
@@ -103,6 +98,30 @@ ul.task-list li input[type="checkbox"] {
 </i> 
  <span class="menu-text">Documentation</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-updates" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-code-square" role="img">
+</i> 
+ <span class="menu-text">Updates</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-updates">    
+        <li>
+    <a class="dropdown-item" href="../updates.html"><i class="bi bi-code-square" role="img">
+</i> 
+ <span class="dropdown-text">Blog</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/craig-shenton/RAPdown/discussions"><i class="bi bi-code-square" role="img">
+</i> 
+ <span class="dropdown-text">0.0.1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../updates/changelog.html"><i class="bi bi-code-square" role="img">
+</i> 
+ <span class="dropdown-text">Changelog</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-info-square" role="img">
@@ -170,27 +189,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../updates/index.html" class="sidebar-item-text sidebar-link">Updates</a>
+            <a href="../tutorials/index.html" class="sidebar-item-text sidebar-link">Tutorials</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../updates/changelog.html" class="sidebar-item-text sidebar-link">Changelog</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../tutorials/index.html" class="sidebar-item-text sidebar-link">Tutorials</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorials/data-pipelines.html" class="sidebar-item-text sidebar-link">Data Pipelines</a>
@@ -211,11 +215,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../documentation/index.html" class="sidebar-item-text sidebar-link">Documentation</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../documentation/parameters.html" class="sidebar-item-text sidebar-link active">Parameters</a>
@@ -228,6 +232,21 @@ ul.task-list li input[type="checkbox"] {
   <a href="../ae_attendance.html" class="sidebar-item-text sidebar-link">Example Report</a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../updates.html" class="sidebar-item-text sidebar-link">Updates</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../updates/changelog.html" class="sidebar-item-text sidebar-link">Changelog</a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../faq.html" class="sidebar-item-text sidebar-link">FAQ</a>
