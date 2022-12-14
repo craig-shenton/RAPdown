@@ -50,10 +50,7 @@ website:
             href: blog.qmd
           - text: "0.0.1"
             icon: "code-square"
-            href: /posts/0.0.1/index.qmd
-          - text: "Changelog"
-            icon: "list-check"
-          - href: https://craig-shenton.github.io/RAPdown/updates.html#category=Updates
+            href: posts/0.0.1/index.qmd
       - text: "Help"
         icon: "info-square"
         menu:
@@ -98,8 +95,7 @@ website:
       - section: Updates
         file: blog.qmd
         contents: 
-          - text: "Changelog"
-          - href: https://craig-shenton.github.io/RAPdown/updates.html#category=Updates
+          - auto: posts/*.qmd
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
