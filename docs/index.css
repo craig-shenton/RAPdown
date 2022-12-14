@@ -1,4 +1,3 @@
-
 .content-block {
     padding-top: 20px;
     padding-bottom: 10px;
@@ -35,14 +34,14 @@
   
   .hero-banner {
     position: relative;
-    background-color: rgb(237,243,249);
+    background-color: #f0f4f5;
     display: flex;
     justify-content: center;
   }
   
   .hero-banner h1 {
-    color: #39729E;
-    font-size: 2.5rem;
+    color: #005EB8;
+    font-size: 2.8rem;
   }
   
   
@@ -275,13 +274,13 @@
 
 #quarto-header {
   border-bottom: 1px solid #dee2e6;
-  background-color: #f8f9fa;
+  background-color: #005eb8;
 }
 
 @media (min-width: 991.98px) {
 #quarto-header {
   border-bottom: 1px solid #dee2e6;
-  background-color: #f8f9fa;
+  background-color: #005eb8;
 }
 }
 
@@ -482,11 +481,12 @@ iframe.reveal-demo {
 
 .btn-action-primary {
   color: white;
-  background-color: #447099 !important;
+  background-color: #005eb8 !important;
 }
 
 .btn-action-primary:hover {
-  color: white;
+  background-color: #ffeb3b !important;
+  color: #000 !important;
 }
 
 .btn-action {

@@ -10,7 +10,7 @@ website:
   title: "RAP Markdown"
   description: "RAP Markdown"
   # date: now
-  favicon: _assets/img/rapdown_colour.ico
+  # favicon: _assets/img/rapdown_colour.ico
   repo-url: https://github.com/craig-shenton/RAPdown
   repo-actions: [edit, issue]
   site-url: https://craig-shenton.github.io/RAPdown/
@@ -34,15 +34,19 @@ website:
     collapse-below: lg
     left:
       - text: "{RAPdown}"
+        icon: "house-fill"
         href: index.qmd
-      - text: "Updates" 
-        file: updates.qmd
-      - text: "Tutorials" 
-        file: tutorials/index.qmd
-      - text: "Documentation" 
-        file: documentation/index.qmd
+      - text: "Updates"
+        icon: "code-square"
+        href: updates.qmd
+      - text: "Tutorials"
+        icon: "bookmark-check"
+        href: tutorials/index.qmd
+      - text: "Documentation"
+        icon: "file-earmark-text"
+        href: documentation/index.qmd
       - text: "Example Report"
-        file: ae_attendance.html
+        href: ae_attendance.html
       - text: "Help"
         menu:
           - text: "Report a Bug"

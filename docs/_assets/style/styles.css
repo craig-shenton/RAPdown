@@ -1,4 +1,59 @@
 
+  /*  nav bar start */ 
+
+.navbar-dark {
+   background-color: #005eb8;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  background-color: #005eb8;
+  color: #fff;
+}
+
+.navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+  width: 26px;
+  height: 26px;
+  color: #fff;
+  opacity: 1;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+  background-color: #005eb8;
+  color: #fff;
+}
+}
+
+.navbar-dark a:hover {
+  text-decoration: underline;
+  color: #fff !important;
+}
+
+.navbar-dark a:focus {
+  text-decoration: underline;
+  color: #fff !important;
+}
+
+.dropdown-menu a:hover {
+  text-decoration: none;
+  background-color: #ffeb3b !important;
+  color: #000 !important;
+}
+
+/*  nav bar end */ 
+
+@media (min-width: 991.98px) {
+  #quarto-header {
+    border-bottom: 1px solid #dee2e6;
+    background-color: #005eb8;
+  }
+  }
+      
   .navbar-brand > img {
   max-height: 40px;
   width: 90px;
@@ -53,13 +108,6 @@
   .navbar .bi-rss
    {
     font-size: .8em;
-  }
-  }
-  
-  @media (min-width: 991.98px) {
-  #quarto-header {
-    border-bottom: 1px solid #dee2e6;
-    background-color: #f8f9fa;
   }
   }
   
