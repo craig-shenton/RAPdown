@@ -52,7 +52,7 @@ Templates for interactive `.html` reports in Markdown; a lightweight markup lang
 :::
 
 ::: {.feature}
-### `Make`-like Data Pipelines
+### Make-like Data Pipelines
 Use `{targets}` to define dependencies in data processing pipelines. Specify the order in which tasks should be executed, and automatically rebuild parts of the pipeline if the input data or any of the intermediate results change.
 
 ::: {.learn-more}

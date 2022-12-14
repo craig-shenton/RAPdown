@@ -1,6 +1,26 @@
 ---
-pagetitle: "About"
-description: | 
-  About {RAP}down
+title: "About {Rapdown}"
 comments: false
 ---
+
+## Authors
+
+[Craig Robert Shenton, PhD](https://github.com/craig-shenton) `author`, `maintainer`, `copyright holder`.
+
+## Licence
+
+MIT License, see [`LICENSE.md`](https://github.com/craig-shenton/RAPdown/blob/main/LICENSE)
+
+## Citation
+
+Shenton, CR (2022). *Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications.* [https://craig-shenton.github.io/RAPdown/](https://craig-shenton.github.io/RAPdown/), [https://github.com/craig-shenton/RAPdown](https://github.com/craig-shenton/RAPdown).
+
+```r
+@Manual{,
+  title = {"Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications."},
+  author = {Craig R Shenton},
+  year = {2022},
+  note = {https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown},
+}
+```
+
