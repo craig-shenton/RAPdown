@@ -21,12 +21,12 @@ comments: false
 
 ### A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
-Reproducible Analytical Pipelines are the gold standard for creating analytical outputs in government[^goldacre]:
+##### Reproducible Analytical Pipelines are the gold standard for creating analytical outputs in government and the public sector[^goldacre]
 
-- Transparancy increases trust and confidence in your results
-- Allow others to easily verify and replicate your analyses
-- Reduce the risk of human error and inconsistencies
-- Leaves you time to focus on more advanced analytics
+- RAP allows others to easily verify and replicate your analyses
+- Transparancy increases trust and confidence in our publications
+- Open standards promote best practice across industry
+- Automation leaves time to focus on more advanced analytics
 
 ::: {.hero-buttons}
 [Get started](tutorials/index.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
