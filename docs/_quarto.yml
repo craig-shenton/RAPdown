@@ -43,17 +43,17 @@ website:
         icon: "file-earmark-text"
         href: documentation/index.qmd
       - text: "Updates"
-        icon: "code-square"
+        icon: "patch-check"
         menu:
           - text: "Blog"
-            icon: "code-square"
-            href: updates.qmd
+            icon: "rss"
+            href: blog.qmd
           - text: "0.0.1"
             icon: "code-square"
-            href: "https://github.com/craig-shenton/RAPdown/discussions"
+            href: /posts/0.0.1/index.qmd
           - text: "Changelog"
-            icon: "code-square"
-            href: updates/changelog.qmd
+            icon: "list-check"
+          - href: https://craig-shenton.github.io/RAPdown/updates.html#category=Updates
       - text: "Help"
         icon: "info-square"
         menu:
@@ -69,6 +69,8 @@ website:
     right:
       - text: "About"
         href: about.qmd
+      - icon: box-seam
+        href: https://cloud.r-project.org/web/packages/
       - icon: twitter
         href: https://twitter.com/craigrshenton
         aria-label: Twitter
@@ -94,9 +96,10 @@ website:
       - text: "Example Report"
         href: ae_attendance.html
       - section: Updates
-        file: updates.qmd
+        file: blog.qmd
         contents: 
-          - auto: updates/*.qmd
+          - text: "Changelog"
+          - href: https://craig-shenton.github.io/RAPdown/updates.html#category=Updates
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
