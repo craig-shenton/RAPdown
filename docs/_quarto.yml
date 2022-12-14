@@ -45,9 +45,8 @@ website:
       - text: "Documentation"
         icon: "file-earmark-text"
         href: documentation/index.qmd
-      - text: "Example Report"
-        href: ae_attendance.html
       - text: "Help"
+        icon: "info-circle"
         menu:
           - text: "Report a Bug"
             icon: "bug"
@@ -85,6 +84,8 @@ website:
         file: documentation/index.qmd
         contents: 
           - auto: documentation/*.qmd
+      - text: "Example Report"
+        href: ae_attendance.html
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
