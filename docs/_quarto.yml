@@ -69,6 +69,7 @@ website:
         aria-label: GitHub
 
   sidebar:
+    id: toc-side
     style: "floating"
     pinned: true
     contents:

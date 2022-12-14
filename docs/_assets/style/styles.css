@@ -19,7 +19,6 @@
 
 .navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active {
   color: #fff;
-  text-decoration: underline;
 }
 
 @media (min-width: 992px) {
