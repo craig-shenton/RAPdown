@@ -43,14 +43,8 @@ website:
         icon: "file-earmark-text"
         href: documentation/index.qmd
       - text: "Updates"
-        icon: "patch-check"
-        menu:
-          - text: "Blog"
-            icon: "rss"
-            href: blog.qmd
-          - text: "0.0.1"
-            icon: "code-square"
-            href: posts/0.0.1/index.qmd
+        icon: "rss"
+        href: blog.qmd
       - text: "Help"
         icon: "info-square"
         menu:
@@ -90,12 +84,13 @@ website:
         file: documentation/index.qmd
         contents: 
           - auto: documentation/*.qmd
+      - section: Examples
+        contents: 
+          - auto: examples/*.html
       - text: "Example Report"
         href: ae_attendance.html
-      - section: Updates
+      - text: Updates
         file: blog.qmd
-        contents: 
-          - auto: posts/*.qmd
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
