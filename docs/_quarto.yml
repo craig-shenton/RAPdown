@@ -36,18 +36,21 @@ website:
       - text: "Homepage"
         icon: "house-door"
         href: index.qmd
-      - text: "Updates"
-        icon: "code-square"
-        href: updates.qmd
       - text: "Tutorials"
         icon: "bookmark-check"
         href: tutorials/index.qmd
       - text: "Documentation"
         icon: "file-earmark-text"
         href: documentation/index.qmd
+      - text: "Updates"
+        icon: "rss"
+        href: blog.qmd
+    right:
       - text: "Help"
-        icon: "info-square"
         menu:
+          - text: "About"
+            icon: "info-circle"
+            href: about.qmd
           - text: "Report a Bug"
             icon: "bug"
             href: "https://github.com/craig-shenton/RAPdown/issues"
@@ -57,9 +60,6 @@ website:
           - text: "FAQ"
             icon: "question-circle"
             href: faq.qmd
-    right:
-      - text: "About"
-        href: about.qmd
       - icon: twitter
         href: https://twitter.com/craigrshenton
         aria-label: Twitter
@@ -74,8 +74,6 @@ website:
     contents:
       - text: "Homepage" 
         file: index.qmd
-      - text: "Updates"
-        file: updates.qmd
       - section: Tutorials
         file: tutorials/index.qmd
         contents: 
@@ -84,8 +82,11 @@ website:
         file: documentation/index.qmd
         contents: 
           - auto: documentation/*.qmd
-      - text: "Example Report"
-        href: ae_attendance.html
+      - section: Examples
+        contents: 
+          - auto: examples/*.html
+      - text: Updates
+        file: blog.qmd
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
@@ -120,3 +121,5 @@ format:
     # code-summary: "Show code"
     # code-copy: true
     # code-overflow: wrap
+#      - icon: box-seam
+#        href: https://cloud.r-project.org/web/packages/
