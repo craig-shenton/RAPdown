@@ -6,8 +6,7 @@
 # -------------------------------------------------------------------------
 
 # FILE:           ae_attendances.R
-# DESCRIPTION:    Ingest NHS-R dataset `ae_attendances` as .csv to simulate
-#                 real-world data pipleine.
+# DESCRIPTION:    Validate NHS-R dataset `ae_attendances` dataset
 # CONTRIBUTORS:   Craig R. Shenton
 # CONTACT:        craig.shenton@nhs.net
 # CREATED:        15 Dec 2022
@@ -18,21 +17,34 @@
 # -------------------------------------------------------------------------
 library(here)
 library(readr)
-library(NHSRdatasets)
-source("utilities/create_directory.R")
+library(validate)
 
 # load dataset
 # -------------------------------------------------------------------------
 data_path <- "data"
-end_state <- "raw"
+start_state <- "raw"
 source <- "NHSRdatasets"
-sink_file <- "ae_attendances.csv"
+source_file <- "ae_attendances.csv"
 
-data("ae_attendances")
-df <- ae_attendances
+metric_path <- here(data_path, start_state, source)
+ae_attendances <- readr::read_csv(here(metric_path, source_file),
+                                  show_col_types = FALSE)
+
+# validate dataset
+# -------------------------------------------------------------------------
+rules <- validator(ae_attendances,
+                   speed >= 0
+                 , dist >= 0
+                 , speed/dist <= 1.5
+                 , cor(speed, dist) >= 0.2)
 
 # write data to .csv
 # -------------------------------------------------------------------------
+data_path <- "data"
+end_state <- "interim"
+source <- "NHSRdatasets"
+source_file <- "ae_attendances.csv"
+
 write_path <- here(data_path, end_state, source)
 create_directory(write_path) # check if dir exist, else create it
 readr::write_csv(df, here(write_path, sink_file), na = "NA")

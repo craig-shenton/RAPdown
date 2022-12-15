@@ -216,14 +216,32 @@ First let's open and explore the dataset to show the first 10 rows of data.
 ## A&E Attendances
 
 ```{r data table}
-library(NHSRdatasets)
-data("ae_attendances")
+# load dataset and create formatted table
+# -------------------------------------------------------------------------
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(readr)
+})
+# library(NHSRdatasets)
+# data(ae_attendances)
 
+# set data path
+data_path <- "data"
+start_state <- "raw"
+source <- "NHSRdatasets"
+source_file <- "ae_attendances.csv"
+
+# load data
+metric_path <- here(data_path, start_state, source)
+ae_attendances <- readr::read_csv(here(metric_path, source_file),
+                                  show_col_types = FALSE)
+
+# format and create table
 ae_attendances %>%
   # set the period column to show in Month-Year format
-  mutate_at(vars(period), format, "%b-%y") %>% 
+  dplyr::mutate_at(vars(period), format, "%b-%y") %>% 
   # set the numeric columns to have a comma at the 1000's place
-  mutate_at(vars(attendances, breaches, admissions), comma) %>%
+  dplyr::mutate_at(vars(attendances, breaches, admissions), comma) %>%
   # show the first 10 rows
   head(10) %>%
   # format as a table
