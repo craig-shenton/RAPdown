@@ -28,6 +28,13 @@
     "text": "test"
   },
   {
+    "objectID": "updates.html",
+    "href": "updates.html",
+    "title": "Updates",
+    "section": "",
+    "text": "RAP Maturity Framework\n\n\n\n\n\n\n\nNHS\n\n\nRAP\n\n\n\n\nQuarto Markdown Publishing & RAP Maturity\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\nMy First Post\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/rap-maturity/index.html",
     "href": "posts/rap-maturity/index.html",
     "title": "RAP Maturity Framework",
@@ -56,25 +63,11 @@
     "text": "Gold RAP - analysis as a product\nMeeting all of the above requirements, plus:\n\nCode is fully packaged.\nRepository automatically runs tests etc. via CI/CD or a different integration/deployment tool e.g. GitHub Actions.\nProcess runs based on event-based triggers (e.g., new data in database) or on a schedule.\nChanges to the RAP are clearly signposted. E.g. a changelog in the package, releases etc. (See gov.uk info on Semantic Versioning)"
   },
   {
-    "objectID": "posts/v0.0.1/index.html",
-    "href": "posts/v0.0.1/index.html",
-    "title": "v0.0.1 (Alpha)",
-    "section": "",
-    "text": "Documentation site published\nExample report based on ae_attendances dataset from the {NHSRdatasets} package published"
-  },
-  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "Welcome to my new blog! I’m excited to share my thoughts, ideas, and experiences with you on this platform. This blog will be a place where I can share my passions and interests, as well as provide helpful information and insights on topics that I’m knowledgeable about.\nI’m passionate about many things, but some of the main topics that I’ll be writing about on this blog include technology, data science, and personal development. I’ll be sharing tips and tricks for using new technologies, discussing the latest trends and developments in the field of data science, and offering advice on how to improve your personal and professional skills.\nI hope that you’ll find my blog interesting and informative, and that you’ll come back often to read my latest posts. I welcome your feedback and suggestions, and I’m looking forward to connecting with you and engaging in meaningful discussions on this platform.\nThank you for visiting my blog, and I hope that you’ll enjoy what you read here. Happy reading!\nWritten by ChatGPT."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Updates",
-    "section": "",
-    "text": "v0.0.1 (Alpha)\n\n\n\n\n\n\n\nUpdates\n\n\n\n\nChangelog\n\n\n\n\n\n\nDec 14, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nRAP Maturity Framework\n\n\n\n\n\n\n\nNHS\n\n\nRAP\n\n\n\n\nQuarto Markdown Publishing & RAP Maturity\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\nMy First Post\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "documentation/parameters.html",
