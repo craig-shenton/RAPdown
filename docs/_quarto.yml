@@ -45,9 +45,12 @@ website:
       - text: "Updates"
         icon: "rss"
         href: blog.qmd
+    right:
       - text: "Help"
-        icon: "info-square"
         menu:
+          - text: "About"
+            icon: "info-circle"
+            href: about.qmd
           - text: "Report a Bug"
             icon: "bug"
             href: "https://github.com/craig-shenton/RAPdown/issues"
@@ -57,9 +60,6 @@ website:
           - text: "FAQ"
             icon: "question-circle"
             href: faq.qmd
-    right:
-      - text: "About"
-        href: about.qmd
       - icon: twitter
         href: https://twitter.com/craigrshenton
         aria-label: Twitter
