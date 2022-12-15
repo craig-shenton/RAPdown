@@ -60,8 +60,6 @@ website:
     right:
       - text: "About"
         href: about.qmd
-#      - icon: box-seam
-#        href: https://cloud.r-project.org/web/packages/
       - icon: twitter
         href: https://twitter.com/craigrshenton
         aria-label: Twitter
@@ -87,8 +85,6 @@ website:
       - section: Examples
         contents: 
           - auto: examples/*.html
-      - text: "Example Report"
-        href: ae_attendance.html
       - text: Updates
         file: blog.qmd
       - text: "FAQ"
@@ -125,3 +121,5 @@ format:
     # code-summary: "Show code"
     # code-copy: true
     # code-overflow: wrap
+#      - icon: box-seam
+#        href: https://cloud.r-project.org/web/packages/
