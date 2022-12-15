@@ -84,9 +84,8 @@ website:
           - auto: documentation/*.qmd
       - section: Examples
         contents: 
-          - auto: examples/*.html
-      - text: Updates
-        file: updates.qmd
+          - text: "A&E Attendances"
+            file: ae_attendance.html
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
