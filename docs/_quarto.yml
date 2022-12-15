@@ -44,7 +44,7 @@ website:
         href: documentation/index.qmd
       - text: "Updates"
         icon: "rss"
-        href: blog.qmd
+        href: updates.qmd
     right:
       - text: "Help"
         menu:
@@ -86,7 +86,7 @@ website:
         contents: 
           - auto: examples/*.html
       - text: Updates
-        file: blog.qmd
+        file: updates.qmd
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
