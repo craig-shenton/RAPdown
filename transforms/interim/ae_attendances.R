@@ -18,6 +18,7 @@
 library(here)
 library(readr)
 library(validate)
+source("utilities/create_directory.R")
 
 # load dataset
 # -------------------------------------------------------------------------
@@ -29,21 +30,21 @@ source_file <- "ae_attendances.csv"
 metric_path <- here(data_path, start_state, source)
 ae_attendances <- readr::read_csv(here(metric_path, source_file),
                                   show_col_types = FALSE)
+df <- ae_attendances
 
 # validate dataset
 # -------------------------------------------------------------------------
-rules <- validator(ae_attendances,
-                   speed >= 0
-                 , dist >= 0
-                 , speed/dist <= 1.5
-                 , cor(speed, dist) >= 0.2)
+rules <- validate::validator(attendances >= 0)
+
+out <- validate::confront(ae_attendances, rules)
+validation_report <- summary(out)
 
 # write data to .csv
 # -------------------------------------------------------------------------
 data_path <- "data"
 end_state <- "interim"
 source <- "NHSRdatasets"
-source_file <- "ae_attendances.csv"
+sink_file <- "ae_attendances.csv"
 
 write_path <- here(data_path, end_state, source)
 create_directory(write_path) # check if dir exist, else create it
