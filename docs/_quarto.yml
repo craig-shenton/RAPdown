@@ -74,8 +74,6 @@ website:
     contents:
       - text: "Homepage" 
         file: index.qmd
-      - text: "Updates"
-        file: updates.qmd
       - section: Tutorials
         file: tutorials/index.qmd
         contents: 
@@ -122,3 +120,5 @@ format:
     # code-summary: "Show code"
     # code-copy: true
     # code-overflow: wrap
+#      - icon: box-seam
+#        href: https://cloud.r-project.org/web/packages/
