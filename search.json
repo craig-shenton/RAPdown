@@ -21,11 +21,11 @@
     "text": "Citation\nShenton, CR (2022). Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications. https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown.\n@Manual{,\n  title = {\"Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications.\"},\n  author = {Craig R Shenton},\n  year = {2022},\n  note = {https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown},\n}"
   },
   {
-    "objectID": "posts/0.0.1/index.html",
-    "href": "posts/0.0.1/index.html",
-    "title": "0.0.1",
+    "objectID": "tutorials/data-pipelines.html",
+    "href": "tutorials/data-pipelines.html",
+    "title": "Data Pipelines",
     "section": "",
-    "text": "Documentation site published\nExample report based on ae_attendances dataset from the {NHSRdatasets} package published"
+    "text": "test"
   },
   {
     "objectID": "posts/rap-maturity/index.html",
@@ -56,6 +56,13 @@
     "text": "Gold RAP - analysis as a product\nMeeting all of the above requirements, plus:\n\nCode is fully packaged.\nRepository automatically runs tests etc. via CI/CD or a different integration/deployment tool e.g. GitHub Actions.\nProcess runs based on event-based triggers (e.g., new data in database) or on a schedule.\nChanges to the RAP are clearly signposted. E.g. a changelog in the package, releases etc. (See gov.uk info on Semantic Versioning)"
   },
   {
+    "objectID": "posts/v0.0.1/index.html",
+    "href": "posts/v0.0.1/index.html",
+    "title": "v0.0.1 (Alpha)",
+    "section": "",
+    "text": "Documentation site published\nExample report based on ae_attendances dataset from the {NHSRdatasets} package published"
+  },
+  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
@@ -67,7 +74,7 @@
     "href": "blog.html",
     "title": "Updates",
     "section": "",
-    "text": "0.0.1\n\n\n\n\n\n\n\nUpdates\n\n\n\n\nrapdown 0.0.1 (Alpha)\n\n\n\n\n\n\nDec 14, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nRAP Maturity Framework\n\n\n\n\n\n\n\nNHS\n\n\nRAP\n\n\n\n\nQuarto Markdown Publishing & RAP Maturity\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\nMy First Post\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\nNo matching items"
+    "text": "v0.0.1 (Alpha)\n\n\n\n\n\n\n\nUpdates\n\n\n\n\nChangelog\n\n\n\n\n\n\nDec 14, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nRAP Maturity Framework\n\n\n\n\n\n\n\nNHS\n\n\nRAP\n\n\n\n\nQuarto Markdown Publishing & RAP Maturity\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\nMy First Post\n\n\n\n\n\n\nDec 11, 2022\n\n\nCraig R Shenton\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "documentation/parameters.html",
