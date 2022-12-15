@@ -36,18 +36,21 @@ website:
       - text: "Homepage"
         icon: "house-door"
         href: index.qmd
-      - text: "Updates"
-        icon: "code-square"
-        href: updates.qmd
       - text: "Tutorials"
         icon: "bookmark-check"
         href: tutorials/index.qmd
       - text: "Documentation"
         icon: "file-earmark-text"
         href: documentation/index.qmd
+      - text: "Updates"
+        icon: "rss"
+        href: updates.qmd
+    right:
       - text: "Help"
-        icon: "info-square"
         menu:
+          - text: "About"
+            icon: "info-circle"
+            href: about.qmd
           - text: "Report a Bug"
             icon: "bug"
             href: "https://github.com/craig-shenton/RAPdown/issues"
@@ -57,9 +60,6 @@ website:
           - text: "FAQ"
             icon: "question-circle"
             href: faq.qmd
-    right:
-      - text: "About"
-        href: about.qmd
       - icon: twitter
         href: https://twitter.com/craigrshenton
         aria-label: Twitter
@@ -84,8 +84,10 @@ website:
         file: documentation/index.qmd
         contents: 
           - auto: documentation/*.qmd
-      - text: "Example Report"
-        href: ae_attendance.html
+      - section: Examples
+        contents: 
+          - text: "A&E Attendances"
+            file: ae_attendance.html
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
