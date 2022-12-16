@@ -19,7 +19,7 @@
 library(here)
 library(readr)
 library(NHSRdatasets)
-source("utilities/create_directory.R")
+source("utilities/sink_csv.R")
 
 # load dataset
 # -------------------------------------------------------------------------
@@ -28,11 +28,11 @@ end_state <- "raw"
 source <- "NHSRdatasets"
 sink_file <- "ae_attendances.csv"
 
-data("ae_attendances")
-df <- ae_attendances
+dataset <- "ae_attendances"
+df <- eval(parse(text = dataset))
 
 # write data to .csv
 # -------------------------------------------------------------------------
-write_path <- here(data_path, end_state, source)
-create_directory(write_path) # check if dir exist, else create it
-readr::write_csv(df, here(write_path, sink_file), na = "NA")
+#write_path <- here(data_path, end_state, source)
+#create_directory(write_path) # check if dir exist, else create it
+#readr::write_csv(df, here(write_path, sink_file), na = "NA")

@@ -1,0 +1,3 @@
+main:
+  store: transforms
+  script: transforms/_targets.R

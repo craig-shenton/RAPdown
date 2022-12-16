@@ -1,0 +1,13 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+create_directory|function|80d91f535c037205|||||||||||||||
+data_path|object|b7119b48552d1da3|||||||||||||||
+dataset_name|object|b1fc881f67b89b9a|||||||||||||||
+end_state|object|67be920e14d52a62|||||||||||||||
+get_nhsr_dataset|function|0322e4c6224290c7|||||||||||||||
+get_nhsr_datasets|function|9bed5361c4ad3935|||||||||||||||
+input|stem|a3e3455871089c81|1f9bda25fb22cc33|9058a151f175acc6|-1276294782||t19342.8743477132s|aeb9e822999ebdfa|90108|rds|local|vector|||0.045||
+nhsr_dataset_name|object|b1fc881f67b89b9a|||||||||||||||
+output|stem|1f28bec248461afc|0f7b199b83dfa88f|0bf1227b520cd1d3|-265169002|/Users/nhsengland/Documents/GitHub/RAPdown/data/raw/NHSRdatasets/ae_attendances.csv|t19342.9116610558s|08a812c372e68eed|396690|file|local|vector|||0.08||
+sink_csv|function|a5b2f0d22d295760|||||||||||||||
+sink_file|object|798f535dc677dd43|||||||||||||||
+source|object|8f6c75478524926f|||||||||||||||
