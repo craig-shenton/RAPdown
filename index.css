@@ -43,6 +43,10 @@
     color: #005EB8;
     font-size: 2.8rem;
   }
+
+  .hero-banner h1 span {
+    font-size: 1.6rem;
+  }
   
   
   .hero-banner .hero-image {
