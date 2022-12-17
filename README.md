@@ -30,7 +30,7 @@ RAPdown
 │   └───raw
 │
 ├───docs
-|   ├───_assets_
+|   ├───_assets
 │   ├───documentation
 │   ├───examples
 │   ├───posts
