@@ -9,8 +9,8 @@
 # DESCRIPTION:    Define target functions
 # CONTRIBUTORS:   Craig R. Shenton
 # CONTACT:        craig.shenton@nhs.net
-# CREATED:        16 Dec 2022
-# VERSION:        0.0.1
+# CREATED:        17 Dec 2022
+# VERSION:        0.0.2
 
 library(targets)
 tar_config_set(script = "transforms/_targets.R")
@@ -24,7 +24,7 @@ source("utilities/sink_csv.R")
 # -------------------------------------------------------------------------
 list(
 
-# ingest_ae_attendance_data
+# Ingest ae_attendance data from {NHSRdatasets} package
 # -------------------------------------------------------------------------
 nhsr_dataset_name <- "ae_attendances",
 tar_target(
@@ -32,7 +32,7 @@ tar_target(
   command = get_nhsr_dataset(nhsr_dataset_name)
 ),
 
-# sink_ae_attendance_data_to_raw
+# Sink ae_attendance data to raw
 # -------------------------------------------------------------------------
 data_path <- "data",
 end_state <- "raw",
@@ -48,7 +48,7 @@ tar_target(
   format = "file"
 ),
 
-# sink_ae_attendance_data_interim
+# Sink ae_attendance data to interim
 # -------------------------------------------------------------------------
 data_path <- "data",
 end_state <- "interim",
