@@ -18,39 +18,31 @@ _**Note:** No private data are stored in this repository._
 
 ### Project Structure
 
-<!-- NHSD template -->
-
 ```
 RAPdown
-│   README.md
 │
-├───my_project
-│   │   create_publication.py
-│   │   params.py
-│   │
-│   └───utilities
-│       │   data_connections.py
-│       │   field_definitions.py
-│       │   processing_steps.py
+├───.github
+│   └───workflows
 |
-├───reports
-│   │
-│   ├───input_profile
-│   └───output_profile
+├───data
+│   ├───interim
+│   ├───processed
+│   └───raw
 │
-└───tests
-|   ├───unittests
-|   │       │   test_data_connections.py
-|   │       │   test_field_definitions.py
-|   │       │   test_processing_steps.py
-|   │
-|   └───backtests
-|           │   test_compare_outputs.py
+├───docs
+|   ├───_assets_
+│   ├───documentation
+│   ├───examples
+│   ├───posts
+│   └───tutorials
 |
-├───reports
-│   │
-│   ├───input_profile
-│   └───output_profile
+├───templates
+│
+├───tests
+│
+├───transforms
+|
+└───utilities
 ```
 
 ### Built With
