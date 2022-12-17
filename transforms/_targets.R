@@ -20,23 +20,43 @@ source("utilities/create_directory.R")
 source("utilities/get_nhsr_dataset.R")
 source("utilities/sink_csv.R")
 
-# Define 'load_ae_attendance_data' target
+# Start target list
 # -------------------------------------------------------------------------
-nhsr_dataset_name <- "ae_attendances"
-load_ae_attendance_data <- tar_target(
-  name = input,
-  command = get_nhsr_dataset(nhsr_dataset_name)
-)
+list(
 
-# Define 'sink_csv_to_raw' target
+# ingest_ae_attendance_data
 # -------------------------------------------------------------------------
-data_path <- "data"
-end_state <- "raw"
-source <- "NHSRdatasets"
-sink_file <- "ae_attendances.csv"
-sink_csv_to_raw <- tar_target(
-  name = output,
-  command = sink_csv(input,
+nhsr_dataset_name <- "ae_attendances",
+tar_target(
+  name = ae_attendance_raw,
+  command = get_nhsr_dataset(nhsr_dataset_name)
+),
+
+# sink_ae_attendance_data_to_raw
+# -------------------------------------------------------------------------
+data_path <- "data",
+end_state <- "raw",
+source <- "NHSRdatasets",
+sink_file <- "ae_attendances.csv",
+tar_target(
+  name = ae_attendance_raw_sink,
+  command = sink_csv(data = ae_attendance_raw,
+                     data_path,
+                     end_state,
+                     source,
+                     sink_file),
+  format = "file"
+),
+
+# sink_ae_attendance_data_interim
+# -------------------------------------------------------------------------
+data_path <- "data",
+end_state <- "interim",
+source <- "NHSRdatasets",
+sink_file <- "ae_attendances.csv",
+tar_target(
+  name = ae_attendance_interim_sink,
+  command = sink_csv(data = ae_attendance_raw,
                      data_path,
                      end_state,
                      source,
@@ -44,6 +64,6 @@ sink_csv_to_raw <- tar_target(
   format = "file"
 )
 
-# Set target order
+# End target list
 # -------------------------------------------------------------------------
-list(load_ae_attendance_data, sink_csv_to_raw)
+)

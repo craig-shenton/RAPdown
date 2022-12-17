@@ -1,3 +1,5 @@
 name|type|parent|branches|progress
-input|stem|input|0|skipped
-output|stem|output|0|skipped
+ae_attendance_raw|stem|ae_attendance_raw|0|started
+ae_attendance_raw|stem|ae_attendance_raw|0|built
+ae_attendance_raw_sink|stem|ae_attendance_raw_sink|0|skipped
+ae_attendance_interim_sink|stem|ae_attendance_interim_sink|0|skipped
