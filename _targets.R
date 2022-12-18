@@ -14,7 +14,6 @@
 
 library(targets)
 library(tarchetypes)
-# tar_config_set(script = "_targets.R")
 tar_option_set(packages = c("readr", "here", "NHSRdatasets"))
 
 source("utilities/create_directory.R")
