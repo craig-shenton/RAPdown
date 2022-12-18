@@ -29,7 +29,8 @@ list(
 # Ingest ae_attendance data from {NHSRdatasets} package
 # -------------------------------------------------------------------------
 nhsr_dataset_name <- "ae_attendances",
-tar_target(
+
+targets::tar_target(
   name = ae_attendance_raw,
   command = get_nhsr_dataset(nhsr_dataset_name)
 ),
@@ -40,7 +41,8 @@ data_path <- "data",
 end_state <- "raw",
 source <- "NHSRdatasets",
 sink_file <- "ae_attendances.csv",
-tar_target(
+
+targets::tar_target(
   name = ae_attendance_raw_sink,
   command = sink_csv(data = ae_attendance_raw,
                      data_path,
@@ -56,7 +58,8 @@ data_path <- "data",
 end_state <- "interim",
 source <- "NHSRdatasets",
 sink_file <- "ae_attendances.csv",
-tar_target(
+
+targets::tar_target(
   name = ae_attendance_interim_sink,
   command = sink_csv(data = ae_attendance_raw,
                      data_path,
@@ -66,7 +69,9 @@ tar_target(
   format = "file"
 ),
 
-tar_quarto(report, here("templates/ae_attendance_min.qmd"))
+# Render Quarto template
+# -------------------------------------------------------------------------
+tarchetypes::tar_quarto(report, here("templates/ae_attendance_min.qmd"))
 
 # End target list
 # -------------------------------------------------------------------------
