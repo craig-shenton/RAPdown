@@ -13,7 +13,8 @@
 # VERSION:        0.0.2
 
 library(targets)
-tar_config_set(script = "transforms/_targets.R")
+library(tarchetypes)
+# tar_config_set(script = "_targets.R")
 tar_option_set(packages = c("readr", "here", "NHSRdatasets"))
 
 source("utilities/create_directory.R")
@@ -63,6 +64,8 @@ tar_target(
                      sink_file),
   format = "file"
 )
+
+# tar_quarto(report, here("templates/ae_attendance.qmd"))
 
 # End target list
 # -------------------------------------------------------------------------

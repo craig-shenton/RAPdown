@@ -43,3 +43,6 @@ vignettes/*.pdf
 
 # local build files
 /docs/_site/
+
+# {targets} meta data
+_targets/

@@ -219,22 +219,27 @@ First let's open and explore the dataset to show the first 10 rows of data.
 # load dataset and create formatted table
 # -------------------------------------------------------------------------
 suppressPackageStartupMessages({
+  library(targets)
   library(dplyr)
   library(readr)
 })
+tar_config_set(script = "transforms/_targets.R")
+tar_option_set(packages = c("readr", "here", "NHSRdatasets"))
 # library(NHSRdatasets)
 # data(ae_attendances)
 
 # set data path
-data_path <- "data"
-start_state <- "raw"
-source <- "NHSRdatasets"
-source_file <- "ae_attendances.csv"
+#data_path <- "data"
+#start_state <- "raw"
+#source <- "NHSRdatasets"
+#source_file <- "ae_attendances.csv"
 
 # load data
-metric_path <- here(data_path, start_state, source)
-ae_attendances <- readr::read_csv(here(metric_path, source_file),
-                                  show_col_types = FALSE)
+#metric_path <- here(data_path, start_state, source)
+#ae_attendances <- readr::read_csv(here(metric_path, source_file),
+#                                  show_col_types = FALSE)
+
+ae_attendances <- tar_read(ae_attendances_raw)
 
 # format and create table
 ae_attendances %>%
