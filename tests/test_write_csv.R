@@ -6,7 +6,7 @@
 # license information.
 # -------------------------------------------------------------------------
 
-# FILE:           test_sink_csv.R
+# FILE:           test_write_csv.R
 # DESCRIPTION:    This test does the following:
 #                 1. It sets up test data that includes a temporary .csv file
 #                    with the defualt Iris data set.
@@ -28,11 +28,11 @@
 library(testthat)
 library(here)
 library(readr)
-source("utilities/sink_csv.R")
+source("utilities/write_csv.R")
 
 # Define the unit test
 # -------------------------------------------------------------------------
-test_that("sink_csv writes data to a .csv file", {
+test_that("write_csv writes data to a .csv file", {
   # Set up test data
   data_path <- tempdir()
   end_state <- "test"
@@ -40,7 +40,7 @@ test_that("sink_csv writes data to a .csv file", {
   sink_file <- "sink.csv"
 
   # Call the sink_csv function
-  sink_csv(iris, data_path, end_state, source, sink_file)
+  write_csv(iris, data_path, end_state, source, sink_file)
 
   # Check that the output file was created
   expect_true(file.exists(here(data_path, end_state, source, sink_file)))

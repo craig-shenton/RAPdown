@@ -6,7 +6,7 @@
 # -------------------------------------------------------------------------
 
 # FILE:           sink_csv.R
-# DESCRIPTION:    Sink (save) a dataframe as a .csv file.
+# DESCRIPTION:    Write a dataframe as a .csv file.
 # CONTRIBUTORS:   Craig R. Shenton
 # CONTACT:        craig.shenton@nhs.net
 # CREATED:        16 Dec 2022
@@ -18,7 +18,7 @@
 library(here)
 source("utilities/create_directory.R")
 
-sink_csv <- function(data, data_path, end_state, source, sink_file) {
+write_csv <- function(data, data_path, end_state, source, sink_file) {
 
   # Construct the path for the output file
   write_path <- here(data_path, end_state, source)
