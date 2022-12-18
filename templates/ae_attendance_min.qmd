@@ -228,9 +228,9 @@ suppressPackageStartupMessages({
 ae_attendances <- targets::tar_read("ae_attendance_raw")
 
 # format and create table
-ae_attendances %>%
+data %>%
   # set the period column to show in Month-Year format
-  dplyr::mutate_at(dplyr::vars(period), format, "%b-%y") %>% 
+  dplyr::mutate_at(dplyr::vars(cols), format, "%b-%y") %>% 
   # set the numeric columns to have a comma at the 1000's place
   dplyr::mutate_at(dplyr::vars(attendances, breaches, admissions), scales::comma) %>%
   # show the first 10 rows
