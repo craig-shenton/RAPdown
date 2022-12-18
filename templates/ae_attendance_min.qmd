@@ -1,0 +1,275 @@
+---
+title: "A&E Attendances Dataset"
+date: "`r Sys.Date()`"
+date-format: "D MMMM YYYY"
+format:
+  html:
+    # Table of Contents options
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    toc-title: Contents
+    number-sections: false
+    number-depth: 3
+    # Render options
+    theme: cosmo
+    anchor-sections: false
+    html-math-method: katex
+    # Code options
+    code-tools:
+      source: false
+      toggle: false
+      caption: none
+    code-fold: true
+    code-summary: "Show code"
+    embed-resources: true
+    standalone: true
+    # URL options
+    link-external-icon: true
+    link-external-newwindow: true
+    # References
+    citations-hover: true
+    footnotes-hover: true
+    callout-appearance: simple
+    callout-collapse: true
+    cap-location: bottom
+    title-block-banner: '#005EB8'
+    backgroundcolor: '#f0f4f5'
+    mainfont: 'Open Sans'
+crossref:
+  fig-title: '**Figure**'
+  fig-labels: arabic
+#execute: 
+#  echo: false
+---
+
+```{r load library}
+#| include: False
+
+# Load libs and global vars
+# -------------------------------------------------------------------------
+#library(here)
+#here()
+#library(ggrepel)
+#library(tidyverse)
+#options(tidyverse.quiet = TRUE)
+#library(dplyr)
+#library(lemon)
+#library(sf)
+##library(scales)
+#library(zoo)
+#library(lubridate, warn.conflicts = FALSE)
+#library(plyr, include.only = c("rbind.fill"))
+#library(plotly)
+#library(DT)
+
+# Needed
+#library(scales)
+#library(ggrepel)
+#library(lubridate)
+#library(dplyr)
+#library(forcats)
+#library(tidyr)
+```
+
+```{css, echo=FALSE}
+.panel-tabset .nav-item {
+  font-size: 16px;
+}
+
+.dt-buttons {
+    /* margin-bottom: -7px; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-bottom: 0.3em;
+}
+
+.figure-caption {
+  color: #373a3c;
+  font-size: 16px;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: #495057;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.tab-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #fff;
+}
+
+.quarto-title-banner {
+  padding-top: 30px;
+  padding-right: 0px;
+  padding-bottom: 40px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.quarto-title-meta  {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  background-color: #fff;
+}
+
+#title-block-header.quarto-title-block {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  background-color: #fff;
+}
+
+.quarto-title {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 16'%3E%3Cpath fill='%23fff' d='M0 0h40v16H0z'%3E%3C/path%3E%3Cpath fill='%23005eb8' d='M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6'%3E%3C/path%3E%3C/svg%3E");
+      display: block;
+      background-color: #005EB8;
+      background-repeat: no-repeat;
+      background-size: 90px;
+      background-position: 0px 0px;
+}
+
+.quarto-title p.subtitle {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: 300;
+}
+
+.quarto-title h1.title {
+      text-indent: 3.7em;
+      font-size: 30px;
+}
+
+.callout-caption-container {
+  color: #005EB8;
+}
+
+.callout {
+  background-color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: .25rem;
+}
+
+.callout-note.callout {
+  border-left-color: #005EB8;
+  background-color: white;
+}
+
+.callout.callout-style-simple {
+  padding: .01em .7em;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: lighter;
+}
+
+h1, .h1 {
+  font-size:30px;
+  font-weight:600;
+}
+
+h2, .h2 {
+ font-size:20px;
+ font-weight:600;
+}
+
+h3, .h3 {
+ font-size:18px;
+ font-weight:600;
+}
+
+.header-section-number {
+  color: #373a3c;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.opensans {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+ -moz-osx-font-smoothing:grayscale;
+ -webkit-font-smoothing:antialiased;
+}
+```
+
+# The A&E Attendances Dataset
+
+This report explains how to use the `ae_attendances` dataset from the [{NHSRdatasets}](https://nhs-r-community.github.io/NHSRdatasets/) package. The dataset contains all reported A&E attendances for the period April 2016 through March 2019.
+
+First let's open and explore the dataset to show the first 10 rows of data.
+
+:::: panel-tabset
+
+## A&E Attendances
+
+```{r data table}
+# load dataset and create formatted table
+# -------------------------------------------------------------------------
+suppressPackageStartupMessages({
+  library(targets)
+  library(dplyr)
+  library(readr)
+})
+
+ae_attendances <- targets::tar_read("ae_attendance_raw")
+
+# format and create table
+ae_attendances %>%
+  # set the period column to show in Month-Year format
+  dplyr::mutate_at(dplyr::vars(period), format, "%b-%y") %>% 
+  # set the numeric columns to have a comma at the 1000's place
+  dplyr::mutate_at(dplyr::vars(attendances, breaches, admissions), scales::comma) %>%
+  # show the first 10 rows
+  head(10) %>%
+  # format as a table
+  knitr::kable()
+```
+
+## Reference
+
+::: {.callout-note collapse="false"}
+## Data source
+
+- [NHS England Statistical Work Areas][nhs_swa]
+- available under the [Open Government Licence v3.0][ogl_v3]
+:::
+
+The dataset contains:
+
+- `period`: the month that this activity relates to, stored as a date (1st of each month)
+- `org_code`: the [ODS][ods]
+code for the organisation that this activity relates to
+- `type`: the [Department Type][ae_types]
+for this activity, either 1, 2, or other
+- `attendances`: the number of attendances for this department type at this organisation
+for this month
+- `breaches`: the number of attendances that breached the 4 hour target
+- `admissions`: the number of attendances that resulted in an admission to the
+hospital
+
+:::: 
+
+# Footnotes
+
+Adapted from the vignette in the [{NHSRdatasets}](https://nhs-r-community.github.io/NHSRdatasets/) package, writen by [Thomas Jemmett][tj_email] and developed by the [NHS-R Community](https://nhsrcommunity.com/).
+
+[tj_email]: mailto:thomas.jemmett@nhs.net
+[su_web]:   https://www.strategyunitwm.nhs.uk/ 
+[nhs_swa]:  https://www.england.nhs.uk/statistics/statistical-work-areas/ae-waiting-times-and-activity/
+[ogl_v3]:   https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+[ods]:      https://digital.nhs.uk/services/organisation-data-service
+[ae_types]: https://web.archive.org/web/20200128111444/https://www.datadictionary.nhs.uk/data_dictionary/attributes/a/acc/accident_and_emergency_department_type_de.asp

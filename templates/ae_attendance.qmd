@@ -223,8 +223,6 @@ suppressPackageStartupMessages({
   library(dplyr)
   library(readr)
 })
-tar_config_set(script = "transforms/_targets.R")
-tar_option_set(packages = c("readr", "here", "NHSRdatasets"))
 # library(NHSRdatasets)
 # data(ae_attendances)
 
@@ -239,7 +237,7 @@ tar_option_set(packages = c("readr", "here", "NHSRdatasets"))
 #ae_attendances <- readr::read_csv(here(metric_path, source_file),
 #                                  show_col_types = FALSE)
 
-ae_attendances <- tar_read(ae_attendances_raw)
+ae_attendances <- tar_load("ae_attendances_raw")
 
 # format and create table
 ae_attendances %>%

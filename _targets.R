@@ -12,6 +12,8 @@
 # CREATED:        17 Dec 2022
 # VERSION:        0.0.2
 
+# Load libraries and global vars
+# -------------------------------------------------------------------------
 library(targets)
 library(tarchetypes)
 tar_option_set(packages = c("readr", "here", "NHSRdatasets"))
@@ -62,9 +64,9 @@ tar_target(
                      source,
                      sink_file),
   format = "file"
-)
+),
 
-# tar_quarto(report, here("templates/ae_attendance.qmd"))
+tar_quarto(report, here("templates/ae_attendance_min.qmd"))
 
 # End target list
 # -------------------------------------------------------------------------
