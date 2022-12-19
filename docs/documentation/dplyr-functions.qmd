@@ -71,18 +71,3 @@ print(formatted_df)
 #> 2 Feb-22
 #> 3 Mar-22
 ```
-
-### Date Formats
-
-Symbol | Definition | Example
--------|------------|--------
-%d | Day as a number | 19
-%a | Abbreviated weekday | Sun
-%A | Unabbreviated weekday | Sunday
-%m | Month as a number | 04
-%b | Abbreviated month | Feb
-%B | Unabbreviated month | February
-%y | 2-digit year | 14
-%Y | 4-digit year | 2014
-
-Source: [www.statology.org](https://www.statology.org/r-date-format/)

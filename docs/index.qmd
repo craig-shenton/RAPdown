@@ -23,8 +23,8 @@ comments: false
 
 - The gold standard for creating analytical outputs in government[^goldacre]
 - Allows others to verify and replicate complex analysis
+- Uses open standards to promote best practice across the sector
 - Transparancy increases trust and confidence in published data
-- Open standards to promote best practice across the sector
 
 ::: {.hero-buttons}
 [Get started](tutorials/index.qmd){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
@@ -70,14 +70,21 @@ Plotly is a popular data visualisation library with a wide range of interactive 
 :::
 
 ::: {.feature}
-### Approved Statitical Functions
-`Coming soon`
+### Library of Tested Functions
+A shared library of unit tested functions that highly complex analysis can be run knowing that every step in the calculation is fully validated and documented. These functions can be further developed, re-used, and improved upon as part of a collaborative effort.
 
+::: {.learn-more}
+[Learn more »](tutorials/index.qmd)
+:::
 :::
 
 ::: {.feature}
-### CI/CD GitHub Actions
-`Coming soon`
+### CI GitHub Actions
+Continuous integration with `Travis CI` automates builds and tests. So when something stops working you will both be informed about the problem and told how you can fix it. This can reduce the time it takes to validate new data and update your publications.
+
+::: {.learn-more}
+[Learn more »](tutorials/index.qmd)
+:::
 
 :::
 
