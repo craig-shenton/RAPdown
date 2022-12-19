@@ -26,12 +26,26 @@ dplyr_format_date(data, cols, date_format)
 
 ### Arguments
 
-- __data__
-A dataframe, or dataframe extension (e.g. a tibble)
-- __cols__
-A column name (or list of column names) in the dataframe that will be formatted.
-- __date_format__
-A data format string (e.g., `"%b-%y"`)
+__data:__ A dataframe, or dataframe extension (e.g. a tibble)
+
+__cols:__ A column name (or list of column names) in the dataframe that will be formatted.
+
+__date_format:__ A date format string (e.g., `"%b-%y"`), see table @date-format.
+
+Symbol | Definition | Example
+-------|------------|--------
+%d | Day as a number | 19
+%a | Abbreviated weekday | Sun
+%A | Unabbreviated weekday | Sunday
+%m | Month as a number | 04
+%b | Abbreviated month | Feb
+%B | Unabbreviated month | February
+%y | 2-digit year | 14
+%Y | 4-digit year | 2014
+
+: Date format strings {#tbl-date-format}
+
+Source: [www.statology.org](https://www.statology.org/r-date-format/)
 
 
 ### See also
@@ -45,21 +59,17 @@ Other dplyr functions: [`utilites/dplyr_format_num.R`](https://github.com/craig-
 library(dplyr)
 source("utilities/dplyr_format_date.R")
 
-df <- data.frame(
-                 date = c("2022-01-01",
+df <- data.frame(date = c("2022-01-01",
                           "2022-02-01",
-                          "2022-03-01"),
-                 values = c(0.5,
-                            0.6,
-                            0.7))
+                          "2022-03-01"))
 
 formatted_df <- dplyr_format_date(df, "date", "%b-%y")
 
 print(formatted_df)
-#>     date values
-#> 1 Jan-22    0.5
-#> 2 Feb-22    0.6
-#> 3 Mar-22    0.7
+#>     date
+#> 1 Jan-22
+#> 2 Feb-22
+#> 3 Mar-22
 ```
 
 ### Date Formats
