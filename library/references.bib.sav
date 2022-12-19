@@ -1,6 +1,15 @@
-@Manual{
-    title = {tarchetypes: Archetypes for Targets},
-    author = {William Michael Landau},
-    year = {2021},
-    note = {{https://docs.ropensci.org/tarchetypes/, https://github.com/ropensci/tarchetypes}}
+@Manual{Landau2021,
+  title  = {tarchetypes: Archetypes for Targets},
+  author = {William Michael Landau},
+  url   = {https://docs.ropensci.org/tarchetypes/},
+  year   = {2021},
 }
+
+@Manual{rapdown2022,
+  title  = {Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications},
+  author = {Craig Robert Shenton},
+  url   = {https://github.com/craig-shenton/RAPdown},
+  year   = {2022},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
