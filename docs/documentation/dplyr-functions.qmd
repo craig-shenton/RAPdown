@@ -9,6 +9,15 @@ Source: [`utilites/dplyr_format_date.R`](https://github.com/craig-shenton/RAPdow
 
 `dplyr_format_date()` is function that takes a dataframe and a list of column names as input and applies date formatting options to the specified columns.
 
+```r
+dplyr_format_date <- function(data, cols, date_format) {
+  data %>%
+    dplyr::mutate_at(dplyr::vars(cols), function(x) {
+      as.character(format(as.Date(x), date_format))
+    })
+}
+```
+
 ### Usage
 
 ```r
