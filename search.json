@@ -32,14 +32,14 @@
     "href": "about.html#citation",
     "title": "About {Rapdown}",
     "section": "Citation",
-    "text": "Citation\nShenton, CR (2022). Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications. https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown.\n@Manual{,\n  title = {\"Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications.\"},\n  author = {Craig R Shenton},\n  year = {2022},\n  note = {https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown},\n}"
+    "text": "Citation\nShenton, C. R. Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications (2022). At <https://github.com/craig-shenton/RAPdown>.\n@Manual{rapdown2022,\n  title  = {Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications},\n  author = {Craig Robert Shenton},\n  url = {https://github.com/craig-shenton/RAPdown},\n  year = {2022},\n}"
   },
   {
     "objectID": "about.html#references",
     "href": "about.html#references",
     "title": "About {Rapdown}",
     "section": "References",
-    "text": "References\n\n\nLandau, William Michael. 2021. Tarchetypes: Archetypes for Targets."
+    "text": "References\n\n\n1. Landau, W. M. Tarchetypes: Archetypes for targets. (2021). at <https://docs.ropensci.org/tarchetypes/>\n\n\n2. Shenton, C. R. Rapdown: A framework for creating reproducible analytical pipeline (RAP) compliant quarto publications. (2022). at <https://github.com/craig-shenton/RAPdown>"
   },
   {
     "objectID": "documentation/parameters.html",
