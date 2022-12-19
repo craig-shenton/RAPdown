@@ -2,7 +2,7 @@
   {
     "objectID": "tutorials/data-pipelines.html",
     "href": "tutorials/data-pipelines.html",
-    "title": "Data Pipelines with {targets}",
+    "title": "Data pipelines",
     "section": "",
     "text": "test"
   },
@@ -37,7 +37,7 @@
   {
     "objectID": "tutorials/containers.html",
     "href": "tutorials/containers.html",
-    "title": "Containers with Docker",
+    "title": "Containers",
     "section": "",
     "text": "test"
   },
