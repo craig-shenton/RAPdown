@@ -1,6 +1,9 @@
 ---
 title: "About {Rapdown}"
 comments: false
+bibliography: references.bib
+nocite: |
+  @*
 ---
 
 ## Authors
@@ -23,4 +26,9 @@ Shenton, CR (2022). *Rapdown: A framework for creating Reproducible Analytical P
   note = {https://craig-shenton.github.io/RAPdown/, https://github.com/craig-shenton/RAPdown},
 }
 ```
+
+## References
+
+::: {#refs}
+:::
 

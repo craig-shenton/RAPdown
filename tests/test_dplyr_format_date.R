@@ -4,6 +4,7 @@
 # Load libraries and the function to be tested
 # -------------------------------------------------------------------------
 library(testthat)
+library(dplyr)
 source("utilities/dplyr_format_date.R")
 
 # Define the unit test
