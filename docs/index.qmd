@@ -19,7 +19,7 @@ comments: false
 
 <h1><img src="_assets/img/rapdown_blue.svg" width="100" height="100" /> {RAPdown} <span>v0.0.1</span></h1>
 
-### A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
+### An opinionated framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
 - The gold standard for creating analytical outputs in government[^goldacre]
 - Allows others to verify and replicate complex analysis
@@ -79,8 +79,8 @@ A shared library of unit tested functions that highly complex analysis can be ru
 :::
 
 ::: {.feature}
-### CI GitHub Actions
-Continuous integration with `Travis CI` automates builds and tests. So when something stops working you will both be informed about the problem and told how you can fix it. This can reduce the time it takes to validate new data and update your publications.
+### Continuous Integration
+Continuous integration (CI) with `Travis CI` automates builds and tests. So when something stops working you will both be informed about the problem and told how you can fix it. This can reduce the time it takes to validate new data and update your publications.
 
 ::: {.learn-more}
 [Learn more »](tutorials/index.qmd)
