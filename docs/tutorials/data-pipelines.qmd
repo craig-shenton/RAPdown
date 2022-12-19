@@ -1,5 +1,5 @@
 ---
-title: "Data Pipelines"
+title: "Data Pipelines with {targets}"
 comments: false
 ---
 

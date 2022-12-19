@@ -1,0 +1,69 @@
+---
+title: "Dplyr Functions"
+comments: false
+---
+
+## `dplyr_format_date()` 
+
+Source: [`utilites/dplyr_format_date.R`](https://github.com/craig-shenton/RAPdown/blob/main/utilities/dplyr_format_date.R)
+
+`dplyr_format_date()` is function that takes a dataframe and a list of column names as input and applies date formatting options to the specified columns.
+
+### Usage
+
+```r
+dplyr_format_date(data, cols, date_format)
+```
+
+### Arguments
+
+- __data__
+A dataframe, or dataframe extension (e.g. a tibble)
+- __cols__
+A column name (or list of column names) in the dataframe that will be formatted.
+- __date_format__
+A data format string (e.g., `"%b-%y"`)
+
+
+### See also
+
+Other dplyr functions: [`utilites/dplyr_format_num.R`](https://github.com/craig-shenton/RAPdown/blob/main/utilities/dplyr_format_num.R), [`utilites/dplyr_filter_cols.R`](https://github.com/craig-shenton/RAPdown/blob/main/utilities/dplyr_filter_cols.R)
+
+### Examples
+
+```r
+# Format date column as abbreviated month (%b) - 2-digit year (%y)
+library(dplyr)
+source("utilities/dplyr_format_date.R")
+
+df <- data.frame(
+                 date = c("2022-01-01",
+                          "2022-02-01",
+                          "2022-03-01"),
+                 values = c(0.5,
+                            0.6,
+                            0.7))
+
+formatted_df <- dplyr_format_date(df, "date", "%b-%y")
+
+print(formatted_df)
+#>     date values
+#> 1 Jan-22    0.5
+#> 2 Feb-22    0.6
+#> 3 Mar-22    0.7
+```
+
+### Date Formats
+
+Symbol | Definition | Example
+-------|------------|--------
+%d | Day as a number | 19
+%a | Abbreviated weekday | Sun
+%A | Unabbreviated weekday | Sunday
+%m | Month as a number | 04
+%b | Abbreviated month | Feb
+%B | Unabbreviated month | February
+%y | 2-digit year | 14
+%Y | 4-digit year | 2014
+
+Source: [www.statology.org](https://www.statology.org/r-date-format/)
