@@ -356,11 +356,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="arguments" class="level3">
 <h3 class="anchored" data-anchor-id="arguments">Arguments</h3>
-<ul>
-<li><strong>data</strong> A dataframe, or dataframe extension (e.g.&nbsp;a tibble)</li>
-<li><strong>cols</strong> A column name (or list of column names) in the dataframe that will be formatted.</li>
-<li><strong>date_format</strong> A data format string (e.g., <code>"%b-%y"</code>)</li>
-</ul>
+<p><strong>data:</strong> A dataframe, or dataframe extension (e.g.&nbsp;a tibble)</p>
+<p><strong>cols:</strong> A column name (or list of column names) in the dataframe that will be formatted.</p>
+<p><strong>date_format:</strong> A date format string (e.g., <code>"%b-%y"</code>), see table <span class="citation" data-cites="date-format">@date-format</span>.</p>
+<div id="tbl-date-format" class="anchored">
+<table class="table">
+<caption>Table&nbsp;1: Date format strings</caption>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>%d</td>
+<td>Day as a number</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td>%a</td>
+<td>Abbreviated weekday</td>
+<td>Sun</td>
+</tr>
+<tr class="odd">
+<td>%A</td>
+<td>Unabbreviated weekday</td>
+<td>Sunday</td>
+</tr>
+<tr class="even">
+<td>%m</td>
+<td>Month as a number</td>
+<td>04</td>
+</tr>
+<tr class="odd">
+<td>%b</td>
+<td>Abbreviated month</td>
+<td>Feb</td>
+</tr>
+<tr class="even">
+<td>%B</td>
+<td>Unabbreviated month</td>
+<td>February</td>
+</tr>
+<tr class="odd">
+<td>%y</td>
+<td>2-digit year</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>%Y</td>
+<td>4-digit year</td>
+<td>2014</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Source: <a href="https://www.statology.org/r-date-format/">www.statology.org</a></p>
 </section>
 <section id="see-also" class="level3">
 <h3 class="anchored" data-anchor-id="see-also">See also</h3>
@@ -372,21 +425,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"utilities/dplyr_format_date.R"</span>)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">date =</span> <span class="fu">c</span>(<span class="st">"2022-01-01"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"2022-02-01"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"2022-03-01"</span>),</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">values =</span> <span class="fu">c</span>(<span class="fl">0.5</span>,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                            <span class="fl">0.6</span>,</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                            <span class="fl">0.7</span>))</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>formatted_df <span class="ot">&lt;-</span> <span class="fu">dplyr_format_date</span>(df, <span class="st">"date"</span>, <span class="st">"%b-%y"</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(formatted_df)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     date values</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Jan-22    0.5</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Feb-22    0.6</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 Mar-22    0.7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">date =</span> <span class="fu">c</span>(<span class="st">"2022-01-01"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"2022-02-01"</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"2022-03-01"</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>formatted_df <span class="ot">&lt;-</span> <span class="fu">dplyr_format_date</span>(df, <span class="st">"date"</span>, <span class="st">"%b-%y"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(formatted_df)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     date</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 Jan-22</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 Feb-22</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 Mar-22</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="date-formats" class="level3">
 <h3 class="anchored" data-anchor-id="date-formats">Date Formats</h3>
