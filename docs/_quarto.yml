@@ -82,8 +82,6 @@ website:
         file: documentation/index.qmd
         contents: 
           - auto: documentation/*.qmd
-      - section: Gallery
-        file: gallery/index.qmd
       - section: Examples
         contents: 
           - text: "A&E Attendances"
