@@ -2,50 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/tutorials/markdown-reports.html</loc>
-    <lastmod>2022-12-19T14:00:21.309Z</lastmod>
+    <lastmod>2022-12-19T15:33:22.311Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/tutorials/data-pipelines.html</loc>
-    <lastmod>2022-12-19T14:00:21.989Z</lastmod>
+    <lastmod>2022-12-19T15:33:23.075Z</lastmod>
   </url>
   <url>
-    <loc>https://craig-shenton.github.io/RAPdown/tutorials/plotly-charts.html</loc>
-    <lastmod>2022-12-19T14:00:22.341Z</lastmod>
+    <loc>https://craig-shenton.github.io/RAPdown/tutorials/visualisations.html</loc>
+    <lastmod>2022-12-19T15:33:23.467Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/tutorials/index.html</loc>
-    <lastmod>2022-12-19T14:00:22.733Z</lastmod>
+    <lastmod>2022-12-19T15:33:23.931Z</lastmod>
+  </url>
+  <url>
+    <loc>https://craig-shenton.github.io/RAPdown/tutorials/containers.html</loc>
+    <lastmod>2022-12-19T15:33:24.291Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/updates.html</loc>
-    <lastmod>2022-12-19T14:00:23.141Z</lastmod>
+    <lastmod>2022-12-19T15:33:24.791Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/about.html</loc>
-    <lastmod>2022-12-19T14:00:23.665Z</lastmod>
+    <lastmod>2022-12-19T15:33:25.403Z</lastmod>
   </url>
   <url>
-    <loc>https://craig-shenton.github.io/RAPdown/documentation/parameters.html</loc>
-    <lastmod>2022-12-19T14:00:23.969Z</lastmod>
+    <loc>https://craig-shenton.github.io/RAPdown/documentation/dplyr-functions.html</loc>
+    <lastmod>2022-12-19T15:33:25.963Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/documentation/index.html</loc>
-    <lastmod>2022-12-19T14:00:24.313Z</lastmod>
+    <lastmod>2022-12-19T15:33:26.347Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/posts/rap-maturity/index.html</loc>
-    <lastmod>2022-12-19T14:00:25.393Z</lastmod>
+    <lastmod>2022-12-19T15:33:27.539Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/posts/welcome/index.html</loc>
-    <lastmod>2022-12-19T14:00:26.601Z</lastmod>
+    <lastmod>2022-12-19T15:33:28.491Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/index.html</loc>
-    <lastmod>2022-12-19T14:00:26.973Z</lastmod>
+    <lastmod>2022-12-19T15:33:28.923Z</lastmod>
   </url>
   <url>
     <loc>https://craig-shenton.github.io/RAPdown/faq.html</loc>
-    <lastmod>2022-12-19T14:00:27.313Z</lastmod>
+    <lastmod>2022-12-19T15:33:29.323Z</lastmod>
   </url>
 </urlset>

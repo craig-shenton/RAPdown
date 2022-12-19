@@ -2,7 +2,7 @@
   {
     "objectID": "tutorials/data-pipelines.html",
     "href": "tutorials/data-pipelines.html",
-    "title": "Data Pipelines",
+    "title": "Data Pipelines with {targets}",
     "section": "",
     "text": "test"
   },
@@ -33,6 +33,13 @@
     "title": "Get Started",
     "section": "Render and Preview",
     "text": "Render and Preview\nWe’ll start out by rendering a simple example (hello.qmd) to a couple of formats. If you want to follow along step-by-step in your own environment, create a new file named hello.qmd and copy the following content into it.\n---\ntitle: \"Quarto Basics\"\nformat:\n  html:\n    code-fold: true\njupyter: python3\n---\n\nFor a demonstration of a line plot on a polar axis, see @fig-polar.\n\n```{python}\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\ntest"
+  },
+  {
+    "objectID": "tutorials/containers.html",
+    "href": "tutorials/containers.html",
+    "title": "Containers with Docker",
+    "section": "",
+    "text": "test"
   },
   {
     "objectID": "updates.html",
@@ -67,14 +74,14 @@
     "href": "about.html#references",
     "title": "About {Rapdown}",
     "section": "References",
-    "text": "References\n\n\n1. Landau, W. M. Tarchetypes: Archetypes for targets. (2021). at <https://docs.ropensci.org/tarchetypes/>\n\n\n2. Shenton, C. R. Rapdown: A framework for creating reproducible analytical pipeline (RAP) compliant quarto publications. (2022). at <https://github.com/craig-shenton/RAPdown>"
+    "text": "References\n\n\n1. Landau, W. M. Tarchetypes: Archetypes for targets. (2021). at <https://docs.ropensci.org/tarchetypes/>\n\n\n2. Shenton, C. R. Rapdown: A framework for creating reproducible analytical pipeline (RAP) compliant quarto publications. (2022). at <https://github.com/craig-shenton/RAPdown>\n\n\n3. Wickham, H., François, R., Henry, L. & Müller, K. Dplyr: A grammar of data manipulation. (2022). at <https://dplyr.tidyverse.org>"
   },
   {
-    "objectID": "documentation/parameters.html",
-    "href": "documentation/parameters.html",
-    "title": "Parameters",
+    "objectID": "documentation/dplyr-functions.html",
+    "href": "documentation/dplyr-functions.html",
+    "title": "Dplyr Functions",
     "section": "",
-    "text": "Test"
+    "text": "Source: utilites/dplyr_format_date.R\ndplyr_format_date() is function that takes a dataframe and a list of column names as input and applies date formatting options to the specified columns.\n\n\ndplyr_format_date(data, cols, date_format)\n\n\n\n\ndata A dataframe, or dataframe extension (e.g. a tibble)\ncols A column name (or list of column names) in the dataframe that will be formatted.\ndate_format A data format string (e.g., \"%b-%y\")\n\n\n\n\nOther dplyr functions: utilites/dplyr_format_num.R, utilites/dplyr_filter_cols.R\n\n\n\n# Format date column as abbreviated month (%b) - 2-digit year (%y)\nlibrary(dplyr)\nsource(\"utilities/dplyr_format_date.R\")\n\ndf <- data.frame(\n                 date = c(\"2022-01-01\",\n                          \"2022-02-01\",\n                          \"2022-03-01\"),\n                 values = c(0.5,\n                            0.6,\n                            0.7))\n\nformatted_df <- dplyr_format_date(df, \"date\", \"%b-%y\")\n\nprint(formatted_df)\n#>     date values\n#> 1 Jan-22    0.5\n#> 2 Feb-22    0.6\n#> 3 Mar-22    0.7\n\n\n\n\n\n\nSymbol\nDefinition\nExample\n\n\n\n\n%d\nDay as a number\n19\n\n\n%a\nAbbreviated weekday\nSun\n\n\n%A\nUnabbreviated weekday\nSunday\n\n\n%m\nMonth as a number\n04\n\n\n%b\nAbbreviated month\nFeb\n\n\n%B\nUnabbreviated month\nFebruary\n\n\n%y\n2-digit year\n14\n\n\n%Y\n4-digit year\n2014\n\n\n\nSource: www.statology.org"
   },
   {
     "objectID": "posts/rap-maturity/index.html",
