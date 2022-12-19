@@ -48,6 +48,12 @@ crossref:
 
 # Load libs and global vars
 # -------------------------------------------------------------------------
+suppressPackageStartupMessages({
+  library(targets)
+  library(dplyr)
+  library(readr)
+  library(here)
+})
 #library(here)
 #here()
 #library(ggrepel)
@@ -219,23 +225,10 @@ First let's open and explore the dataset to show the first 10 rows of data.
 ```{r data table}
 # load dataset and create formatted table
 # -------------------------------------------------------------------------
-suppressPackageStartupMessages({
-  library(targets)
-  library(dplyr)
-  library(readr)
-})
+tar_load(ae_attendance_raw)
 
-ae_attendances <- targets::tar_read("ae_attendance_raw")
-
-# format and create table
-data %>%
-  # set the period column to show in Month-Year format
-  dplyr::mutate_at(dplyr::vars(cols), format, "%b-%y") %>% 
-  # set the numeric columns to have a comma at the 1000's place
-  dplyr::mutate_at(dplyr::vars(attendances, breaches, admissions), scales::comma) %>%
-  # show the first 10 rows
+ae_attendance_raw %>% 
   head(10) %>%
-  # format as a table
   knitr::kable()
 ```
 

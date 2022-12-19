@@ -1,3 +1,3 @@
 
-df %>%
-    knitr::kable()
+#df %>%
+#    knitr::kable()

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-12-18">
+<meta name="dcterms.date" content="2022-12-19">
 
 <title>A&amp;E Attendances Dataset</title>
 <style>
@@ -2602,7 +2602,7 @@ background: #005EB8;
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">18 December 2022</p>
+        <p class="date">19 December 2022</p>
       </div>
     </div>
       
@@ -2763,20 +2763,14 @@ body {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(targets)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(dplyr)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(readr)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>ae_attendances <span class="ot">&lt;-</span> targets<span class="sc">::</span><span class="fu">tar_read</span>(<span class="st">&quot;ae_attendance_raw&quot;</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># format and create table</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ae_attendances <span class="sc">%&gt;%</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># set the period column to show in Month-Year format</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate_at</span>(dplyr<span class="sc">::</span><span class="fu">vars</span>(period), format, <span class="st">&quot;%b-%y&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># set the numeric columns to have a comma at the 1000&#39;s place</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate_at</span>(dplyr<span class="sc">::</span><span class="fu">vars</span>(attendances, breaches, admissions), scales<span class="sc">::</span>comma) <span class="sc">%&gt;%</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># show the first 10 rows</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># format as a table</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(here)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_load</span>(ae_attendance_raw)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ae_attendance_raw <span class="sc">%&gt;%</span> </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
@@ -2785,91 +2779,91 @@ body {
 <th style="text-align: left;">period</th>
 <th style="text-align: left;">org_code</th>
 <th style="text-align: left;">type</th>
-<th style="text-align: left;">attendances</th>
-<th style="text-align: left;">breaches</th>
-<th style="text-align: left;">admissions</th>
+<th style="text-align: right;">attendances</th>
+<th style="text-align: right;">breaches</th>
+<th style="text-align: right;">admissions</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">RF4</td>
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">21,289</td>
-<td style="text-align: left;">2,879</td>
-<td style="text-align: left;">5,060</td>
+<td style="text-align: right;">21289</td>
+<td style="text-align: right;">2879</td>
+<td style="text-align: right;">5060</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">RF4</td>
 <td style="text-align: left;">2</td>
-<td style="text-align: left;">813</td>
-<td style="text-align: left;">22</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: right;">813</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">RF4</td>
 <td style="text-align: left;">other</td>
-<td style="text-align: left;">2,850</td>
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: right;">2850</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">R1H</td>
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">30,210</td>
-<td style="text-align: left;">5,902</td>
-<td style="text-align: left;">6,943</td>
+<td style="text-align: right;">30210</td>
+<td style="text-align: right;">5902</td>
+<td style="text-align: right;">6943</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">R1H</td>
 <td style="text-align: left;">2</td>
-<td style="text-align: left;">807</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: right;">807</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">R1H</td>
 <td style="text-align: left;">other</td>
-<td style="text-align: left;">11,352</td>
-<td style="text-align: left;">136</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: right;">11352</td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">AD913</td>
 <td style="text-align: left;">other</td>
-<td style="text-align: left;">4,381</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: right;">4381</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">RYX</td>
 <td style="text-align: left;">other</td>
-<td style="text-align: left;">19,562</td>
-<td style="text-align: left;">258</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: right;">19562</td>
+<td style="text-align: right;">258</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">RQM</td>
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">17,414</td>
-<td style="text-align: left;">2,030</td>
-<td style="text-align: left;">3,597</td>
+<td style="text-align: right;">17414</td>
+<td style="text-align: right;">2030</td>
+<td style="text-align: right;">3597</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Mar-17</td>
+<td style="text-align: left;">2017-03-01</td>
 <td style="text-align: left;">RQM</td>
 <td style="text-align: left;">other</td>
-<td style="text-align: left;">7,817</td>
-<td style="text-align: left;">86</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: right;">7817</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">0</td>
 </tr>
 </tbody>
 </table>

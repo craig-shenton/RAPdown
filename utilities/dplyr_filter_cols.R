@@ -1,4 +1,4 @@
 # format and create table
-df %>%
+#df %>%
   # show the first 10 rows
-  head(10)
+#  head(10)

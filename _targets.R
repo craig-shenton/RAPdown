@@ -16,11 +16,12 @@
 # -------------------------------------------------------------------------
 library(targets)
 library(tarchetypes)
-tar_option_set(packages = c("readr", "here", "NHSRdatasets"))
+#tar_option_set(packages = c("readr", "here", "NHSRdatasets", "dplyr"))
 
-source("utilities/create_directory.R")
-source("utilities/get_nhsr_dataset.R")
-source("utilities/sink_csv.R")
+# Load all functions in the utilities folder
+# -------------------------------------------------------------------------
+source("utilities/source_folder.R")
+source_folder("utilities", recursive = TRUE)
 
 # Start target list
 # -------------------------------------------------------------------------
@@ -44,12 +45,19 @@ sink_file <- "ae_attendances.csv",
 
 targets::tar_target(
   name = ae_attendance_raw_sink,
-  command = sink_csv(data = ae_attendance_raw,
+  command = write_csv(data = ae_attendance_raw,
                      data_path,
                      end_state,
                      source,
                      sink_file),
   format = "file"
+),
+
+# set the period column to show in Month-Year ("%b-%y") format
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = ae_attendance_format_date,
+  command = dplyr_format_date(data = ae_attendance_raw, "period", "%b-%y")
 ),
 
 # Sink ae_attendance data to interim
@@ -61,7 +69,7 @@ sink_file <- "ae_attendances.csv",
 
 targets::tar_target(
   name = ae_attendance_interim_sink,
-  command = sink_csv(data = ae_attendance_raw,
+  command = write_csv(data = ae_attendance_format_date,
                      data_path,
                      end_state,
                      source,
@@ -71,7 +79,8 @@ targets::tar_target(
 
 # Render Quarto template
 # -------------------------------------------------------------------------
-tarchetypes::tar_quarto(report, here("templates/ae_attendance_min.qmd"))
+tarchetypes::tar_quarto(report, here("templates/ae_attendance_min.qmd"),
+                        execute_params = list(test = "test"))
 
 # End target list
 # -------------------------------------------------------------------------
