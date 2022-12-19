@@ -82,8 +82,8 @@ Plotly is a popular data visualisation library with a wide range of interactive 
 :::
 
 ::: {.feature}
-### Containerised Deployment with `Docker`
-Docker is an open-source containerisation platform used for developing, deploying, and managing applications in lightweight virtualised environments called containers. This is used so that publications can be deployed in many different environments.
+### Containerised Deployment
+Virtualised environments called containers are used for developing, deploying, and managing data pipelines and Quarto publications across many different IT environments.
 
 ::: {.learn-more}
 [Learn more »](tutorials/containers.qmd)
