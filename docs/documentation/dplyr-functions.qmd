@@ -30,7 +30,7 @@ __data:__ A dataframe, or dataframe extension (e.g. a tibble)
 
 __cols:__ A column name (or list of column names) in the dataframe that will be formatted.
 
-__date_format:__ A date format string (e.g., `"%b-%y"`), see table @date-format.
+__date_format:__ A date format string (e.g., `"%b-%y"`), see table @tbl-date-format.
 
 Symbol | Definition | Example
 -------|------------|--------
