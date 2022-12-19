@@ -6,7 +6,7 @@
 # -------------------------------------------------------------------------
 
 # FILE:           _make.R
-# DESCRIPTION:    run target pipline
+# DESCRIPTION:    run target pipeline
 # CONTRIBUTORS:   Craig R. Shenton
 # CONTACT:        craig.shenton@nhs.net
 # CREATED:        18 Dec 2022
