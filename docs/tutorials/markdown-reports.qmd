@@ -1,4 +1,4 @@
 ---
-title: "Markdown reports with Quarto"
+title: "Markdown reports"
 comments: false
 ---

@@ -1,4 +1,4 @@
 ---
-title: "Charts with Plotly"
+title: "Visualisations"
 comments: false
 ---
