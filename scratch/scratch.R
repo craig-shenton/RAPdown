@@ -1,5 +1,7 @@
 
 library(covr)
 
+devtools::load_all()
 # If run with no arguments implicitly calls `package_coverage()`
-report()
+
+cov <- package_coverage("utilities")

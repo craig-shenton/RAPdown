@@ -1,5 +1,7 @@
 # {RAPdown} Framework
 
+[![Build Status](https://app.travis-ci.com/craig-shenton/RAPdown.svg?branch=main)](https://app.travis-ci.com/craig-shenton/RAPdown)
+
 <!-- PROJECT LOGO -->
 <!-- <br />
 <p align="center">
