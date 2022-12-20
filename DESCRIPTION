@@ -1,5 +1,5 @@
 Package: rapdown
-Title: RAPdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications.
+Title: RAPdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 Version: 0.0.1
 Authors@R: 
     person("Craig Robert", "Shenton", , "craig.shenton@nhs.net", role = c("aut", "cre", "cph"),
