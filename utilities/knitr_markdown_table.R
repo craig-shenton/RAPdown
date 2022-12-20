@@ -13,7 +13,7 @@
 # VERSION:        0.0.1
 
 
-# Load libraries and the function to be tested
+# function
 # -------------------------------------------------------------------------
 knitr_markdown_table <- function(data) {
   require(knitr)
