@@ -21,13 +21,13 @@ source("utilities/create_directory.R")
 write_csv <- function(data, data_path, end_state, source, sink_file) {
 
   # Construct the path for the output file
-  write_path <- here(data_path, end_state, source)
+  write_path <- here::here(data_path, end_state, source)
 
   # Create the directory if it does not exist
   create_directory(write_path)
 
   # Write the data to the CSV file
-  readr::write_csv(data, here(write_path, sink_file), na = "NA")
+  readr::write_csv(data, here::here(write_path, sink_file), na = "NA")
 
   return(here(write_path, sink_file))
 }

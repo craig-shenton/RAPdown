@@ -5,21 +5,25 @@
 # license information.
 # -------------------------------------------------------------------------
 
-# FILE:           dplyr_format_date.R
-# DESCRIPTION:    Function that takes a dataframe, a list of column names,
-#                 and a date format string as inputs and allows you to apply
-#                 several date formatting options to the specified columns
-
+# FILE:           test_dplyr_filter_cols.R
+# DESCRIPTION:    This test case...
+#
 # CONTRIBUTORS:   Craig R. Shenton
 # CONTACT:        craig.shenton@nhs.net
-# CREATED:       19 Dec 2022
+# CREATED:        20 Dec 2022
 # VERSION:        0.0.1
 
-# Define function
+
+# Load libraries and the function to be tested
 # -------------------------------------------------------------------------
-dplyr_format_date <- function(data, cols, date_format) {
-  data %>%
-    dplyr::mutate_at(dplyr::vars(cols), function(x) {
-      as.character(format(as.Date(x), date_format))
-    })
-}
+library(testthat)
+library(dplyr)
+source("utilities/dplyr_filter_cols.R")
+
+test_that("dplyr_filter_cols works correctly", {
+
+  expected_output <- mtcars %>%
+                        filter(mpg > 30)
+  actual_output <- dplyr_filter_cols(mtcars, mpg > 30)
+  expect_equal(expected_output, actual_output)
+})

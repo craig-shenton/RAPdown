@@ -1,4 +1,13 @@
-test_folder <- "utilities"
-print(source_folder(test_folder))
-print(length(test_result))
-print(length(list.files("utilities", pattern = "[.][rR]$", full.names = TRUE)))
+
+
+
+
+
+library(dplyr)
+source("utilities/dplyr_filter_cols.R")
+
+
+expected_output <- mtcars %>% filter(mpg > 30)
+actual_output <- dplyr_filter_cols(mtcars, mpg > 30)
+
+print(actual_output)
