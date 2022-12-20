@@ -1,6 +1,6 @@
 # {RAPdown} Framework
 
-[![Build Status](https://app.travis-ci.com/craig-shenton/RAPdown.svg?branch=main)](https://app.travis-ci.com/craig-shenton/RAPdown)
+[![Website Published](https://github.com/craig-shenton/RAPdown/actions/workflows/build-page.yaml/badge.svg)](https://github.com/craig-shenton/RAPdown/actions/workflows/build-page.yaml) [![CI Build Status](https://app.travis-ci.com/craig-shenton/RAPdown.svg?branch=main)](https://app.travis-ci.com/craig-shenton/RAPdown)
 
 <!-- PROJECT LOGO -->
 <!-- <br />
