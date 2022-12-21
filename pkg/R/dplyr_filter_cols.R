@@ -16,7 +16,12 @@
 # Define function
 # -------------------------------------------------------------------------
 dplyr_filter_cols <- function(data, logic) {
-  require(dplyr)
+    if (!require(dplyr)) {
+    stop("{dplyr} package is not installed")
+  }
+  if (!is.data.frame(data)) {
+    stop("data must be a dataframe")
+  }
   df <- dplyr::filter(data, {{ logic }})
   return(df)
 }

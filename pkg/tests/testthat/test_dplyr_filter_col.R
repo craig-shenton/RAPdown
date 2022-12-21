@@ -17,9 +17,13 @@
 # Define the unit test
 # -------------------------------------------------------------------------
 test_that("dplyr_filter_cols works correctly", {
-  requires(dplyr)
   df <- mtcars
   expected_output <- dplyr::filter(df, mpg > 30)
   actual_output <- dplyr_filter_cols(df, mpg > 30)
   expect_equal(expected_output, actual_output)
+})
+
+test_that("dplyr_filter_cols throws and error if not supplied a dataframe", {
+  df <- "mtcars"
+  expect_error(dplyr_filter_cols(df, mpg > 30))
 })

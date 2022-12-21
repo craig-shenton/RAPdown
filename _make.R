@@ -15,6 +15,7 @@
 # Load libraries and global vars
 # -------------------------------------------------------------------------
 library(targets)
+library(here)
 
 # Run the targets pipleline
 # -------------------------------------------------------------------------

@@ -6,7 +6,7 @@
 # license information.
 # -------------------------------------------------------------------------
 
-# FILE:           test_write_csv.R
+# FILE:           test_write_to_csv.R
 # DESCRIPTION:    This test does the following:
 #                 1. It sets up test data that includes a temporary .csv file
 #                    with the defualt Iris data set.
@@ -26,21 +26,19 @@
 # -------------------------------------------------------------------------
 test_that("write_csv writes data to a .csv file", {
   # Set up test data
-  data_path <- tempdir()
-  end_state <- "test"
-  source <- "source"
-  sink_file <- "sink.csv"
+  path <- paste0(tempdir(), "test", "source")
+  file_name <- "sink.csv"
 
-  # Call the sink_csv function
-  write_csv(iris, data_path, end_state, source, sink_file)
+  # Call the write_to_csv function
+  write_to_csv(iris, path, file_name)
 
   # Check that the output file was created
-  expect_true(file.exists(here(data_path, end_state, source, sink_file)))
+  expect_true(file.exists(here(path, file_name)))
 
   # Check that the data in the output file is correct
 
   ## 1st load file as dataframe
-  file <- as.data.frame(read_csv(here(data_path, end_state, source, sink_file)))
+  file <- as.data.frame(read_csv(here(path, file_name)))
   ## 2nd set Species col as factor to match `iris` dataset
   file$Species <- as.factor(file$Species)
   ## expect that the saved file and iris dataset are equal

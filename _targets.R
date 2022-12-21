@@ -16,12 +16,13 @@
 # -------------------------------------------------------------------------
 library(targets)
 library(tarchetypes)
-#tar_option_set(packages = c("readr", "here", "NHSRdatasets", "dplyr"))
+library(here)
+tar_option_set(packages = c("readr", "here", "NHSRdatasets", "dplyr"))
 
 # Load all functions in the utilities folder
 # -------------------------------------------------------------------------
-source("utilities/source_folder.R")
-source_folder("utilities", recursive = TRUE)
+source("pkg/R/source_folder.R")
+source_folder("pkg/R", recursive = TRUE)
 
 # Start target list
 # -------------------------------------------------------------------------
@@ -38,18 +39,11 @@ targets::tar_target(
 
 # Sink ae_attendance data to raw
 # -------------------------------------------------------------------------
-data_path <- "data",
-end_state <- "raw",
-source <- "NHSRdatasets",
-sink_file <- "ae_attendances.csv",
-
 targets::tar_target(
   name = ae_attendance_raw_sink,
-  command = write_csv(data = ae_attendance_raw,
-                     data_path,
-                     end_state,
-                     source,
-                     sink_file),
+  command = write_to_csv(data = ae_attendance_raw,
+                     "data/raw/NHSRdatasets",
+                     "ae_attendances.csv"),
   format = "file"
 ),
 
@@ -62,18 +56,11 @@ targets::tar_target(
 
 # Sink ae_attendance data to interim
 # -------------------------------------------------------------------------
-data_path <- "data",
-end_state <- "interim",
-source <- "NHSRdatasets",
-sink_file <- "ae_attendances.csv",
-
 targets::tar_target(
   name = ae_attendance_interim_sink,
-  command = write_csv(data = ae_attendance_format_date,
-                     data_path,
-                     end_state,
-                     source,
-                     sink_file),
+  command = write_to_csv(data = ae_attendance_format_date,
+                     "data/interim/NHSRdatasets",
+                     "ae_attendances.csv"),
   format = "file"
 ),
 
