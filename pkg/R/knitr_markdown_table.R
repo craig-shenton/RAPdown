@@ -15,7 +15,13 @@
 
 # function
 # -------------------------------------------------------------------------
-knitr_markdown_table <- function(data) {
+knitr_markdown_table <- function(data, num_rows) {
   require(knitr)
+  require(dplyr)
+  data <- data %>%
+    head(num_rows)
   knitr::kable(data, format = "markdown")
 }
+
+data <- mtcars
+knitr_markdown_table(data, num_rows = 10)

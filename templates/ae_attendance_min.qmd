@@ -225,11 +225,9 @@ First let's open and explore the dataset to show the first 10 rows of data.
 ```{r data table}
 # load dataset and create formatted table
 # -------------------------------------------------------------------------
-tar_load(ae_attendance_raw)
+tar_load(ae_attendance_to_markdown_table)
 
-ae_attendance_raw %>% 
-  head(10) %>%
-  knitr::kable()
+ae_attendance_to_markdown_table
 ```
 
 ## Reference
@@ -255,6 +253,47 @@ for this month
 hospital
 
 :::: 
+
+## England A&E 4 hours Performance
+
+We can calculate the 4 hours performance for England as a whole like so:
+
+:::: panel-tabset
+
+## England 4 Hours Performance
+
+```{r england performance}
+tar_load(england_performance_to_markdown_table)
+
+england_performance_to_markdown_table
+```
+
+
+:::: 
+
+We can now plot the monthly performance
+
+:::: panel-tabset
+
+## England A&E Performance
+
+```{r england performance plot}
+tar_load(england_performance_ggplot)
+
+england_performance_ggplot
+# ggplot(england_performance, aes(period, performance)) +
+#   geom_line() +
+#   geom_point() +
+#   scale_y_continuous(labels = percent) +
+#   labs(x = "Month of attendance",
+#        y = "% of attendances that met the 4 hour standard",
+#        title = "NHS England A&E 4 Hour Performance",
+#        caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+```
+
+::::
+
+We can clearly see the "Winter Pressures" where performance drops.
 
 # Footnotes
 

@@ -5,18 +5,20 @@
 # license information.
 # -------------------------------------------------------------------------
 
-# FILE:           test_knitr_markdown_table.R
-# DESCRIPTION:    The test ...
+# FILE:           dplyr_group_by.R
+# DESCRIPTION:    Function that takes a dataframe, a list of column names,
+#                 and converts it into a grouped dataframe where operations
+#                 are performed "by group". dplyr_ungroup() removes grouping.
+
 # CONTRIBUTORS:   Craig R. Shenton
 # CONTACT:        craig.shenton@nhs.net
-# CREATED:        20 Dec 2022
+# CREATED:       19 Dec 2022
 # VERSION:        0.0.1
 
-# Define the unit test
+# Define function
 # -------------------------------------------------------------------------
-test_that("knitr_markdown_table() works", {
-  data <- mtcars
-  expected_output_class <- "knitr_kable"
-  actual_output <- knitr_markdown_table(data, num_rows = 10)
-  expect_equal(class(actual_output), expected_output_class)
-})
+dplyr_group_by <- function(data, col_list) {
+  library(dplyr)
+  df <- dplyr::group_by(data, .dots = col_list)
+  return(df)
+}

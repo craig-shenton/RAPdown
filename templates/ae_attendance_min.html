@@ -2615,7 +2615,10 @@ background: #005EB8;
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#the-ae-attendances-dataset" id="toc-the-ae-attendances-dataset" class="nav-link active" data-scroll-target="#the-ae-attendances-dataset">The A&amp;E Attendances Dataset</a></li>
+  <li><a href="#the-ae-attendances-dataset" id="toc-the-ae-attendances-dataset" class="nav-link active" data-scroll-target="#the-ae-attendances-dataset">The A&amp;E Attendances Dataset</a>
+  <ul class="collapse">
+  <li><a href="#england-ae-4-hours-performance" id="toc-england-ae-4-hours-performance" class="nav-link" data-scroll-target="#england-ae-4-hours-performance">England A&amp;E 4 hours Performance</a></li>
+  </ul></li>
   <li><a href="#footnotes" id="toc-footnotes" class="nav-link" data-scroll-target="#footnotes">Footnotes</a></li>
   </ul>
 </nav>
@@ -2759,11 +2762,9 @@ body {
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load dataset and create formatted table</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------------------------------</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_load</span>(ae_attendance_raw)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_load</span>(ae_attendance_to_markdown_table)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ae_attendance_raw <span class="sc">%&gt;%</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ae_attendance_to_markdown_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
@@ -2779,84 +2780,60 @@ body {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">RF4</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">21289</td>
-<td style="text-align: right;">2879</td>
-<td style="text-align: right;">5060</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">RF4</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: right;">813</td>
-<td style="text-align: right;">22</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">RF4</td>
-<td style="text-align: left;">other</td>
-<td style="text-align: right;">2850</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2017-03-01</td>
+<td style="text-align: left;">Mar-17</td>
 <td style="text-align: left;">R1H</td>
 <td style="text-align: left;">1</td>
 <td style="text-align: right;">30210</td>
 <td style="text-align: right;">5902</td>
 <td style="text-align: right;">6943</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">R1H</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: right;">807</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">0</td>
-</tr>
 <tr class="even">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">R1H</td>
-<td style="text-align: left;">other</td>
-<td style="text-align: right;">11352</td>
-<td style="text-align: right;">136</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">AD913</td>
-<td style="text-align: left;">other</td>
-<td style="text-align: right;">4381</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">RYX</td>
-<td style="text-align: left;">other</td>
-<td style="text-align: right;">19562</td>
-<td style="text-align: right;">258</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">RQM</td>
+<td style="text-align: left;">Mar-19</td>
+<td style="text-align: left;">RRK</td>
 <td style="text-align: left;">1</td>
-<td style="text-align: right;">17414</td>
-<td style="text-align: right;">2030</td>
-<td style="text-align: right;">3597</td>
+<td style="text-align: right;">32017</td>
+<td style="text-align: right;">10670</td>
+<td style="text-align: right;">10850</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jan-19</td>
+<td style="text-align: left;">RRK</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">31935</td>
+<td style="text-align: right;">12502</td>
+<td style="text-align: right;">11493</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2017-03-01</td>
-<td style="text-align: left;">RQM</td>
-<td style="text-align: left;">other</td>
-<td style="text-align: right;">7817</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: left;">Dec-18</td>
+<td style="text-align: left;">RRK</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">30979</td>
+<td style="text-align: right;">8981</td>
+<td style="text-align: right;">11401</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nov-18</td>
+<td style="text-align: left;">RRK</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">30645</td>
+<td style="text-align: right;">8120</td>
+<td style="text-align: right;">11230</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct-18</td>
+<td style="text-align: left;">RRK</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">30570</td>
+<td style="text-align: right;">7089</td>
+<td style="text-align: right;">10770</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jul-18</td>
+<td style="text-align: left;">RRK</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">32209</td>
+<td style="text-align: right;">6499</td>
+<td style="text-align: right;">11332</td>
 </tr>
 </tbody>
 </table>
@@ -2895,6 +2872,121 @@ Data source
 </div>
 </div>
 </div>
+<section id="england-ae-4-hours-performance" class="level2">
+<h2 data-anchor-id="england-ae-4-hours-performance">England A&amp;E 4 hours Performance</h2>
+<p>We can calculate the 4 hours performance for England as a whole like so:</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href>England 4 Hours Performance</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_load</span>(england_performance_to_markdown_table)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>england_performance_to_markdown_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">period</th>
+<th style="text-align: left;">breaches</th>
+<th style="text-align: left;">attendances</th>
+<th style="text-align: left;">performance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Apr-16</td>
+<td style="text-align: left;">186,122</td>
+<td style="text-align: left;">1,867,781</td>
+<td style="text-align: left;">90%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">May-16</td>
+<td style="text-align: left;">201,329</td>
+<td style="text-align: left;">2,070,340</td>
+<td style="text-align: left;">90%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jun-16</td>
+<td style="text-align: left;">184,912</td>
+<td style="text-align: left;">1,958,802</td>
+<td style="text-align: left;">91%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jul-16</td>
+<td style="text-align: left;">201,973</td>
+<td style="text-align: left;">2,079,034</td>
+<td style="text-align: left;">90%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aug-16</td>
+<td style="text-align: left;">174,419</td>
+<td style="text-align: left;">1,932,901</td>
+<td style="text-align: left;">91%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sep-16</td>
+<td style="text-align: left;">182,597</td>
+<td style="text-align: left;">1,952,464</td>
+<td style="text-align: left;">91%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oct-16</td>
+<td style="text-align: left;">219,137</td>
+<td style="text-align: left;">2,001,816</td>
+<td style="text-align: left;">89%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nov-16</td>
+<td style="text-align: left;">221,713</td>
+<td style="text-align: left;">1,907,871</td>
+<td style="text-align: left;">88%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dec-16</td>
+<td style="text-align: left;">268,818</td>
+<td style="text-align: left;">1,944,567</td>
+<td style="text-align: left;">86%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jan-17</td>
+<td style="text-align: left;">281,612</td>
+<td style="text-align: left;">1,895,272</td>
+<td style="text-align: left;">85%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>We can now plot the monthly performance</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href>England A&amp;E Performance</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(england_performance, aes(period, performance)) +</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_line() +</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_point() +</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   scale_y_continuous(labels = percent) +</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   labs(x = &quot;Month of attendance&quot;,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#        y = &quot;% of attendances that met the 4 hour standard&quot;,</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#        title = &quot;NHS England A&amp;E 4 Hour Performance&quot;,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#        caption = &quot;Source: NHS England Statistical Work Areas (OGL v3.0)&quot;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+</div>
+</div>
+<p>We can clearly see the “Winter Pressures” where performance drops.</p>
+</section>
 </section>
 <section id="footnotes" class="level1">
 <h1>Footnotes</h1>

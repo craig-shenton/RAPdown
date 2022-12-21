@@ -17,7 +17,7 @@
 library(targets)
 library(tarchetypes)
 library(here)
-tar_option_set(packages = c("readr", "here", "NHSRdatasets", "dplyr"))
+tar_option_set(packages = c("readr", "here", "NHSRdatasets", "dplyr", "knitr"))
 
 # Load all functions in the utilities folder
 # -------------------------------------------------------------------------
@@ -62,6 +62,83 @@ targets::tar_target(
                      "data/interim/NHSRdatasets",
                      "ae_attendances.csv"),
   format = "file"
+),
+
+# filter on attendances
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = ae_attendance_filtered,
+  command = dplyr_filter_cols(data = ae_attendance_format_date,
+                              attendances > 30000)
+),
+
+# write to markdown table
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = ae_attendance_to_markdown_table,
+  command = knitr_markdown_table(data = ae_attendance_filtered, 10)
+),
+
+# Group data by date (i.e., period)
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = england_performance_raw,
+  command = add_metric_col_percent(data = ae_attendance_raw,
+                                   "period",
+                                   "breaches",
+                                   "attendances",
+                                   "performance")
+),
+
+# Sink england_performance data to interim
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = england_performance_interim_sink,
+  command = write_to_csv(data = england_performance_raw,
+                     "data/interim/NHSRdatasets",
+                     "england_performance.csv"),
+  format = "file"
+),
+
+# set the [period] column to show in Month-Year ("%b-%y") format
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = england_performance_format_date,
+  command = dplyr_format_date(data = england_performance_raw, "period", "%b-%y")
+),
+
+# set the [attendances, breaches] column to 1000s (comma) format
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = england_performance_format_comma,
+  command = dplyr_format_num(data = england_performance_format_date,
+                             c("attendances", "breaches"), "comma", digits = 1)
+),
+
+# set the [performance] column to % (percent) format
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = england_performance_format_percent,
+  command = dplyr_format_num(data = england_performance_format_comma,
+                             c("performance"), "percent", digits = 1)
+),
+
+# write to markdown table
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = england_performance_to_markdown_table,
+  command = knitr_markdown_table(data = england_performance_format_percent, 10)
+),
+
+# make ggplot line chart
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = england_performance_ggplot,
+  command = plotly_count_linechart_target(data = england_performance_format_percent,
+                                          "period",
+                                          "performance",
+                                          "period", 
+                                          "performance",)
 ),
 
 # Render Quarto template

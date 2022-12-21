@@ -28,4 +28,4 @@ tar_make()
 # Deletes the data and metadata of all the targets no longer present in
 # your current target script file
 # default: _targets.R
-tar_prune()
+# tar_prune()
