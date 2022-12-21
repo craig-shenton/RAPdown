@@ -21,6 +21,7 @@ library(here)
 # -------------------------------------------------------------------------
 # Run the pipeline you defined in the targets script file.
 # default: _targets.R
+source("_targets.R")
 tar_make()
 
 # Prune targets
