@@ -5,21 +5,18 @@
 # license information.
 # -------------------------------------------------------------------------
 
-# FILE:           test_dplyr_filter_cols.R
-# DESCRIPTION:    This test case...
-#
+# FILE:           test_knitr_markdown_table.R
+# DESCRIPTION:    The test ...
 # CONTRIBUTORS:   Craig R. Shenton
 # CONTACT:        craig.shenton@nhs.net
 # CREATED:        20 Dec 2022
 # VERSION:        0.0.1
 
-
-# Load libraries and the function to be tested
+# Define the unit test
 # -------------------------------------------------------------------------
-test_that("dplyr_filter_cols works correctly", {
-
-  expected_output <- mtcars %>%
-                        filter(mpg > 30)
-  actual_output <- dplyr_filter_cols(mtcars, mpg > 30)
-  expect_equal(expected_output, actual_output)
+test_that("knitr_markdown_table() works", {
+  data <- head(mtcars)
+  expected_output_class <- "knitr_kable"
+  actual_output <- knitr_markdown_table(data)
+  expect_equal(class(actual_output), expected_output_class)
 })

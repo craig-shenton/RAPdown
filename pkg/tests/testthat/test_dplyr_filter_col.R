@@ -6,20 +6,20 @@
 # -------------------------------------------------------------------------
 
 # FILE:           test_dplyr_filter_cols.R
-# DESCRIPTION:    This test case...
+# DESCRIPTION:    Test that the `dplyr_filter_cols()` function works with
+#                 a dataset and filter logic (e.g., mpg > 30).
 #
 # CONTRIBUTORS:   Craig R. Shenton
 # CONTACT:        craig.shenton@nhs.net
-# CREATED:        20 Dec 2022
-# VERSION:        0.0.1
+# CREATED:        21 Dec 2022
+# VERSION:        0.0.2
 
-
-# Load libraries and the function to be tested
+# Define the unit test
 # -------------------------------------------------------------------------
 test_that("dplyr_filter_cols works correctly", {
-
-  expected_output <- mtcars %>%
-                        filter(mpg > 30)
-  actual_output <- dplyr_filter_cols(mtcars, mpg > 30)
+  requires(dplyr)
+  df <- mtcars
+  expected_output <- dplyr::filter(df, mpg > 30)
+  actual_output <- dplyr_filter_cols(df, mpg > 30)
   expect_equal(expected_output, actual_output)
 })
