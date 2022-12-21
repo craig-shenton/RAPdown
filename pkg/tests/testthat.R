@@ -10,4 +10,3 @@ library(testthat)
 library(rapdown)
 
 test_check("rapdown")
-
