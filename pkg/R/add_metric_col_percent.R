@@ -21,6 +21,27 @@ add_metric_col_percent <- function(data,
                                    numerator,
                                    denominator,
                                    new_col) {
+  # Validate input data
+  if (!is.data.frame(data)) {
+    stop("Error: 'data' must be a data frame")
+  }
+  if (!is.character(grouping) || !is.character(numerator) || !is.character(denominator) || !is.character(new_col)) {
+    stop("Error: 'grouping', 'numerator', 'denominator', and 'new_col' must all be character strings")
+  }
+  if (!grouping %in% colnames(data)) {
+    stop(paste("Error: '", grouping, "' is not a valid column name in 'data'"))
+  }
+  if (!numerator %in% colnames(data)) {
+    stop(paste("Error: '", numerator, "' is not a valid column name in 'data'"))
+  }
+  if (!denominator %in% colnames(data)) {
+    stop(paste("Error: '", denominator, "' is not a valid column name in 'data'"))
+  }
+  if (new_col %in% colnames(data)) {
+    stop(paste("Error: '", new_col, "' already exists in 'data'"))
+  }
+
+  # Perform calculations and return result
   library(dplyr)
   df <- dplyr::group_by_(data, grouping) %>%
         dplyr::summarise_at(vars(numerator, denominator), sum)
