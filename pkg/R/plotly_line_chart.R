@@ -15,11 +15,15 @@
 
 # Define function
 # -------------------------------------------------------------------------
-plotly_line_chart <- function(data, x, y, plot_title, x_lab, y_lab) {
-  fig <- plot_ly(data, x = ~x, y = ~y, type = 'scatter', mode = 'lines')
+plotly_line_chart <- function(data, x, y,
+                              plot_title, x_lab, y_lab) {
+  require(dplyr)
+  require(plotly)
+  fig <- plot_ly(data, x = data[x][[1]], y = data[y][[1]],
+                 type = "scatter", mode = "lines")
   fig <- fig %>%
     layout(title = plot_title,
            xaxis = list(title = x_lab),
-           yaxis = list (title = y_lab))
+           yaxis = list(title = y_lab))
   return(fig)
 }

@@ -17,7 +17,12 @@
 library(targets)
 library(tarchetypes)
 library(here)
-tar_option_set(packages = c("readr", "here", "NHSRdatasets", "dplyr", "knitr"))
+tar_option_set(packages = c("readr",
+                            "here",
+                            "NHSRdatasets",
+                            "dplyr",
+                            "knitr",
+                            "plotly"))
 
 # Load all functions in the utilities folder
 # -------------------------------------------------------------------------
@@ -100,6 +105,18 @@ targets::tar_target(
   format = "file"
 ),
 
+# make ploty line chart
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = england_performance_linechart,
+  command = plotly_line_chart(data = england_performance_raw,
+    "period",
+    "performance",
+    "NHS England A&E 4 Hour Performance",
+    "Month of attendance",
+    "% of attendances that met the 4 hour standard")
+),
+
 # set the [period] column to show in Month-Year ("%b-%y") format
 # -------------------------------------------------------------------------
 targets::tar_target(
@@ -128,17 +145,6 @@ targets::tar_target(
 targets::tar_target(
   name = england_performance_to_markdown_table,
   command = knitr_markdown_table(data = england_performance_format_percent, 10)
-),
-
-# make ggplot line chart
-# -------------------------------------------------------------------------
-targets::tar_target(
-  name = england_performance_ggplot,
-  command = plotly_count_linechart_target(data = england_performance_format_percent,
-                                          "period",
-                                          "performance",
-                                          "period", 
-                                          "performance",)
 ),
 
 # Render Quarto template

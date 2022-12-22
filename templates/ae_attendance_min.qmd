@@ -20,8 +20,8 @@ format:
       source: false
       toggle: false
       caption: none
-    code-fold: true
-    code-summary: "Show code"
+    # code-fold: false
+    # code-summary: "Show code"
     embed-resources: true
     standalone: true
     # URL options
@@ -36,6 +36,8 @@ format:
     title-block-banner: '#005EB8'
     backgroundcolor: '#f0f4f5'
     mainfont: 'Open Sans'
+execute:
+  echo: false
 crossref:
   fig-title: '**Figure**'
   fig-labels: arabic
@@ -278,22 +280,185 @@ We can now plot the monthly performance
 ## England A&E Performance
 
 ```{r england performance plot}
-tar_load(england_performance_ggplot)
+tar_load(england_performance_linechart)
 
-england_performance_ggplot
-# ggplot(england_performance, aes(period, performance)) +
-#   geom_line() +
-#   geom_point() +
-#   scale_y_continuous(labels = percent) +
-#   labs(x = "Month of attendance",
-#        y = "% of attendances that met the 4 hour standard",
-#        title = "NHS England A&E 4 Hour Performance",
-#        caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+england_performance_linechart
+
+
 ```
 
 ::::
 
 We can clearly see the "Winter Pressures" where performance drops.
+
+## Performance by Trust Type
+
+We can also inspect performance for the [different types of department][ae_types]:
+
+:::: panel-tabset
+
+## England Performance by Type
+
+```{r england performance by type}
+# ae_attendances %>%
+#   group_by(period, type) %>%
+#   summarise_if(is.numeric, sum) %>%
+#   mutate(performance = 1 - breaches / attendances) %>%
+#   ggplot(aes(period, performance, colour = type)) +
+#   geom_line() +
+#   geom_point() +
+#   scale_y_continuous(labels = percent) +
+#   #facet_wrap(vars(type), nrow = 1) +
+#   theme(legend.position = "bottom") +
+#   labs(x = "Month of attendance",
+#        y = "% of attendances that met the 4 hour standard",
+#        title = "NHS England A&E 4 Hour Performance",
+#        subtitle = "By Department Type",
+#        caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+```
+
+## Reference
+
+According to the [NHS Data Dictonary][ae_types] the type of Accident and Emergency Department is determined according to the activity performed as follows:
+
+### National Codes:
+- `01`:	Emergency departments are a Consulatant led 24 hour service with full resuscitation facilities and designated accommodation for the reception of accident and emergency Patients
+- `02`:	Consultant led mono specialty accident and emergency service (e.g. ophthalmology, dental) with designated accommodation for the reception of Patients 
+- `03`:	Other type of A&E/minor injury activity with designated accommodation for the reception of accident and emergency Patients. The department may be doctor led or NURSE led and treats at least minor injuries and illnesses and can be routinely accessed without appointment. A service mainly or entirely appointment based (for example a GP Practice or Out-Patient Clinic) is excluded even though it may treat a number of Patients with minor illness or injury. Excludes NHS walk-in centres
+- `04`:	NHS walk in centres
+
+::::
+
+From this it appears as if only the type 1 departments have the seasonal
+drops, type 2 and "other" departments remain pretty consistent.
+
+## Best and worst for performance?
+
+We could create a similar table of data for performance by each individual trust,
+but it would be useful to only look at trusts that have a type 1 department as
+it appears from the chart above that these departments have the largest
+variation.
+
+:::: panel-tabset
+
+## Performance by Trust
+
+```{r performance_by_trust}
+# performance_by_trust <- ae_attendances %>%
+#   group_by(org_code, period) %>%
+#   # make sure that this trust has a type 1 department
+#   filter(any(type == 1)) %>%
+#   summarise_at(vars(attendances, breaches), sum) %>%
+#   mutate(performance = 1 - breaches / attendances)
+
+# # format for display
+# performance_by_trust %>%
+#   mutate_at(vars(period), format, "%b-%y") %>% 
+#   mutate_at(vars(attendances, breaches), comma) %>%
+#   mutate_at(vars(performance), percent) %>%
+#   head(10) %>%
+#   knitr::kable()
+```
+
+:::
+
+From this table we can calculate the overall performance by each trust and then
+organise the trusts by their overall performance.
+
+```{r performance_by_trust_ranking}
+# performance_by_trust_ranking <- performance_by_trust %>%
+#   summarise(performance = 1 - sum(breaches) / sum(attendances)) %>%
+#   arrange(performance) %>%
+#   pull(org_code) %>%
+#   as.character()
+
+# ### Top Performing Trusts
+# tail(performance_by_trust_ranking, 5)
+
+# ### Bottom Performing Trusts
+# head(performance_by_trust_ranking, 5)
+```
+
+:::: panel-tabset
+
+## Top Performing
+
+```{r performance_by_trust top-5-plot}
+# performance_by_trust %>%
+#   ungroup() %>%
+#   mutate_at(vars(org_code), fct_relevel, performance_by_trust_ranking) %>%
+#   filter(org_code %in% c(head(performance_by_trust_ranking, 5))) %>%
+#   ggplot(aes(period, performance)) +
+#   geom_line() +
+#   geom_point() +
+#   scale_y_continuous(labels = percent) +
+#   facet_wrap(vars(org_code), nrow = 2) +
+#   theme(legend.position = "bottom") +
+#   labs(x = "Month of attendance",
+#        y = "% of attendances that met the 4 hour standard",
+#        title = "NHS England A&E 4 Hour Performance",
+#        subtitle = "Top 5 over the whole 3 years",
+#        caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+```
+
+## Bottom Performing
+
+```{r performance_by_trust bottom-5-plot}
+# performance_by_trust %>%
+#   ungroup() %>%
+#   mutate_at(vars(org_code), fct_relevel, performance_by_trust_ranking) %>%
+#   filter(org_code %in% c(tail(performance_by_trust_ranking, 5))) %>%
+#   ggplot(aes(period, performance)) +
+#   geom_line() +
+#   geom_point() +
+#   scale_y_continuous(labels = percent) +
+#   facet_wrap(vars(org_code), nrow = 2) +
+#   theme(legend.position = "bottom") +
+#   labs(x = "Month of attendance",
+#        y = "% of attendances that met the 4 hour standard",
+#        title = "NHS England A&E 4 Hour Performance",
+#        subtitle = "Bottom 5 over the whole 3 years",
+#        caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
+```
+
+::::
+
+## Benchmarking
+
+It is sometimes useful to see how an organisation stacks up against all of the
+other organisations. Below we create a chart where each organisation is shown as
+a point, ordered by performance from left (highest performance) to right (lowest)
+performance.
+
+It's useful to indicate certain organisations on the chart, below I am showing
+the 3 organisations that are at the lower quartile, median and upper quartile,
+however you could change this to instead pick out specific organisations (using
+a reference table and `left_join` or hard coding with `case_when`).
+
+:::: panel-tabset
+
+## Performance Spine Chart
+
+```{r}
+library(targets)
+tar_load(ae_attendance_raw)
+data <- ae_attendance_raw %>%
+  group_by(org_code) %>%
+  filter(any(type == 1)) %>%
+  summarise_at(vars(attendances, breaches), sum) %>%
+  mutate(performance = 1 - breaches/attendances) %>%
+  ungroup() %>%
+  arrange(performance)
+print(data)
+library(plotly)
+fig <- plot_ly(data, x = ~org_code, y = ~performance, type = "scatter") %>%
+        layout(xaxis = list(categoryorder = "array", categoryarray = ~org_code))
+
+
+fig
+```
+
+::::
 
 # Footnotes
 
