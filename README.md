@@ -10,7 +10,7 @@
   </a>
 </p> -->
 
-A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
+A toolkit for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
 - [Explore Documentation](https://craig-shenton.github.io/RAPdown/)
 - [Report Bug](https://github.com/craig-shenton/RAPdown/issues)
