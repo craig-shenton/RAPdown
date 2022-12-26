@@ -231,8 +231,26 @@ tar_load(ae_attendance_to_markdown_table)
 
 ae_attendance_to_markdown_table
 ```
+::::
 
-## Reference
+# England A&E 4 hours Performance
+
+We can calculate the 4 hours performance for England as a whole like so:
+
+:::: panel-tabset
+
+## England 4h A&E Performance
+
+```{r england performance plot}
+tar_load(england_performance_linechart)
+
+england_performance_linechart
+
+
+```
+
+
+## Data Table
 
 ::: {.callout-note collapse="false"}
 ## Data source
@@ -240,6 +258,14 @@ ae_attendance_to_markdown_table
 - [NHS England Statistical Work Areas][nhs_swa]
 - available under the [Open Government Licence v3.0][ogl_v3]
 :::
+
+```{r england performance}
+tar_load(england_performance_to_markdown_table)
+
+england_performance_to_markdown_table
+```
+
+## Metadata
 
 The dataset contains:
 
@@ -254,44 +280,19 @@ for this month
 - `admissions`: the number of attendances that resulted in an admission to the
 hospital
 
-:::: 
+### Department Types
+According to the [NHS Data Dictonary][ae_types] the type of Accident and Emergency Department is determined according to the activity performed as follows:
 
-## England A&E 4 hours Performance
-
-We can calculate the 4 hours performance for England as a whole like so:
-
-:::: panel-tabset
-
-## England 4 Hours Performance
-
-```{r england performance}
-tar_load(england_performance_to_markdown_table)
-
-england_performance_to_markdown_table
-```
-
+- `01`:	Emergency departments are a Consulatant led 24 hour service with full resuscitation facilities and designated accommodation for the reception of accident and emergency Patients
+- `02`:	Consultant led mono specialty accident and emergency service (e.g. ophthalmology, dental) with designated accommodation for the reception of Patients 
+- `03`:	Other type of A&E/minor injury activity with designated accommodation for the reception of accident and emergency Patients. The department may be doctor led or NURSE led and treats at least minor injuries and illnesses and can be routinely accessed without appointment. A service mainly or entirely appointment based (for example a GP Practice or Out-Patient Clinic) is excluded even though it may treat a number of Patients with minor illness or injury. Excludes NHS walk-in centres
+- `04`:	NHS walk in centres
 
 :::: 
-
-We can now plot the monthly performance
-
-:::: panel-tabset
-
-## England A&E Performance
-
-```{r england performance plot}
-tar_load(england_performance_linechart)
-
-england_performance_linechart
-
-
-```
-
-::::
 
 We can clearly see the "Winter Pressures" where performance drops.
 
-## Performance by Trust Type
+# Performance by Trust Type
 
 We can also inspect performance for the [different types of department][ae_types]:
 
@@ -316,16 +317,6 @@ We can also inspect performance for the [different types of department][ae_types
 #        subtitle = "By Department Type",
 #        caption = "Source: NHS England Statistical Work Areas (OGL v3.0)")
 ```
-
-## Reference
-
-According to the [NHS Data Dictonary][ae_types] the type of Accident and Emergency Department is determined according to the activity performed as follows:
-
-### National Codes:
-- `01`:	Emergency departments are a Consulatant led 24 hour service with full resuscitation facilities and designated accommodation for the reception of accident and emergency Patients
-- `02`:	Consultant led mono specialty accident and emergency service (e.g. ophthalmology, dental) with designated accommodation for the reception of Patients 
-- `03`:	Other type of A&E/minor injury activity with designated accommodation for the reception of accident and emergency Patients. The department may be doctor led or NURSE led and treats at least minor injuries and illnesses and can be routinely accessed without appointment. A service mainly or entirely appointment based (for example a GP Practice or Out-Patient Clinic) is excluded even though it may treat a number of Patients with minor illness or injury. Excludes NHS walk-in centres
-- `04`:	NHS walk in centres
 
 ::::
 
