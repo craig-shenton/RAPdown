@@ -4,7 +4,7 @@ authors:
 - family-names: "Shenton"
   given-names: "Craig Robert"
   orcid: "https://orcid.org/0000-0003-3717-7160"
-title: "Rapdown: A framework for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications."
+title: "Rapdown: A best practice toolkit for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications."
 version: 0.0.1
 date-released: 2022-12-18
 url: "https://github.com/craig-shenton/RAPdown"
