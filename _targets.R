@@ -52,58 +52,33 @@ targets::tar_target(
   format = "file"
 ),
 
-# set the period column to show in Month-Year ("%b-%y") format
-# -------------------------------------------------------------------------
-targets::tar_target(
-  name = ae_attendance_format_date,
-  command = dplyr_format_date(data = ae_attendance_raw, "period", "%b-%y")
-),
-
-# Sink ae_attendance data to interim
-# -------------------------------------------------------------------------
-targets::tar_target(
-  name = ae_attendance_interim_sink,
-  command = write_to_csv(data = ae_attendance_format_date,
-                     "data/interim/NHSRdatasets",
-                     "ae_attendances.csv"),
-  format = "file"
-),
-
 # filter on attendances
 # -------------------------------------------------------------------------
 targets::tar_target(
-  name = ae_attendance_filtered,
-  command = dplyr_filter_cols(data = ae_attendance_format_date,
-                              attendances > 30000)
-),
-
-# write to markdown table
-# -------------------------------------------------------------------------
-targets::tar_target(
-  name = ae_attendance_to_markdown_table,
-  command = knitr_markdown_table(data = ae_attendance_filtered, 10)
+  name = ae_attendance_type1,
+  command = dplyr_filter_cols(data = ae_attendance_raw,
+                              type == 1)
 ),
 
 # Group data by date (i.e., period)
 # -------------------------------------------------------------------------
 targets::tar_target(
   name = england_performance_raw,
-  command = add_metric_col_percent(data = ae_attendance_raw,
+  command = add_metric_col_percent(data = ae_attendance_type1,
                                    "period",
                                    "breaches",
                                    "attendances",
                                    "performance")
 ),
 
-# Sink england_performance data to interim
+# add_date_time_col
 # -------------------------------------------------------------------------
 targets::tar_target(
-  name = england_performance_interim_sink,
-  command = write_to_csv(data = england_performance_raw,
-                     "data/interim/NHSRdatasets",
-                     "england_performance.csv"),
-  format = "file"
+  name = england_performance_date,
+  command = add_date_time_col(data = england_performance_raw, period,
+                                                              month = TRUE)
 ),
+
 
 # make ploty line chart
 # -------------------------------------------------------------------------
@@ -149,7 +124,7 @@ targets::tar_target(
 
 # Render Quarto template
 # -------------------------------------------------------------------------
-tarchetypes::tar_quarto(report, here("templates/ae_attendance_min.qmd"),
+tarchetypes::tar_quarto(report, here("templates/ae_attendance_mvp.qmd"),
                         execute_params = list(test = "test"))
 
 # End target list

@@ -55,6 +55,7 @@ suppressPackageStartupMessages({
   library(dplyr)
   library(readr)
   library(here)
+  library(DT)
 })
 #library(here)
 #here()
@@ -231,6 +232,23 @@ tar_load(ae_attendance_to_markdown_table)
 
 ae_attendance_to_markdown_table
 ```
+
+## Data Table
+
+```{r}
+tar_load(ae_attendance_raw)
+
+datatable(ae_attendance_raw, 
+          extensions = 'Buttons',
+          rownames = FALSE,
+          options = list(dom = 'Brtip', pageLength = 10, autoWidth = TRUE,
+          buttons = c('copy', 'csv', 'pdf', 'print'),
+          lengthMenu = list(c(10,25,50,-1), c(10,25,50,"All")),
+          columnDefs = list(list(visible=FALSE, targets=c(0, 3, 4)))
+          )) %>%
+          formatStyle(columns = colnames(.$x$data), `font-size` = "14px")
+```
+
 ::::
 
 # England A&E 4 hours Performance
@@ -351,7 +369,7 @@ variation.
 #   knitr::kable()
 ```
 
-:::
+::::
 
 From this table we can calculate the overall performance by each trust and then
 organise the trusts by their overall performance.

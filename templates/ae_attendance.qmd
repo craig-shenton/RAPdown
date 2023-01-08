@@ -223,32 +223,11 @@ suppressPackageStartupMessages({
   library(dplyr)
   library(readr)
 })
-# library(NHSRdatasets)
-# data(ae_attendances)
+# load dataset and create formatted table
+# -------------------------------------------------------------------------
+tar_load(ae_attendance_to_markdown_table)
 
-# set data path
-#data_path <- "data"
-#start_state <- "raw"
-#source <- "NHSRdatasets"
-#source_file <- "ae_attendances.csv"
-
-# load data
-#metric_path <- here(data_path, start_state, source)
-#ae_attendances <- readr::read_csv(here(metric_path, source_file),
-#                                  show_col_types = FALSE)
-
-ae_attendances <- tar_load("ae_attendances_raw")
-
-# format and create table
-ae_attendances %>%
-  # set the period column to show in Month-Year format
-  dplyr::mutate_at(vars(period), format, "%b-%y") %>% 
-  # set the numeric columns to have a comma at the 1000's place
-  dplyr::mutate_at(vars(attendances, breaches, admissions), comma) %>%
-  # show the first 10 rows
-  head(10) %>%
-  # format as a table
-  knitr::kable()
+ae_attendance_to_markdown_table
 ```
 
 ## Reference
