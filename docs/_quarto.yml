@@ -85,7 +85,7 @@ website:
       - section: Examples
         contents: 
           - text: "A&E Attendances"
-            file: ae_attendance.html
+            file: ae_attendances.html
       - text: "FAQ"
         file: faq.qmd
       - text: "About"
