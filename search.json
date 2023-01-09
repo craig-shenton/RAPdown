@@ -11,28 +11,21 @@
     "href": "tutorials/index.html",
     "title": "Get Started",
     "section": "",
-    "text": "In this tutorial we’ll show you how to use Quarto with VS Code. Before getting started, you should install the Quarto VS Code Extension, which includes many tools that enhance working with Quarto, including:\n---\ntitle: \"Quarto Basics\"\nformat:\n  html:\n    code-fold: true\njupyter: python3\n---"
+    "text": "Before getting started, you should Fork this repository from github"
   },
   {
     "objectID": "tutorials/index.html#step-2",
     "href": "tutorials/index.html#step-2",
     "title": "Get Started",
     "section": "Step 2",
-    "text": "Step 2\n\nInstall Quarto"
+    "text": "Step 2\n\nRun make()"
   },
   {
-    "objectID": "tutorials/index.html#overview-1",
-    "href": "tutorials/index.html#overview-1",
+    "objectID": "tutorials/index.html#build-your-first-report",
+    "href": "tutorials/index.html#build-your-first-report",
     "title": "Get Started",
-    "section": "Overview",
-    "text": "Overview\nIn this tutorial we’ll show you how to use Quarto with VS Code. Before getting started, you should install the Quarto VS Code Extension, which includes many tools that enhance working with Quarto, including:\n\nIntegrated render and preview for Quarto documents.\nSyntax highlighting for markdown and embedded languages\nCompletion and diagnostics for YAML options\nCompletion for embedded languages (e.g. Python, R, Julia, etc.)\nCommands and key-bindings for running cells and selected lines.\n\nYou can install the Quarto extension from within the Extensions tab in VS Code, from the Extension Marketplace, the Open VSX Registry or directly from a VISX extension file.\n\n\n\n\n\n\nNote\n\n\n\nThis tutorial focuses on editing plain text Quarto .qmd files in VS Code. You can alternatively use the VS Code Notebook Editor if you prefer to work with .ipynb files.\nFor the purposes of learning we recommend you follow along with the .qmd examples. At the end of this article there is a link to documentation on using the Notebook Editor with Quarto that will apply what you’ve learned to notebooks.\n\n\n\nBasic Workflow\nQuarto .qmd files contain a combination of markdown and executable code cells. Here’s what it might look like in VS Code to edit and preview a .qmd file:\nThe window on the left is a qmd file opened in VSCode. The contents of this document are the same as the first part of the Getting Started: Welcome section of this website. The contents of this document are rendered by Quarto in the window on the right.”}\nThe document on the left is rendered into the HTML version you see on the right. This is the basic model for Quarto publishing—take a source document and render it to a variety of output formats, including HTML, PDF, MS Word, etc.\nThe tutorials will make use of the matplotlib and plotly Python packages—the commands you can use to install them are given in the table below.\n\n\n\n\n\n\nNote\n\n\n\nNote that while this tutorial uses Python, using Julia (via the IJulia kernel) is also well supported. See the article on Using Julia for additional details."
-  },
-  {
-    "objectID": "tutorials/index.html#render-and-preview",
-    "href": "tutorials/index.html#render-and-preview",
-    "title": "Get Started",
-    "section": "Render and Preview",
-    "text": "Render and Preview\nWe’ll start out by rendering a simple example (hello.qmd) to a couple of formats. If you want to follow along step-by-step in your own environment, create a new file named hello.qmd and copy the following content into it.\n---\ntitle: \"Quarto Basics\"\nformat:\n  html:\n    code-fold: true\njupyter: python3\n---\n\nFor a demonstration of a line plot on a polar axis, see @fig-polar.\n\n```{python}\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\ntest"
+    "section": "Build your first report",
+    "text": "Build your first report\nRun the tar_make() command in the _make.R file to build the _targets.R pipeline."
   },
   {
     "objectID": "tutorials/containers.html",
