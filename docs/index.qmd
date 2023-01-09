@@ -104,13 +104,9 @@ Virtualised environments called containers are used for developing, deploying, a
 ::: {.get-started .alt-background}
 ::: {.content-block}
 
-## Example RAP Quarto Report
+### Example RAP Quarto Report
 
 <a href="https://craig-shenton.github.io/RAPdown/examples/ae_attendances.html"><img src="_assets/img/example_screen.png" width="500" /></a>
-
-### Read more about Reproducible Analytical Pipelines at NHS Digital's Community of Practice
-
-[Why RAP?](https://nhsdigital.github.io/rap-community-of-practice/introduction_to_RAP/why_RAP_is_important/){.btn-action-primary  .btn-action .btn .btn-success .btn-lg role="button"}
 
 :::
 :::
