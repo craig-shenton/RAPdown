@@ -35,6 +35,7 @@ comments: false
 :::
 
 ::: {.hero-image .hero-image-right}
+<img src="_assets/img/example_screen.png" width="200" />
 :::
 
 ::::

@@ -15,7 +15,38 @@ anchor-sections: false
 
 :::: {.g-col-lg-6 .g-col-12}
 
+## Download the code locally
+
 Before getting started, you should [Fork this repository from github](https://github.com/craig-shenton/RAPdown/fork)
+
+You should end up with a folder with the following structure:
+
+```
+RAPdown
+│
+├───.github
+│   └───workflows
+|
+├───data
+│   ├───interim
+│   ├───processed
+│   └───raw
+│
+├───docs
+|   ├───_assets
+│   ├───documentation
+│   ├───examples
+│   ├───posts
+│   └───tutorials
+|
+├───templates
+│
+├───tests
+│
+├───transforms
+|
+└───utilities
+```
 
 ::::
 
