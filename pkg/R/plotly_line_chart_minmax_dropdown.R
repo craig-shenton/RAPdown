@@ -21,7 +21,7 @@ remove <- c('zoom2d','pan2d', 'select2d', 'lasso2d', 'zoomIn2d',
             'resetScale', 'toggleSpikelines', 'hoverClosestCartesian',
             'hoverCompareCartesian', 'toImage')
 
-hline <- function(y = 0, color = '#333333') {
+hline <- function(y = 0, color = "#333333", width = 0.5) {
   list(
     type = "line",
     x0 = 0,
@@ -29,8 +29,23 @@ hline <- function(y = 0, color = '#333333') {
     xref = "paper",
     y0 = y,
     y1 = y,
-    line = list(color = color, opacity = 1, width = 6)
+    line = list(color = color, opacity = 0.5, width = width,  dash = "dash")
   )
+}
+
+text_annotate <- function(x = "2019-08-01",
+                          y = 0,
+                          color = "#1AA3C6",
+                          text = "text") {
+  list(
+    x = x,
+    y = y,
+    text = text,
+    xref = "x",
+    yref = "y",
+    font = list(color = color,
+                size = 12),
+    showarrow = FALSE)
 }
 
 recap_option <- function(data, dropdown_col) {
@@ -45,6 +60,7 @@ recap_option <- function(data, dropdown_col) {
 }
 
 plotly_line_chart_minmax_dropdown <- function(data, x, y, min, max, mean,
+                              target,
                               dropdown,
                               plot_title,
                               x_lab, y_lab,
@@ -71,10 +87,17 @@ plotly_line_chart_minmax_dropdown <- function(data, x, y, min, max, mean,
               hovertemplate = paste('%{y:.1%}')) %>%
     add_trace(x = data[x][[1]],
               y = data[mean][[1]],
-              line = list(color='rgba(174, 37, 115, 0.5)',
+              line = list(color = 'rgba(174, 37, 115, 0.5)',
                           width = 2,
                           dash = 'dash'),
               name = "(Benchmark)",
+              hovertemplate = paste('%{y:.1%}')) %>%
+    add_trace(x = data[x][[1]],
+              y = target,
+              line = list(color='#30BCAD',
+                          width = 2,
+                          dash = 'dash'),
+              name = "(Target)",
               hovertemplate = paste('%{y:.1%}')) %>%
     add_trace(type = "scatter",
               mode = "lines",
@@ -108,7 +131,7 @@ plotly_line_chart_minmax_dropdown <- function(data, x, y, min, max, mean,
                 buttons = recap_option(data = data,
                                        dropdown_col = dropdown)
            )),
-           margin = list(l = 20, r = 20, b = 20, t = 40, pad = 0))
+           margin = list(l = 20, r = 20, b = 70, t = 50, pad = 4))
   if (percent) {
     fig <- fig %>%
         layout(yaxis = list(tickformat = "0%"))

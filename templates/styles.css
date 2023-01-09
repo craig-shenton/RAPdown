@@ -1,6 +1,25 @@
 .panel-tabset .nav-item {
     font-size: 16px;
 }
+
+table colgroup col {
+    width: auto !important;
+}
+.btn-action-primary {
+    color: white;
+    background-color: #005eb8 !important;
+}
+  
+.btn-action-primary:hover {
+    background-color: #ffeb3b !important;
+    color: #000 !important;
+}
+  
+.btn-action {
+    min-width: 165px;
+    border-radius: 30px;
+    border: none;
+}
   
 .dt-buttons {
       /* margin-bottom: -7px; */

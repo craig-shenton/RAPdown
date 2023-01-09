@@ -60,6 +60,14 @@ targets::tar_target(
                               type == 1)
 ),
 
+# filter on attendances
+# -------------------------------------------------------------------------
+targets::tar_target(
+  name = ae_attendance_type2,
+  command = dplyr_filter_cols(data = ae_attendance_raw,
+                              type != 1)
+),
+
 # Group data by date (i.e., period)
 # -------------------------------------------------------------------------
 targets::tar_target(

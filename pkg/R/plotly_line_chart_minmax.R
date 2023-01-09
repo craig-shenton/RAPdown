@@ -21,18 +21,6 @@ remove <- c('zoom2d','pan2d', 'select2d', 'lasso2d', 'zoomIn2d',
             'resetScale', 'toggleSpikelines', 'hoverClosestCartesian',
             'hoverCompareCartesian', 'toImage')
 
-hline <- function(y = 0, color = '#333333') {
-  list(
-    type = "line",
-    x0 = 0,
-    x1 = 1,
-    xref = "paper",
-    y0 = y,
-    y1 = y,
-    line = list(color = color, opacity = 1, width = 6)
-  )
-}
-
 plotly_line_chart_minmax <- function(data, x, y, min, max, mean,
                               plot_title,
                               x_lab, y_lab,
