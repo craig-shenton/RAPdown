@@ -44,7 +44,7 @@ comments: false
 
 ::: {.feature}
 ### Interactive Markdown Reports
-Templates for interactive `.html` reports in Markdown; a lightweight markup language that is easy to read and write. Templates can be parameterised to create multiple versions of the same report, charts, and analyses for many different geographical hierarchies.
+Templates for interactive `.html` reports in Markdown with parameters to create multiple versions of the same report, charts, and analyses for different organisations.
 
 ::: {.learn-more}
 [Learn more »](tutorials/markdown-reports.qmd)
@@ -53,7 +53,7 @@ Templates for interactive `.html` reports in Markdown; a lightweight markup lang
 
 ::: {.feature}
 ### Make-like Data Pipelines
-Use `{targets}` to define dependencies in data processing pipelines. Specify the order in which tasks should be executed, and automatically rebuild parts of the pipeline if the input data or any of the intermediate results change.
+Build fully reproducable data pipelines using `{targets}` to define dependencies in data processing and automatically render and rebuild quarto reports.
 
 ::: {.learn-more}
 [Learn more »](tutorials/data-pipelines.qmd)
@@ -61,8 +61,8 @@ Use `{targets}` to define dependencies in data processing pipelines. Specify the
 :::
 
 ::: {.feature}
-### Pre-configured Plotly Charts
-Plotly is a popular data visualisation library with a wide range of interactive charts and graphs. RAPdown charts have been pre-configured, adjusting the colors, fonts, annotations, and labels to match the in-house style.
+### Pre-configured Visualisations
+Standard reporting charts and tables have been pre-configured, adjusting the colors, fonts, annotations, and labels to match an in-house style.
 
 ::: {.learn-more}
 [Learn more »](tutorials/plotly-charts.qmd)
@@ -71,29 +71,29 @@ Plotly is a popular data visualisation library with a wide range of interactive 
 
 ::: {.feature}
 ### Library of Tested Functions
-A shared library of unit tested functions that highly complex analysis can be run knowing that every step in the calculation is fully validated and documented. These functions can be further developed, re-used, and improved upon as part of a collaborative effort.
+A shared library of tested functions allows complex analysis to be run with every step in a metric calculation fully validated and documented.
 
 ::: {.learn-more}
-[Learn more »](tutorials/index.qmd)
+[Comming Soon »]()
 :::
 :::
 
 ::: {.feature}
-### Continuous Integration
-Continuous integration (CI) automates builds and tests. So when something stops working you will both be informed about the problem and told how you can fix it. This can reduce the time it takes to validate new data and update your publications.
+### Quality Assurance
+Built-in unit tests, data validation, and schema checks ensure that data pipelines are functioning correctly, and the data follows the correct structure and format.
 
 ::: {.learn-more}
-[Learn more »](tutorials/index.qmd)
+[Comming Soon »]()
 :::
 
 :::
 
 ::: {.feature}
 ### Containerised Deployment
-Virtualised environments called containers are used for developing, deploying, and managing data pipelines and Quarto publications across many different IT environments.
+Virtualised environments can be used for developing, deploying, and managing data pipelines and Quarto publications across many different IT environments.
 
 ::: {.learn-more}
-[Learn more »](tutorials/containers.qmd)
+[Comming Soon »]()
 :::
 
 :::
