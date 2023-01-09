@@ -11,7 +11,7 @@
     "href": "tutorials/index.html",
     "title": "Get Started",
     "section": "",
-    "text": "Before getting started, you should Fork this repository from github"
+    "text": "Before getting started, you should Fork this repository from github\nYou should end up with a folder with the following structure:\nRAPdown\n│\n├───.github\n│   └───workflows\n|\n├───data\n│   ├───interim\n│   ├───processed\n│   └───raw\n│\n├───docs\n|   ├───_assets\n│   ├───documentation\n│   ├───examples\n│   ├───posts\n│   └───tutorials\n|\n├───templates\n│\n├───tests\n│\n├───transforms\n|\n└───utilities"
   },
   {
     "objectID": "tutorials/index.html#step-2",
