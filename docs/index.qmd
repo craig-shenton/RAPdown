@@ -53,7 +53,7 @@ Templates for interactive `.html` reports in Markdown with parameters to create 
 
 ::: {.feature}
 ### Make-like Data Pipelines
-Build fully reproducable data pipelines using `{targets}` to define dependencies in data processing and automatically render and rebuild quarto reports.
+Build fully reproducable data pipelines to define dependencies in data processing and automatically render and rebuild quarto reports.
 
 ::: {.learn-more}
 [Learn more »](tutorials/data-pipelines.qmd)
@@ -74,7 +74,7 @@ Standard reporting charts and tables have been pre-configured, adjusting the col
 A shared library of tested functions allows complex analysis to be run with every step in a metric calculation fully validated and documented.
 
 ::: {.learn-more}
-[Comming Soon »]()
+[Coming Soon »]()
 :::
 :::
 
@@ -83,7 +83,7 @@ A shared library of tested functions allows complex analysis to be run with ever
 Built-in unit tests, data validation, and schema checks ensure that data pipelines are functioning correctly, and the data follows the correct structure and format.
 
 ::: {.learn-more}
-[Comming Soon »]()
+[Coming Soon »]()
 :::
 
 :::
@@ -93,7 +93,7 @@ Built-in unit tests, data validation, and schema checks ensure that data pipelin
 Virtualised environments can be used for developing, deploying, and managing data pipelines and Quarto publications across many different IT environments.
 
 ::: {.learn-more}
-[Comming Soon »]()
+[Coming Soon »]()
 :::
 
 :::
