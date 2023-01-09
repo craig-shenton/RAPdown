@@ -10,25 +10,12 @@ anchor-sections: false
 :::: {.g-col-lg-3 .g-col-12}
 ## Step 1 
 
-#### Install Quarto {.fw-light}
+#### Fork RAPdown {.fw-light}
 ::::
 
 :::: {.g-col-lg-6 .g-col-12}
 
-## Overview
-
-In this tutorial we'll show you how to use Quarto with VS Code.
-Before getting started, you should install the [Quarto VS Code Extension](), which includes many tools that enhance working with Quarto, including:
-
-````markdown
----
-title: "Quarto Basics"
-format:
-  html:
-    code-fold: true
-jupyter: python3
----
-````
+Before getting started, you should [Fork this repository from github](https://github.com/craig-shenton/RAPdown/fork)
 
 ::::
 
@@ -39,85 +26,14 @@ jupyter: python3
 :::: {.g-col-lg-3 .g-col-12}
 ## Step 2
 
-#### Install Quarto {.fw-light}
+#### Run make() {.fw-light}
 ::::
 
 :::: {.g-col-lg-6 .g-col-12}
 
-## Overview
+## Build your first report
 
-In this tutorial we'll show you how to use Quarto with VS Code.
-Before getting started, you should install the [Quarto VS Code Extension](), which includes many tools that enhance working with Quarto, including:
-
--   Integrated render and preview for Quarto documents.
--   Syntax highlighting for markdown and embedded languages
--   Completion and diagnostics for YAML options
--   Completion for embedded languages (e.g. Python, R, Julia, etc.)
--   Commands and key-bindings for running cells and selected lines.
-
-You can install the Quarto extension from within the **Extensions** tab in VS Code, from the [Extension Marketplace](), the [Open VSX Registry]() or directly from a [VISX extension file]().
-
-::: callout-note
-This tutorial focuses on editing plain text Quarto `.qmd` files in VS Code.
-You can alternatively use the VS Code Notebook Editor if you prefer to work with `.ipynb` files.
-
-For the purposes of learning we recommend you follow along with the `.qmd` examples.
-At the end of this article there is a link to documentation on using the [Notebook Editor]() with Quarto that will apply what you've learned to notebooks.
-:::
-
-### Basic Workflow
-
-Quarto `.qmd` files contain a combination of markdown and executable code cells.
-Here's what it might look like in VS Code to edit and preview a `.qmd` file:
-
-The window on the left is a qmd file opened in VSCode. The contents of this document are the same as the first part of the Getting Started: Welcome section of this website. The contents of this document are rendered by Quarto in the window on the right."}
-
-The document on the left is *rendered* into the HTML version you see on the right.
-This is the basic model for Quarto publishing---take a source document and render it to a variety of [output formats](), including HTML, PDF, MS Word, etc.
-
-The tutorials will make use of the `matplotlib` and `plotly` Python packages---the commands you can use to install them are given in the table below.
-
-::: callout-note
-Note that while this tutorial uses Python, using Julia (via the [IJulia]() kernel) is also well supported.
-See the article on [Using Julia]() for additional details.
-:::
-
-## Render and Preview
-
-We'll start out by rendering a simple example (`hello.qmd`) to a couple of formats.
-If you want to follow along step-by-step in your own environment, create a new file named `hello.qmd` and copy the following content into it.
-
-````markdown
----
-title: "Quarto Basics"
-format:
-  html:
-    code-fold: true
-jupyter: python3
----
-
-For a demonstration of a line plot on a polar axis, see @fig-polar.
-
-```{{python}}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
-````
-
-test
+Run the `tar_make()` command in the [_make.R](https://github.com/craig-shenton/RAPdown/blob/main/_make.R) file to build the `_targets.R` pipeline.
 
 ::::
 
