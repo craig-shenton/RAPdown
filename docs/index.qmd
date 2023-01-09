@@ -19,8 +19,6 @@ comments: false
 
 <h1><img src="_assets/img/rapdown_blue.svg" width="100" height="100" /> {RAPdown} <span>v0.0.1</span></h1>
 
-<img src="_assets/img/example_screen.png" width="500" />
-
 ### A best practice toolkit for creating Reproducible Analytical Pipeline (RAP) compliant Quarto publications
 
 - The gold standard for creating analytical outputs in government[^goldacre]
@@ -105,6 +103,10 @@ Virtualised environments called containers are used for developing, deploying, a
 
 ::: {.get-started .alt-background}
 ::: {.content-block}
+
+## Example RAP Quarto Report
+
+<a href="https://craig-shenton.github.io/RAPdown/examples/ae_attendances.html"><img src="_assets/img/example_screen.png" width="500" /></a>
 
 ### Read more about Reproducible Analytical Pipelines at NHS Digital's Community of Practice
 
