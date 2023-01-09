@@ -106,10 +106,16 @@ Virtualised environments called containers are used for developing, deploying, a
 
 ### Example RAP Quarto Reports
 
-::: {.features}
+:::
+:::
+
+::: {.content-block}
 <a href="https://craig-shenton.github.io/RAPdown/examples/ae_attendances.html"><img src="_assets/img/example_screen.png" width="500" /></a>
 
 :::
+
+::: {.get-started .alt-background}
+::: {.content-block}
 
 :::
 :::
