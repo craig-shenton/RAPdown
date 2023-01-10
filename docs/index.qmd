@@ -104,19 +104,10 @@ Virtualised environments can be used for developing, deploying, and managing dat
 ::: {.get-started .alt-background}
 ::: {.content-block}
 
-:::
-:::
-
-::: {.content-block}
-
 ### Example RAP Quarto Reports
 
-<a href="https://craig-shenton.github.io/RAPdown/examples/ae_attendances.html"><img src="_assets/img/example_screen.png" width="500" /></a>
+<a href="https://craig-shenton.github.io/RAPdown/examples/ae_attendances.html"><img src="_assets/img/example_screenshot.png" width="400" /></a>
 
-:::
-
-::: {.get-started .alt-background}
-::: {.content-block}
 
 :::
 :::

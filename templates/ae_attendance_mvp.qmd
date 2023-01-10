@@ -173,7 +173,9 @@ According to the [NHS Data Dictonary][ae_types] the type of Accident and Emergen
 | `04` | NHS walk in centres |
 :::: 
 
-The length of time patients spend in A&E before admission, transfer or discharge depends on the type of A&E unit they visit. In the past, minor A&Es (types 2 and 3, such as single specialty departments or minor injury units) nearly always admit, transfer or discharge in less than four hours, whereas major A&Es (type 1) deal with a higher number of attendees and more serious cases, and consistently perform worse at the four-hour target[^1].
+The length of time patients spend in A&E before admission, transfer or discharge depends on the type of A&E unit they visit. In the past, minor A&Es (types 2 and 3, such as single specialty departments or minor injury units) nearly always admit, transfer, or discharge in less than four hours, whereas major A&Es (type 1) deal with a higher number of attendees and more serious cases, and consistently perform worse at the four-hour target[^1].
+
+</br>
 
 ::: {.hero-buttons}
 [Back to RAPdown](https://craig-shenton.github.io/RAPdown/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
