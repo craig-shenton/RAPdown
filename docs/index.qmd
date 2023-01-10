@@ -70,8 +70,8 @@ Standard reporting charts and tables have been pre-configured, adjusting the col
 :::
 
 ::: {.feature}
-### Library of Tested Functions
-A shared library of tested functions allows complex analysis to be run with every step in a metric calculation fully validated and documented.
+### Library of Functions
+A shared library of unit-tested functions allows complex analysis to be run with every step in a metric calculation fully validated and documented.
 
 ::: {.learn-more}
 [Coming Soon »]()
@@ -80,7 +80,7 @@ A shared library of tested functions allows complex analysis to be run with ever
 
 ::: {.feature}
 ### Quality Assurance
-Built-in unit tests, data validation, and schema checks ensure that data pipelines are functioning correctly, and the data follows the correct structure and format.
+Built-in logging, data validation, and schema checks ensure that pipelines are functioning correctly, and the data follows the correct structure and format.
 
 ::: {.learn-more}
 [Coming Soon »]()
